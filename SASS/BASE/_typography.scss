@@ -1,0 +1,59 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../abstracts/maps";
+
+body {
+        @include font-family("body");
+        font-size: map-get($font-size, regular);
+        font-weight: map-get($font-weight, thick);
+        text-rendering: optimizeLegibility;
+        line-height: 1.4;
+        letter-spacing: .6px;
+        color: $color-black;
+
+        @include media-queries-max-width(tablet) {
+                font-size: map-get($font-size, medium);
+        }
+
+        @include media-queries-max-width(medium-tablet) {
+                font-size: map-get($font-size, large);
+        }
+}
+
+h1 {
+        @include font-family("special");
+        font-size: map-get($font-size, header1);
+        font-weight: map-get($font-weight, extra-bold); 
+
+        @include media-queries-max-width(tablet) {
+                font-size: map-get($font-size, header2);
+        };
+
+        @include media-queries-max-width(mobile) {
+                font-size: map-get($font-size, header-mobile);
+        };
+}
+
+h2 {
+        @include font-family("special");
+        font-size:map-get($font-size, header2);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        @include media-queries-max-width(mobile) {
+                font-size: map-get($font-size, header-mobile);
+        };
+}
+
+h3 {
+        font-size: map-get($font-size, large);
+}
+
+li {
+        font-size: map-get($font-size, regular);
+}
+
+p.footer__title {
+        @include font-family("special");
+        font-size: map-get($font-size, large);
+}

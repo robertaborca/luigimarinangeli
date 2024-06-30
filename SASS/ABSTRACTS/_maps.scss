@@ -1,0 +1,42 @@
+$font-size: (
+    small: 1.4rem,
+    regular: 1.6rem,
+    medium: 1.9rem,
+    large: 2.3rem,
+    link: 3.5rem,
+    header1: 3.5rem,
+    header2: 2.5rem,
+    header-mobile: 3rem,
+);
+
+$margin: (
+    small: 2.5rem,
+    medium: 4rem,
+    large: 6rem,
+    huge: 12rem
+);
+
+$font-weight: (
+    regular: 400,
+    thick: 500,
+    bold: 700,
+    extra-bold: 800
+);
+
+$padding: (
+    tiny: .8rem,
+    small: 2rem,
+    medium: 5rem,
+    large: 8rem,
+    huge: 12rem
+);
+
+// media queries breakpoints
+$breakpoints: (
+    mobile: 25em, // 400px
+    medium-tablet: 37.5em, // 600px
+    tablet: 49em, // 768px
+    small-desktop: 59.4em, // 950px
+    medium-desktop: 75.25em, // 1204px
+    large-desktop: 87.5em // 1400px
+);

@@ -1,0 +1,54 @@
+// fonts
+@mixin font-family($type) {
+    @if $type == "special" {
+        font-family: 'Red Hat Display', sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    @else {
+        font-family: "Nunito Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+}
+
+// shadow
+@mixin shadow($colour) {
+    box-shadow: 3px 3px 8px 2px rgba($colour, .5);
+}
+
+
+// flexbox column and rows flows
+@mixin flex-columns {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+@mixin flex-rows {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+// media queries
+@mixin media-queries-min-width($breakpoint, $map-breakpoints: $breakpoints) {
+    // If $breakpoint is a key that exists in
+    // $breakpoints, get and use the value
+    @if map-has-key($map-breakpoints, $breakpoint) {
+      $breakpoint: map-get($map-breakpoints, $breakpoint);
+    }
+    @media only screen and (min-width: #{$breakpoint}) {
+      @content;
+    }
+  }
+
+
+@mixin media-queries-max-width($breakpoint, $map-breakpoints: $breakpoints) {
+    @if map-has-key($map-breakpoints, $breakpoint) {
+        $breakpoint: map-get($map-breakpoints, $breakpoint);
+      }
+
+    @media only screen and (max-width: #{$breakpoint}) {
+        @content;
+    }
+}
