@@ -1,0 +1,53 @@
+@import "../abstracts/maps";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+// BTN
+ .btn {
+    background-image: linear-gradient(to right, $color-primary-darker 0%, #5E9B75  51%, $color-primary-darker  100%);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: $color-white;            
+    @include shadow($color-primary-darker);
+    display: block;
+    font-size: map-get($font-size, large);
+    // font-weight: map-get($font-weight, bold);
+    border-radius: 1rem;
+    min-width: 20rem;
+    height: 5.5rem;
+    padding: 1.2rem 4.5rem;
+    margin: 2rem;
+    text-transform: uppercase;
+    @include font-family("special");
+
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.5;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.5s;
+
+    &:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;  
+    }
+
+    &:active {
+      transform: scale(.9);
+      box-shadow: none;
+  }
+
+    @include media-queries-max-width(tablet) {
+      font-size: map-get($font-size, large);
+    }
+ }
+
+ 
+ 
