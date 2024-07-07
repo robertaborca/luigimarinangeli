@@ -21,7 +21,7 @@
         <!--GOOGLE FONTS-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
         <!--FONT AWESOME-->
         <script src="https://kit.fontawesome.com/fe91d29f6f.js" crossorigin="anonymous"></script>
@@ -43,24 +43,34 @@
         <!--HEADER-->
         <header>
             <nav class="navbar" id="navBar" role="menu">
-
-                <!--LOGO-->
-                    <img src="IMG/luigi-marinangeli-consulente-immobiliare-logo-piccolo.png" alt="Logo Luigi Marinangeli" class="navbar__img" width="50" height="50">
-
                 <!--MENU-->
                 <ul class="navbar__menu" id="menu" role="menu" aria-label="navigation-menu">
-                    <li class="navbar__menu-item navbar__text" role="none">
-                        <p id="header-title">LUIGI MARINANGELI &mdash; CONSULENTE IMMOBILIARE</p>
+
+                    <li class="navbar__menu-item navbar__logo" role="none">
+                        <!--LOGO-->
+                    <img src="IMG/luigi-marinangeli-consulente-immobiliare-logo-piccolo.png" alt="Logo Luigi Marinangeli" class="navbar__img" width="50" height="50">
                     </li>
 
                     <li class="navbar__menu-item" role="none">
-                        <a href="#prenota" class="navbar__menu-item--link" role="menuitem" tabindex="0">
-                            Prenota
+                        <a href="#chi-sono" class="navbar__menu-item--link no-display" role="menuitem" tabindex="0">
+                            Chi sono
                         </a>
                     </li>
 
                     <li class="navbar__menu-item" role="none">
-                        <a href="#contatti" class="navbar__menu-item--link" role="menuitem" tabindex="0">
+                        <a href="#prenota" class="navbar__menu-item--link no-display" role="menuitem" tabindex="0">
+                            I miei servizi
+                        </a>
+                    </li>
+
+                    <li class="navbar__menu-item" role="none">
+                        <a href="#prenota" class="navbar__menu-item--link" role="menuitem" tabindex="0">
+                            Consulenze online
+                        </a>
+                    </li>
+
+                    <li class="navbar__menu-item" role="none">
+                        <a href="#contatti" class="navbar__menu-item--link no-display--deep" role="menuitem" tabindex="0">
                             Contatti
                         </a>
                     </li>
@@ -73,11 +83,10 @@
 
             <!--HERO-->
             <article class="hero">
-                <div class="hero__content">
-                        <h2 class="hero__h2">Luigi Marinangeli</h2>
-                        <h1 class="hero__title">Consulente Immobiliare</h1>
-                        <p class="hero__subtitle">Esperienza e professionalità per guidarti alla ricerca della casa perfetta.</p>
-                
+                    <div class="hero__titles-container">
+                        <h2 class="hero__h2">Il mio lavoro,<br>la mia passione.</h2>
+                        <h1 class="hero__title">Sono Luigi,<br>e ti guido nella vendita del tuo immobile.</h1>
+                    </div>
                     <div class="btn-container">
                         <!-- HERO BTN -->
                         <a href="#prenota" class="btn hero__button hero__button--call-to-action">Prenota
@@ -85,25 +94,9 @@
                     
                         <a href="#chisono" class="btn hero__button hero__button--chisono">Chi sono</a> 
                     </div>
-                </div>
-                <div class="hero__image-grid">
-                    <figure class="hero__image-grid--figure hero__image-grid--figure--1">
-                        <img src="IMG/luigi-marinangeli-consulente-immobiliare-ancona.png" alt="Luigi Marinangeli, consulente immobiliare a Senigallia, Ancona"  width="400" height="400" class="hero__image-grid--figure--image">
-                    </figure>
-                    <figure class="hero__image-grid--figure hero__image-grid--figure--2">
-                        <img src="IMG/appartamenti-in-vendita-senigallia.png" alt="appartamenti in vendita zona Senigallia, vista su giardino con piscina"  width="250" height="250" class="hero__image-grid--figure--image">
-                    </figure>
-                    <figure class="hero__image-grid--figure hero__image-grid--figure--3">
-                        <img src="IMG/consulente-immobiliare-luigi-marinangeli.png" alt="consulenze immobiliare zona Senigalli Ancona, vista su villa privata"  width="250" height="250" class="hero__image-grid--figure--image">
-                    </figure>
-                    <figure class="hero__image-grid--figure hero__image-grid--figure--4">
-                        <img src="IMG/immobili-in-vendita-senigallia-ancona.png" alt="immobili in vendita Senigallia Aancona, casa lussuosa"  width="300" height="300" class="hero__image-grid--figure--image">
-                    </figure>
-                </div>
             </article>
             <!-- HERO ENDS -->
             
-                
         </main>
 
         <footer class="footer">
@@ -141,15 +134,6 @@
 
 
         </footer>
-        <script>
-            var navBar = document.getElementById("navBar");
-            window.onscroll = function() {
-              if (window.scrollY > 22) {
-                navBar.classList.add("scrolled");
-              } else {
-                navBar.classList.remove("scrolled");
-              }
-            };
-          </script>
+        <script src="scripts/nav.js" async defer></script>
     </body>
 </html>

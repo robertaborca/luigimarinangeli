@@ -4,7 +4,7 @@
 
 // BTN
  .btn {
-    background-image: linear-gradient(to right, $color-primary-darker 0%, #5E9B75  51%, $color-primary-darker  100%);
+    background-image: linear-gradient(to right, $color-primary-darker 0%, $color-primary  51%, $color-primary-darker  100%);
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
@@ -20,7 +20,7 @@
     padding: 1.2rem 4.5rem;
     margin: 2rem;
     text-transform: uppercase;
-    @include font-family("special");
+    @include font-family("normal");
 
     letter-spacing: 2px;
     text-align: center;

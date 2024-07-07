@@ -4,9 +4,7 @@
 
 // NAVBAR
 .navbar {
-    @include flex-rows;
-    align-items: center;
-    justify-content: space-around;
+    
     background-color: $color-white;
 
     position: fixed;
@@ -16,33 +14,10 @@
     overflow: hidden;
     top:0;
     width: 100%;
-    padding: map-get($padding, tiny);
+    padding: map-get($padding, small);
     opacity: 0.96;
     transition: all 80ms ease-out;
     z-index: 999;
-
-    &__logo {
-        justify-self: flex-start;
-        padding-left: map-get($padding, small);
-
-    }
-
-    &__text {
-        padding-right: 25rem;
-        color: $color-primary-dark;
-
-        @include media-queries-max-width(small-desktop) {
-            padding-right: 0;
-            display: none;
-        }
-    }
-
-    @include media-queries-max-width(small-desktop) {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-evenly;
-    }
 
 
     // UL NAV MENU
@@ -51,26 +26,32 @@
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        justify-content: space-between;
-        gap: 7rem;
+        justify-content: space-evenly;
+        width: 100%;
 
-        @include font-family("special");
-        font-size: map-get($font-size, medium);
+        @include font-family(normal);
+        text-transform: uppercase;
         letter-spacing: 1.3px;
 
 
-             &-item {
+        @include media-queries-max-width(medium-tablet) {
+            gap: 1rem;
+            width: 90%;
+            justify-content: space-around;
+        }
+    
+            .no-display {
+                @include media-queries-max-width(small-desktop) {
+                    display: none;
+                    width: 0;
+                }
+            }
 
-
-                 @include media-queries-max-width(small-desktop) {
-                     margin: 2rem 0;
-                 }
-
-                 @include media-queries-max-width(tablet) {
-                     font-size: map-get($font-size, large);
-                 }
-             }
-
+            .no-display--deep {
+                @include media-queries-max-width(large-mobile) {
+                    display: none;
+                }
+            }
              
             // NAV LINKS STATES
             &-item--link:link,
@@ -115,12 +96,6 @@
         @include shadow($color-primary-lighter);
     }
 
-
-.no-display {
-    @include media-queries-max-width(tablet) {
-        display: none;
-    }
-}
 
 
 

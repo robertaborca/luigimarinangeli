@@ -1,12 +1,12 @@
 // fonts
 @mixin font-family($type) {
     @if $type == "special" {
-        font-family: 'Red Hat Display', sans-serif;
+        font-family: 'Libre Baskerville', serif;
         font-optical-sizing: auto;
         font-style: normal;
     }
     @else {
-        font-family: "Nunito Sans", sans-serif;
+        font-family: "Montserrat", serif;
         font-optical-sizing: auto;
         font-style: normal;
     }
