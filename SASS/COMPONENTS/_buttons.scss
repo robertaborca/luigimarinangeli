@@ -9,16 +9,15 @@
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
-    color: $color-white;            
+    color: #dfdfdf;           
     @include shadow($color-primary-darker);
     display: block;
     font-size: map-get($font-size, large);
-    // font-weight: map-get($font-weight, bold);
     border-radius: 1rem;
     min-width: 20rem;
     height: 5.5rem;
     padding: 1.2rem 4.5rem;
-    margin: 2rem;
+    margin-right: 2rem;
     text-transform: uppercase;
     @include font-family("normal");
 
@@ -44,9 +43,18 @@
       box-shadow: none;
   }
 
-    @include media-queries-max-width(tablet) {
-      font-size: map-get($font-size, large);
-    }
+  @include media-queries-max-width(small-desktop) {
+    width: auto;
+    height: auto;
+    padding: 1.4rem;
+    font-size: map-get($font-size, regular);
+  }
+
+  @include media-queries-max-width(medium-tablet) {
+    padding: 1.3rem;
+    font-size: map-get($font-size, small);
+  }
+
  }
 
  

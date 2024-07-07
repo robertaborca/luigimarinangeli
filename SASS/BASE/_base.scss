@@ -49,39 +49,35 @@ body {
 .hero {
     @include flex-columns;
     justify-content: center;
-    gap: 3rem;
+    gap: 4rem;
     position: relative;
     padding: map-get($padding, medium);
     padding-bottom: 0;
+    margin-top: 2rem;
     min-height: 100vh;
-    max-width: 100vw;
+    max-width: 100%;
     color: $color-white;
     z-index: 1;
 
     background-image: url("#{$img-path}luigi-marinangeli-consulente-immobiliare-senigallia-ancona-sfondo.png");
     background-color: $color-white;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 
     @include media-queries-max-width(tablet) {
         background-position: right;
-    }
-
-
-    &__titles-container {
-        @include flex-rows;
-        align-items: center;
-        gap: 3rem;
-        width: 75%;
+        padding: map-get($padding,small);
+        max-height: 100vh;
     }
 
 
     // H1
     &__title {
-        font-size: 3.4rem;
+        font-size: 3rem;
         height: max-content;
         text-transform: uppercase;
+        width: 60%;
         line-height: 1.5;
         flex-basis: 75%;
         opacity: 1;
@@ -94,18 +90,27 @@ body {
         // MEDIA RULES
         @include media-queries-max-width(small-desktop) {
             line-height: 1.5;
+            font-size: 2.2rem;
+        }
+
+        @include media-queries-max-width(tablet) {
+            font-size: 2rem;
         }
 
     }
 
     // HERO H2
     &__h2 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
         font-weight: map-get($font-weight,bold);
         background-image: linear-gradient(to bottom, $color-primary-darker 0%, $color-primary  51%, $color-primary-darker  100%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @include media-queries-max-width(small-desktop) {
+            font-size: 2rem;
+        }
     }
 
     
