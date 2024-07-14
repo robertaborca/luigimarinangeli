@@ -59,9 +59,9 @@ body {
     color: $color-white;
     z-index: 1;
 
-    background-image: url("#{$img-path}luigi-marinangeli-consulente-immobiliare-senigallia-ancona-sfondo.png");
+    background-image: url("#{$img-path}3.jpg");
     background-color: $color-white;
-    background-position: center center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -69,6 +69,13 @@ body {
         background-position: right;
         padding: map-get($padding,small);
         max-height: 100vh;
+    }
+
+    @include media-queries-max-width(large-mobile) {
+        min-height: auto;
+        background-size: cover;
+        gap: 6rem;
+        margin: 3rem 0;
     }
 
 
@@ -81,11 +88,6 @@ body {
         line-height: 1.5;
         flex-basis: 75%;
         opacity: 1;
-        background-image: linear-gradient(to bottom, $color-primary-darker 0%, $color-primary  51%, $color-primary-darker  100%);
-
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
 
         // MEDIA RULES
         @include media-queries-max-width(small-desktop) {
@@ -103,10 +105,7 @@ body {
     &__h2 {
         font-size: 2.5rem;
         font-weight: map-get($font-weight,bold);
-        background-image: linear-gradient(to bottom, $color-primary-darker 0%, $color-primary  51%, $color-primary-darker  100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include font-family("normal");
 
         @include media-queries-max-width(small-desktop) {
             font-size: 2rem;
@@ -114,15 +113,17 @@ body {
     }
 
     
-    // HERO BTNS CONTAINER
+    // BTNS CONTAINERS
         .btn-container {
             @include flex-rows;
             align-items: center;
             justify-content: flex-start;
             flex-basis: 50%;
-
-            @include media-queries-max-width(mobile) {
-            margin-top: 2.5rem;
+            
+            a {
+                @include media-queries-max-width(large-mobile) {
+                    margin-top: 2.5rem;
+                    }
             }
         }
 }
@@ -132,19 +133,170 @@ body {
 
 //ABOUT-MENUS
 .article {
+    display: flex;
+    margin-top: 3rem;
+    gap: 4rem;
     min-height: 100vh;
-    @include flex-rows;
-    justify-content: space-between;
-    padding: map-get($padding, large);
+    padding: map-get($padding,medium);
     
-    opacity: 0;
-    transition: opacity 700ms linear;
     
     // ABOUT SECTION
     &__about {
-        color: $color-secondary;
-        padding-left: map-get($padding, large);
+        @include flex-rows;
+        align-items: center;
+
+        @include media-queries-max-width(small-desktop) {
+            justify-content: center;
+            align-items: flex-start;
+            gap: 6rem;
+        }
+
+        &--h2 {
+            flex-basis: 66%;
+            margin-left: 10%;
+
+            @include media-queries-max-width(small-desktop) {
+                flex-basis: 100%;
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+
+        &--content {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+
+            
+            @include media-queries-max-width(small-desktop) {
+                flex-flow: column-reverse wrap;
+                gap: 4rem;
+            }
+        }
+
+        &--img {
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+            clip-path: polygon(15% 0, 100% 0, 88% 100%, 0% 100%);
+            @include shadow($color-primary-darker);
+        }
+
+        &--text {
+            flex-basis: 35%;
+            max-height: fit-content;
+            box-shadow: -.7px 0px 0px 0px $color-secondary;
+            padding-left: map-get($padding, medium);
+
+            @include media-queries-max-width(small-desktop) {
+                flex-basis: 100%;
+            }
+
+            @include media-queries-max-width(large-mobile) {
+                box-shadow: none;
+            }
+        }
+
+        &--btn--container {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 3rem;
+            margin-left: 10%;
+
+            @include media-queries-max-width(small-desktop) {
+                margin-left: 0;
+            }
+        }
     }
+
+//////////////// SERVIZI SECTION
+
+
+    &__servizi {
+        @include flex-rows;
+        align-items: center;
+        background-color: rgba($color-grey-light, .3);
+
+        &--h2 {
+            margin-left: 10%;
+        }
+
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .cards_item {
+        display: flex;
+        padding: 1rem;
+      }
+      
+      @media (min-width: 40rem) {
+        .cards_item {
+          width: 50%;
+        }
+      }
+      
+      @media (min-width: 56rem) {
+        .cards_item {
+          width: 33.3333%;
+        }
+      }
+      
+      .card {
+        background-color: white;
+        border-radius: 5rem;
+        box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        overflow: hidden;
+        padding: 5rem 3rem 3rem 3rem;
+      }
+      
+      .card_content {
+        padding: 5rem 3rem 2rem 3rem;
+        @include flex-columns;
+        gap: 2rem;
+
+      }
+      
+      .card_title {
+        margin: 0px;
+      }
+      
+      .card_text {
+        line-height: 1.5;
+        margin-bottom: 1.25rem;    
+      }
+
+
+      .icon {    
+        background-image: linear-gradient(to bottom, $color-secondary-dark 0%, $color-secondary  51%, $color-secondary-dark  100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 5.5rem;
+      }
+
+
+
+
+
+
+
+
+
+
     
     // MENUS SECTION 
     &__menus {
@@ -217,10 +369,7 @@ body {
     }
 
     // MEDIA RULES
-    @include media-queries-max-width(medium-desktop) {
-        justify-content: center;
-        text-align: center;
-    }
+
 
     @include media-queries-max-width(medium-tablet) {
         padding: map-get($padding, medium);
@@ -231,19 +380,7 @@ body {
         padding: map-get($padding, small);
     }
     
-    // H2s
-    &__title {
-        color: $color-primary;
-        align-self: flex-start;
-        flex-basis: 100%;
-        margin-bottom: map-get($margin, large);
-
-        // MEDIA RULES
-        @include media-queries-max-width(mobile) {
-            margin-bottom: map-get($margin, medium);
-            margin-top: map-get($margin, medium);
-        }
-    }
+    
     
     // Ps
     &__info {

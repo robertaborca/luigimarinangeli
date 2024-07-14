@@ -1,7 +1,6 @@
 .link {
     position: relative;
-    @include font-family("special");
-    font-size: map-get($font-size, link);
+    font-size: map-get($font-size, large);
 
     &:visited,
     &:link {

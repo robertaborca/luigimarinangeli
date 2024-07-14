@@ -1,12 +1,12 @@
 // fonts
 @mixin font-family($type) {
     @if $type == "special" {
-        font-family: 'Libre Baskerville', serif;
+        font-family: 'Perpetua', serif;
         font-optical-sizing: auto;
         font-style: normal;
     }
     @else {
-        font-family: "Montserrat", serif;
+        font-family: "Dubai", serif;
         font-optical-sizing: auto;
         font-style: normal;
     }

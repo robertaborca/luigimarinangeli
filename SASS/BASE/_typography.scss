@@ -9,7 +9,7 @@ body {
         text-rendering: optimizeLegibility;
         line-height: 1.4;
         letter-spacing: .6px;
-        color: $color-black;
+        color: $color-primary;
 
         @include media-queries-max-width(tablet) {
                 font-size: map-get($font-size, medium);
@@ -24,6 +24,11 @@ h1 {
         @include font-family("special");
         font-size: map-get($font-size, header1);
         font-weight: map-get($font-weight, extra-bold); 
+        
+        background-image: linear-gradient(to bottom, $color-primary-darker 0%, $color-primary  51%, $color-primary-darker  100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
 
         @include media-queries-max-width(tablet) {
                 font-size: map-get($font-size, header2);
@@ -38,6 +43,11 @@ h2 {
         @include font-family("special");
         font-size:map-get($font-size, header2);
         letter-spacing: 2px;
+        text-transform: uppercase;
+        background-image: linear-gradient(to bottom, $color-primary-darker 0%, $color-primary  51%, $color-primary-darker  100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
 
         @include media-queries-max-width(mobile) {
                 font-size: map-get($font-size, header-mobile);
@@ -46,6 +56,12 @@ h2 {
 
 h3 {
         font-size: map-get($font-size, large);
+        text-transform: uppercase;
+        background-image: linear-gradient(to bottom, $color-primary-darker 0%, $color-primary  51%, $color-primary-darker  100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
 }
 
 li {

@@ -19,6 +19,9 @@
     transition: all 80ms ease-out;
     z-index: 999;
 
+    display: flex;
+    justify-content: center;
+
 
     // UL NAV MENU
     &__menu {
@@ -38,6 +41,10 @@
             gap: 1rem;
             width: 90%;
             justify-content: space-around;
+        }
+
+        @include media-queries-max-width(large-mobile) {
+            justify-content: center;
         }
     
             .no-display {

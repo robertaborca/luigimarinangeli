@@ -5,12 +5,14 @@
 
 .footer {
     @include flex-rows;
-    color: rgba($color-white, .85);
-    background-color: $color-secondary;
+    color: rgba($color-secondary-lighter, .85);
+    background-image: linear-gradient(to right, $color-primary-darker 0%, $color-primary  51%, $color-primary-darker  100%);
     margin-top: map-get($margin, medium);
     align-items: center;
     font-size: map-get($font-size, regular);
     max-width: 100%;
+    @include font-family("normal");
+    text-transform: uppercase;
 
     @include media-queries-max-width(mobile) {
         font-size: map-get($font-size, medium);
@@ -65,23 +67,12 @@
         @include flex-rows;
         align-items: center;
         i {
-            color: $color-primary;
+            color: $color-secondary-light;
             font-size: map-get($font-size, large);
             line-height: 2;
             padding-right: map-get($padding, small);
             height: 5rem;
             width: 5rem;
-        }
-    }
-
-    &__license {
-        justify-self: flex-start;
-        flex-basis: 100%;
-        margin-top: map-get($margin, medium);
-        font-size: map-get($font-size, small);
-
-        a {
-            color: $color-white;
         }
     }
 
