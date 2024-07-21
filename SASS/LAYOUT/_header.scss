@@ -22,6 +22,20 @@
     display: flex;
     justify-content: center;
 
+    @include media-queries-max-width(small-desktop) {
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 2rem;
+
+        @include media-queries-max-width(large-mobile) {
+            gap: 1rem;
+        }
+    }
+
 
     // UL NAV MENU
     &__menu {
@@ -30,6 +44,7 @@
         flex-flow: row nowrap;
         align-items: center;
         justify-content: space-evenly;
+        gap: 2rem;
         width: 100%;
 
         @include font-family(normal);
@@ -37,26 +52,29 @@
         letter-spacing: 1.3px;
 
 
-        @include media-queries-max-width(medium-tablet) {
-            gap: 1rem;
-            width: 90%;
-            justify-content: space-around;
+        @include media-queries-max-width(tablet) {
+            justify-content: center;
+            gap: 0;
         }
 
-        @include media-queries-max-width(large-mobile) {
-            justify-content: center;
-        }
+            .no-display--1 {
+                @include media-queries-max-width(medium-desktop) {
+                    display: none;
+                    width: 0;
+                }
+            }
     
-            .no-display {
+            .no-display--2 {
                 @include media-queries-max-width(small-desktop) {
                     display: none;
                     width: 0;
                 }
             }
 
-            .no-display--deep {
-                @include media-queries-max-width(large-mobile) {
+            .no-display--3 {
+                @include media-queries-max-width(tablet) {
                     display: none;
+                    width: 0;
                 }
             }
              

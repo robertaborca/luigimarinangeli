@@ -17,7 +17,6 @@
     min-width: 20rem;
     height: 5.5rem;
     padding: 1.2rem 4.5rem;
-    margin-right: 2rem;
     text-transform: uppercase;
     @include font-family("normal");
 
@@ -52,7 +51,6 @@
 
   @include media-queries-max-width(medium-tablet) {
     padding: 1.3rem;
-    font-size: map-get($font-size, small);
   }
 
  }
