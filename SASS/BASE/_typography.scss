@@ -69,7 +69,3 @@ p {
         font-size: map-get($font-size, regular);
 }
 
-p.footer__title {
-        @include font-family("special");
-        font-size: map-get($font-size, large);
-}

@@ -4,14 +4,11 @@
 @import "../base/animations";
 
 .footer {
-    @include flex-rows;
     color: rgba($color-secondary-lighter, .85);
     background-image: linear-gradient(to right, $color-primary-darker 0%, $color-primary  51%, $color-primary-darker  100%);
     margin-top: map-get($margin, medium);
-    align-items: center;
     font-size: map-get($font-size, regular);
     max-width: 100%;
-    @include font-family("normal");
     text-transform: uppercase;
 
     @include media-queries-max-width(mobile) {
@@ -20,11 +17,11 @@
 
     &__content {
         @include flex-rows;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         padding: map-get($padding, medium);
-        flex-basis: 100%;
         align-items: center;
+        gap: 3rem;
 
         @include media-queries-max-width(small-desktop) {
             padding: map-get($padding, small);
@@ -37,43 +34,9 @@
         }
     }
 
-    &__info {
-        @include flex-columns;
-        gap: 2rem;
-        line-height: 1.6;
-
-        @include media-queries-max-width(tablet) {
-            @include flex-columns;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-
-    &__logo {
-        align-self: center; 
-    }
-
-    &__nav {
-        align-items: center;
-        align-self: flex-end;
-
-        @include media-queries-max-width(tablet) {
-            align-self: center;
-            margin-top: map-get($margin, medium);
-        }
-    }
-
-    &__item {
-        @include flex-rows;
-        align-items: center;
-        i {
-            color: $color-secondary-light;
-            font-size: map-get($font-size, large);
-            line-height: 2;
-            padding-right: map-get($padding, small);
-            height: 5rem;
-            width: 5rem;
-        }
+    &__address{
+        flex-basis: 100%;
+        text-align: center;
     }
 
 }

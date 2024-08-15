@@ -152,7 +152,7 @@ body {
 
 /////////////////////////////////////////////////////////////////////////
 
-//ABOUT-MENUS
+//article
 .article {
     display: flex;
     margin-top: 3rem;
@@ -162,6 +162,11 @@ body {
 
     @include media-queries-max-width(tablet) {
         padding: map-get($padding, small);
+    }
+
+    h2 {
+        margin-left: 10%;
+        text-transform: uppercase; 
     }
     
     
@@ -178,8 +183,6 @@ body {
 
         &--h2 {
             flex-basis: 66%;
-            margin-left: 10%;
-            text-transform: uppercase;
 
             @include media-queries-max-width(small-desktop) {
                 flex-basis: 100%;
@@ -248,12 +251,6 @@ body {
         @include flex-rows;
         align-items: center;
         background-color: rgba($color-grey-light, .3);
-
-        &--h2 {
-            margin-left: 10%;
-            text-transform: uppercase;
-        }
-
     }
 
     .cards {
@@ -321,257 +318,35 @@ body {
         font-size: 5.5rem;
       }
 
-
-    
-    // MENUS SECTION 
-    &__menus {
-        padding-right: map-get($padding, large);
-
-        color: $color-white;
-        text-align: right;
-        background-color: $color-secondary;
-    }
-
-    // MAP SECTION
-    &__map {
-        text-align: right;
-        background-color: $color-primary-dark;
-        color: rgba($color-white, .8);
-        padding: map-get($padding, large);
-        justify-content: space-around;
+      // CONTATTI
+       &__contatti {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
 
         h2 {
-            color: $color-white;
-        }
-    }
-
-    // TIMES SECTION
-    &__times {
-        align-items: center;
-        font-size: map-get($font-size, large);
-        @include font-family("special");
-        padding-left: map-get($padding, large);
-
-    }
-
-    // CHRISTMAS SECTION
-    &__christmas {
-        color: $color-secondary;
-        padding-left: map-get($padding, large);
-        background: linear-gradient( rgba($color-secondary, 0.2), rgba($color-secondary, 0.2) ), url("#{$img-path}pasqua-2024-alla-casa-cantoniera.webp");
-        background-size: cover;
-        background-repeat: no-repeat;
-        color: $color-white;
-        align-items: center;
-
-        // MEDIA RULES
-        @include media-queries-max-width(small-desktop) {
-            background: linear-gradient( rgba($color-secondary, 0.2), rgba($color-secondary, 0.2) ), url("#{$img-path}pasqua-2024-alla-casa-cantoniera--mobile.webp");
-            background-size: cover;
-            background-repeat: no-repeat;
-            color: $color-black;
-            background-color: rgba(255,255,255,.4);
-        }
-
-        @include media-queries-max-width(tablet) {
-            background-position: center;
-        }
-
-        h2 {
-            color: #ca5093;
-            background-color: rgba(255,255,255, .8);
-            flex-basis: 75%;
-            
-
-            @include media-queries-max-width(small-desktop) {
-            color: #ca5093;
-            background-color: rgba(255, 255, 255, .8);
             flex-basis: 100%;
-            }
-            
         }
 
-    }
-    
-    
-    
-    // Ps
-    &__info {
-        line-height: 1.8;
-        letter-spacing: 2px;
-        align-self: center;
-        flex-basis: 30%;
+        &--link {
+            background-image: linear-gradient(to bottom, $color-primary-darker 0%, $color-primary  51%, $color-primary-darker  100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-left: 2rem;
+            text-transform: uppercase;
+        }
 
-        // MEDIA RULES
-        @include media-queries-max-width(medium-desktop) {
+        &--icon-list {
             flex-basis: 100%;
-            text-align: justify;
-            padding: 0 map-get($padding, medium);
+            @include flex-rows;
+            justify-content: space-evenly;
         }
 
-        @include media-queries-max-width(medium-tablet) {
-            padding: 0 map-get($padding, tiny);
-        }
+       }
 
-        @include media-queries-max-width(mobile) {
-            text-align:left;
-        }
-        
-        // ABOUT PARAGRAPH
-        &--about {
-            color: rgba($color-secondary, .78);
-
-            // MEDIA RULES
-            @include media-queries-max-width(medium-desktop) {
-                margin-bottom: map-get($margin, medium);
-            }
-        }
-        
-        // MENUS PARAGRAPH
-        &--menus {
-            color: rgba($color-white, .8);
-            background-color: rgba($color-secondary, .6);
-            justify-self: flex-end;
-
-            // MEDIA RULES
-            @include media-queries-max-width(medium-desktop) {
-                margin-top: map-get($margin, medium);
-            }
-
-            @include media-queries-max-width(medium-desktop) {
-                margin-bottom: map-get($margin, small);
-            }
-        }
-
-        // MAP PARAGRAPH
-        &--map {
-            @include media-queries-max-width(medium-desktop) {
-                margin-top: map-get($margin, medium);
-            }
-        }
-
-        // TIMES PARAGRAPH
-        &--times {
-            padding: map-get($padding, small);
-            border: 1px solid $color-primary;
-
-            // MEDIA RULES
-            @include media-queries-max-width(medium-desktop) {
-                margin-bottom: map-get($margin, medium);
-            }
-        }
-
-        // CHRISTMAS PARAGRAPH
-        &--christmas {
-            justify-self: flex-end;
-            flex-basis: 60%;
-            color: $color-black;
-            font-size: 2rem;
-            background-color: rgba(rgba($color-white, .3), .3);
-            padding: 5rem;
-            
-
-            // MEDIA RULES
-            @include media-queries-max-width(small-desktop) {
-                flex-basis: 80%;
-                color: $color-black;
-                text-align: center;
-
-            }
-
-            @include media-queries-max-width(medium-tablet) {
-                flex-basis: 100%;
-                margin-bottom: map-get($margin, medium);
-
-            }
-        }
-    }
-
-    // IMAGES
-    &__image {
-        @include shadow($color-secondary);
-        outline: none;
-        transition: outline 200ms linear;
-        object-fit: contain;
-        object-position: center;
-        width: 100%;
-        height: auto;
-
-        &--right {
-            justify-self: flex-end;
-        }
-
-        &--left {
-            justify-self: flex-start;
-        }
-
-        &:hover {
-            outline: 1px solid $color-white;
-            outline-offset: -5rem;
-        }
-    }
-
-    // ARTICLES' LINKS
-    &__link {
-        flex-basis: 100%;
-        align-self: flex-end;
-        
-        // MEDIA RULES
-        @include media-queries-max-width(mobile) {
-            margin-bottom: map-get($margin, medium);
-        }
-        
-        //ABOUT LINK
-        &--about,
-        &--christmas {
-            padding-left: map-get($padding, medium);
-            text-align: left; 
-        }
-
-        &--christmas {
-                background-color: rgba(#ca5093, .8);
-                color: $color-white!important;  
-                flex-basis: 75%;
-                
-                @include media-queries-max-width(mobile) {
-                    flex-basis: 100%;
-                }
-         }
-
-        &--about {
-            @include media-queries-max-width(medium-desktop) {
-                margin-top: map-get($margin, small);
-                color: $color-white;
-            }
-        }
-        
-        // MENUS LINK
-        &--menus {
-            justify-self: flex-start;
-            padding-right: map-get($padding, huge);
-            text-align: right;
-        }
-
-        // MAP LINK
-        &--map {
-            padding-right: map-get($padding, huge);
-        }
-        
-    }
+    
     
 }
-
-// SHOW ON SCROLL - GETS ADDED BY JS
-.show {
-    opacity: 1;
-}
-
-
-
-
-
-
-
 
 
 // LINKS TAB NAV ACCESSIBILITY
