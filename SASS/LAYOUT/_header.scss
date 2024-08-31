@@ -14,7 +14,7 @@
     overflow: hidden;
     top:0;
     width: 100%;
-    padding: map-get($padding, small);
+    padding: map-get($padding, tiny);
     opacity: 0.96;
     transition: all 80ms ease-out;
     z-index: 999;

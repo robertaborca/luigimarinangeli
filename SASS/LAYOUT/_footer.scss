@@ -19,7 +19,7 @@
         @include flex-rows;
         justify-content: center;
         align-items: center;
-        padding: map-get($padding, medium);
+        padding: map-get($padding, tiny);
         align-items: center;
         gap: 3rem;
 

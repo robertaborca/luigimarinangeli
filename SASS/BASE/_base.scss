@@ -53,7 +53,6 @@ body {
     position: relative;
     padding: map-get($padding, medium);
     padding-bottom: 0;
-    margin-top: 2rem;
     min-height: 100vh;
     max-width: 100%;
     color: $color-white;
@@ -155,14 +154,10 @@ body {
 //article
 .article {
     display: flex;
-    margin-top: 3rem;
+    // margin-top: 3rem;
     gap: 4rem;
     min-height: 100vh;
     padding: map-get($padding,medium);
-
-    @include media-queries-max-width(tablet) {
-        padding: map-get($padding, small);
-    }
 
     h2 {
         margin-left: 10%;
@@ -181,6 +176,10 @@ body {
             gap: 6rem;
         }
 
+        @include media-queries-max-width(tablet) {
+            font-size: 2rem;
+        }
+
         &--h2 {
             flex-basis: 66%;
 
@@ -189,6 +188,16 @@ body {
                 margin-left: 0;
                 text-align: center;
             }
+        }
+
+        &--h3 {
+            margin-left: 10%;
+            text-transform: lowercase;
+            
+            background-image: linear-gradient(to left, $color-secondary 0%, $color-secondary  75%, $color-secondary-light  100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         &--content {
@@ -250,7 +259,13 @@ body {
     &__servizi {
         @include flex-rows;
         align-items: center;
-        background-color: rgba($color-grey-light, .3);
+        background-color: rgba($color-grey-light, 1);
+
+        @include media-queries-max-width(tablet) {
+            padding: map-get($padding, tiny);
+          }
+
+        
     }
 
     .cards {
@@ -262,68 +277,99 @@ body {
         list-style: none;
         margin: 0;
         padding: 0;
-      }
+
+        .card {
+            background-color: white;
+            border-radius: 5rem;
+            box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: flex-end;
+            overflow: hidden;
+            padding: 3rem 1rem 1rem 1rem;
+            text-align: justify;
+    
+            &_text {
+                font-size: 1.5rem;
+                line-height: 1.5;
+                margin-bottom: 1.25rem; 
+            }
+    
+            &_content {
+                padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+                @include flex-columns;
+                gap: 2rem;
+            }
+    
+            &_title {
+                margin: 0px;
+            }
+    
+            .icon {    
+                background-image: linear-gradient(to left, $color-secondary 0%, $color-secondary  75%, $color-secondary-light  100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 4rem;
+               }
+          }
+      
       
       .cards_item {
         display: flex;
         padding: 1rem;
-      }
-      
-      @media (min-width: 40rem) {
-        .cards_item {
-          width: 50%;
+
+
+        @include media-queries-max-width(medium-desktop) {
+          flex-basis: 50%;
         }
-      }
-      
-      @media (min-width: 56rem) {
-        .cards_item {
-          width: 33.3333%;
+
+        @include media-queries-max-width(tablet) {
+            flex-basis: 100%;
+            font-size: 3rem;
+          }
+        
+        @include media-queries-min-width(medium-desktop) {
+            flex-basis: 33.3333%;
+
         }
-      }
-      
-      .card {
-        background-color: white;
-        border-radius: 5rem;
-        box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: flex-end;
-        overflow: hidden;
-        padding: 5rem 3rem 3rem 3rem;
-      }
-      
-      .card_content {
-        padding: 5rem 3rem 2rem 3rem;
-        @include flex-columns;
-        gap: 2rem;
 
       }
-      
-      .card_title {
-        margin: 0px;
-      }
-      
-      .card_text {
-        line-height: 1.5;
-        margin-bottom: 1.25rem;    
-      }
 
+    }
 
-      .icon {    
-        background-image: linear-gradient(to left, #AE8C63 0%, #AE8C63  75%, $color-secondary-light  100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 5.5rem;
-      }
 
       // CONTATTI
        &__contatti {
         flex-flow: row wrap;
-        justify-content: space-evenly;
+        align-items: flex-start;
+        justify-content: center;
+
 
         h2 {
+            flex-basis: 100%;
+        }
+
+        h3 {
+            text-align: left;
+        }
+
+        &--indirizzo {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            gap: 2rem;
+            flex-basis: 40%;
+
+            &_titolo {
+                display: flex;
+                flex-flow: row nowrap;
+                gap: 3rem;
+            }
+        }
+
+        &--address {
             flex-basis: 100%;
         }
 
@@ -338,15 +384,206 @@ body {
 
         &--icon-list {
             flex-basis: 100%;
-            @include flex-rows;
-            justify-content: space-evenly;
+            @include flex-columns;
+            gap: 2rem;
+
+            .icon {
+              font-size: 3rem;
+              background-image: linear-gradient(to left, $color-secondary 0%, $color-secondary  75%, $color-secondary-light  100%);
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
         }
-
-       }
-
-    
+    }
     
 }
+  
+  .screen {
+    position: relative;
+    background: $color-white;
+    border-radius: 15px;
+  }
+  
+  .screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    z-index: -1;
+  }
+  
+  .screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-image: linear-gradient(to bottom, $color-primary-darker 0%, $color-primary  51%, $color-primary-darker  100%);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .screen-header-left {
+    margin-right: auto;
+  }
+  
+  .screen-header-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-radius: 8px;
+    background: white;
+  }
+  
+  .screen-header-button.close {
+    background: $color-white;
+  }
+  
+  .screen-header-button.maximize {
+    background: rgba($color-white, .7);
+  }
+  
+  .screen-header-button.minimize {
+    background: rgba($color-white, .5);
+  }
+  
+  .screen-header-right {
+    display: flex;
+  }
+  
+  .screen-header-ellipsis {
+    width: 3px;
+    height: 3px;
+    margin-left: 2px;
+    border-radius: 8px;
+    background: rgba($color-white, .5);
+  }
+  
+  .screen-body {
+    display: flex;
+  }
+  
+  .screen-body-item {
+    flex: 1;
+    padding: 50px;
+  }
+  
+  .screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: $color-secondary;
+    font-size: 26px;
+  }
+  
+  .app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: $color-secondary;
+  }
+  
+  .app-form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .app-form-group.message {
+    margin-top: 4rem;
+  }
+  
+  
+  .app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid $color-secondary;
+    color: #ddd;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+  }
+  
+  .app-form-control::placeholder {
+    color: #666;
+  }
+  
+  .app-form-control:focus {
+    border-bottom-color: $color-tertiary;
+  }
+
+  .buttons {
+    @include flex-rows;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 3rem;
+  }
+  
+  .app-form-button {
+    background: none;
+    border: none;
+    color: $color-primary;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.8rem!important;
+  }
+
+  
+  .app-form-button:hover {
+    color: $color-tertiary;
+  }
+  
+  
+  @media screen and (max-width: 520px) {
+    .screen-body {
+      flex-direction: column;
+    }
+  
+    .screen-body-item.left {
+      margin-bottom: 30px;
+    }
+  
+    .app-title {
+      flex-direction: row;
+    }
+  
+    .app-title span {
+      margin-right: 12px;
+    }
+  
+    .app-title:after {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .screen-body {
+      padding: 40px;
+    }
+  
+    .screen-body-item {
+      padding: 0;
+    }
+  }
+  
+
+
+
 
 
 // LINKS TAB NAV ACCESSIBILITY
