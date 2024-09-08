@@ -78,8 +78,9 @@ p {
         font-size: map-get($font-size, regular);
 
         @include media-queries-max-width(tablet) {
-                font-size: 1.8rem;
+                font-size: 2rem;
         }
+
 
 }
 
