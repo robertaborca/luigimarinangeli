@@ -1,7 +1,7 @@
 // fonts
 @mixin font-family($type) {
     @if $type == "special" {
-        font-family: 'Perpetua', serif;
+        font-family: 'Great Vibes', cursive;
         font-optical-sizing: auto;
         font-style: normal;
     }

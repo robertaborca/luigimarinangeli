@@ -1,6 +1,6 @@
 .link {
     position: relative;
-    font-size: map-get($font-size, large);
+    font-size: 1.8rem;
 
     &:visited,
     &:link {
@@ -28,9 +28,6 @@
       margin-left: map-get($margin, medium);
     }
 
-    @include media-queries-max-width(mobile) {
-      font-size: 4rem;
-    }
     
   }
   

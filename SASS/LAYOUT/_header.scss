@@ -47,7 +47,7 @@
         gap: 2rem;
         width: 100%;
 
-        @include font-family(normal);
+        @include font-family("normal");
         text-transform: uppercase;
         letter-spacing: 1.3px;
 
