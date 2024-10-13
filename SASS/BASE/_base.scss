@@ -40,7 +40,7 @@ body {
     flex-basis: 100%;
 }
 
-#main {
+.main {
     padding-top: map-get($padding,large);
 }
 
@@ -619,6 +619,8 @@ body {
           .swiper-pagination-bullet-active{
             background-color: $color-primary;
           }
+
+          
           
           @media screen and (max-width: 768px) {
             .slide-content{

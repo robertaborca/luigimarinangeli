@@ -70,15 +70,12 @@ h3 {
 
 }
 
-li {
-        font-size: map-get($font-size, regular);
-}
 
-p {
+p, li {
         font-size: map-get($font-size, regular);
 
         @include media-queries-max-width(tablet) {
-                font-size: 2rem;
+                font-size: 1.8rem;
         }
 
 

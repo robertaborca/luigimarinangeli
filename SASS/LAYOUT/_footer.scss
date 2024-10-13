@@ -10,6 +10,7 @@
     font-size: map-get($font-size, regular);
     max-width: 100%;
     text-transform: uppercase;
+    padding: map-get($padding, small);
 
     @include media-queries-max-width(mobile) {
         font-size: map-get($font-size, medium);
