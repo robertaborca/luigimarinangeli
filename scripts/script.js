@@ -14,6 +14,13 @@ document.querySelectorAll("button.read-more").forEach(function(button) {
 button.addEventListener( 'click' , changeClass);
 });
 
+function dots() {
+  var dots = document.getElementsByClassName("dots");
+  for (var i = 0; i < dots.length; i++) {
+    dots[i].classList.toggle("hidden-dots");
+  }
+}
+
             
 function changeClass() {
   var content = document.getElementsByClassName("more");
@@ -24,16 +31,13 @@ function changeClass() {
     var buttonText = content[i].classList.contains("show") ? "Mostra meno -" : "Mostra di più +";
     buttons.forEach(function(button) {
       button.innerHTML = buttonText;
-      var dots = document.getElementsByClassName("dots");
-      for (var i = 0; i < dots.length; i++) {
-        dots[i].classList.toggle("hidden-dots");
-      }
     });
   }
+
+  dots();
 }
 
-
- 
+// SWIPER IMMOBILI
 var swiper = new Swiper(".slide-content", {
   slidesPerView: 3,
   spaceBetween: 25,

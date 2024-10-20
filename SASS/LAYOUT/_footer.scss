@@ -8,7 +8,7 @@
     background-image: linear-gradient(to right, $color-primary-darker 0%, $color-primary  51%, $color-primary-darker  100%);
     margin-top: map-get($margin, medium);
     font-size: map-get($font-size, regular);
-    max-width: 100%;
+    width: 100vw;
     text-transform: uppercase;
     padding: map-get($padding, small);
     @include flex-rows;
@@ -16,6 +16,28 @@
 
     @include media-queries-max-width(mobile) {
         font-size: map-get($font-size, medium);
+    }
+
+    &__title {
+        text-align: left;
+        font-size: map-get($font-size, large);
+        line-height: 1.1;
+
+        i {
+            font-weight: 400;
+            font-size: map-get($font-size, medium);
+        }
+
+        span {
+            font-size: 1rem;
+            letter-spacing: 5px;
+        }
+    }
+
+    &__address, &__times {
+        flex-basis: 100%;
+        font-size: 1.4rem;
+
     }
 
     &__content {
@@ -43,6 +65,7 @@
 
         a {
             background-image: linear-gradient(to left, $color-secondary-light 0%, $color-secondary  75%, $color-secondary-light 100%);
+            font-size: 1.4rem;
         }
 
         li {
@@ -52,15 +75,6 @@
         @include media-queries-max-width(tablet) {
             gap: 1.5rem;
         }
-    }
-
-    &__times {
-        flex-basis: 100%;
-    }
-
-    &__address{
-        flex-basis: 100%;
-        text-align: center;
     }
 
 }

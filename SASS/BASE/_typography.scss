@@ -74,10 +74,25 @@ h3 {
 p, li {
         font-size: map-get($font-size, regular);
 
-        @include media-queries-max-width(tablet) {
+        @include media-queries-max-width(mobile) {
                 font-size: 2rem;
         }
 
+
+}
+
+strong {
+        font-family: "SUSE", sans-serif;
+        font-size: map-get($font-size, medium);
+        background-image: linear-gradient(to left, $color-secondary 0%, $color-secondary  75%, $color-secondary-light  100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include media-queries-max-width(mobile) {
+                font-size: map-get($font-size, large);
+              }
+                
 
 }
 
