@@ -13,14 +13,17 @@
     right: 0;
     overflow: hidden;
     top:0;
-    width: 100%;
+    width: 100vw;
     padding: map-get($padding, tiny);
     opacity: 0.96;
-    transition: all 80ms ease-out;
     z-index: 999;
+    @include shadow($color-primary-lighter);
 
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    transition: all ease-in-out;
 
     @include media-queries-max-width(small-desktop) {
         justify-content: space-between;
@@ -60,21 +63,18 @@
             .no-display--1 {
                 @include media-queries-max-width(medium-desktop) {
                     display: none;
-                    width: 0;
                 }
             }
     
             .no-display--2 {
                 @include media-queries-max-width(small-desktop) {
                     display: none;
-                    width: 0;
                 }
             }
 
             .no-display--3 {
                 @include media-queries-max-width(tablet) {
                     display: none;
-                    width: 0;
                 }
             }
              
@@ -117,8 +117,56 @@
 
     }
 
-    .scrolled {
-        @include shadow($color-primary-lighter);
+    .nav-icon {
+        display: none;
+
+        @include media-queries-max-width(tablet) {
+            display: block;
+        }
+    }
+
+    .responsive {
+
+        @include media-queries-max-width(tablet) {
+
+            @include flex-columns;
+        padding: 3rem;
+        background-color: $color-primary;
+        color: $color-white;
+        opacity: 1;
+
+        .no-display--3 {
+            display: block;
+        }
+
+        .navbar__menu {
+            @include flex-columns;
+            align-items: flex-start;
+            gap: 2rem;
+
+            li a {
+                color: $color-white!important;
+            }
+        }
+
+        #hamburger {
+            color: $color-white!important;
+        }
+
+        .navbar__logo {
+            width: 100%;
+            padding: 1rem;
+            background-color: $color-white;
+            opacity: 0.9;
+
+        }
+
+        .navbar__menu-item--link:visited::after {
+            background-color: $color-secondary;
+        }
+
+        }
+        
     }
 
 

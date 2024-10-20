@@ -1,14 +1,3 @@
-
-// SCROLLING SHADOW
-var navBar = document.getElementById("navBar");
-            window.onscroll = function() {
-              if (window.scrollY > 22) {
-                navBar.classList.add("scrolled");
-              } else {
-                navBar.classList.remove("scrolled");
-              }
-            };
-
 // READ MORE BTNS
 document.querySelectorAll("button.read-more").forEach(function(button) {
 button.addEventListener( 'click' , changeClass);

@@ -22,27 +22,31 @@
       padding: map-get($padding, medium);
     }
 
+    @include media-queries-max-width(tablet) {
+      padding: 2rem;
+    }
+
     h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       text-transform: uppercase;
 
       @include media-queries-max-width(small-desktop) {
-        font-size: 2rem;
+        font-size: 3rem;
       }
       @include media-queries-max-width(small-desktop) {
-        font-size: 1.9rem;
+        font-size: 2.5rem;
       }
     }
 
     h2 {
-      font-size: 2.3rem;
+      font-size: 2.8rem;
 
       @include media-queries-max-width(small-desktop) {
-        font-size: 1.9rem;
+        font-size: 2.5rem;
       }
 
       @include media-queries-max-width(tablet) {
-        font-size: 1.7rem;
+        font-size: 2rem;
       }
     }
 }
@@ -89,7 +93,7 @@
   margin-bottom: 1rem;
 
   @include media-queries-max-width(tablet) {
-    font-size: map-get($font-size, regular);
+    font-size: 1.8rem;
   }
 }
 
