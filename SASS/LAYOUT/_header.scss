@@ -34,8 +34,13 @@
         flex-flow: row nowrap;
         gap: 2rem;
 
+        @include media-queries-max-width(tablet) {
+            margin-left: 5rem;
+        }
+
         @include media-queries-max-width(large-mobile) {
             gap: 1rem;
+            margin-left: 2rem;
         }
     }
 
@@ -119,9 +124,15 @@
 
     .nav-icon {
         display: none;
+        font-size: 2.8rem;
+        margin-right: 5rem;
 
         @include media-queries-max-width(tablet) {
             display: block;
+        }
+
+        @include media-queries-max-width(large-mobile) {
+            margin-right: 2rem;
         }
     }
 
@@ -129,14 +140,14 @@
 
         @include media-queries-max-width(tablet) {
 
-            @include flex-columns;
-        padding: 3rem;
+        @include flex-columns;
         background-color: $color-primary;
         color: $color-white;
         opacity: 1;
 
         .no-display--3 {
             display: block;
+            margin-left: 3rem;
         }
 
         .navbar__menu {
@@ -151,13 +162,13 @@
 
         #hamburger {
             color: $color-white!important;
+            margin: 0;
         }
 
         .navbar__logo {
             width: 100%;
-            padding: 1rem;
-            background-color: $color-white;
             opacity: 0.9;
+            margin: 0;
 
         }
 
@@ -167,6 +178,11 @@
 
         }
         
+    }
+
+    .hide {
+        display: none;
+        transition: all linear 3ms;
     }
 
 

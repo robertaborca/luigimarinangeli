@@ -91,8 +91,10 @@ strong {
 
         @include media-queries-max-width(mobile) {
                 font-size: map-get($font-size, large);
-              }
-                
+              }             
+}
 
+.blue {
+        background-image: linear-gradient(to left, $color-primary 0%, $color-primary  75%, $color-primary-lighter 100%);
 }
 

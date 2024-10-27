@@ -51,7 +51,7 @@
     }
 }
 
-.property-hero, .property-description, .property-features, .icon-list, .property-card {
+.property-hero, .property-description, .property-features, .icon-list, .property-card, .specific {
   background-color: rgba($color-white, .6);
   padding: 3rem;
   border: 1px solid rgba($color-secondary, .7);
@@ -292,6 +292,16 @@
   }
 }
 
+.specific ul {
+  @include flex-columns;
+  gap: 1rem;
+
+  li {
+    @include flex-rows;
+    gap: 2rem;
+  }
+}
+
 .property--contacts {
   @include flex-rows;
   justify-content: center;
@@ -305,5 +315,7 @@
        height: 40rem;
      }
    }
+
+
 
 
