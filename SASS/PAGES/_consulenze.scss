@@ -1,0 +1,24 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/maps";
+@import "../base/animations";
+
+.consulenza-fast, .consulenza-personalizzata {
+    padding: 15rem;
+    @include flex-rows;
+    align-items: center;
+    background-color: $color-grey-light;
+
+    .property-link {
+        margin-bottom: 5rem;
+    }
+
+    .property-hero {
+        margin-bottom: 5rem;
+    }
+}
+
+iframe {
+    width: 100%;
+    min-height: max-content;
+}

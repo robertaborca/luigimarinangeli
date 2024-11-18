@@ -49,6 +49,11 @@
         font-size: 2rem;
       }
     }
+
+    h3 {
+        text-align: left;
+        font-size: 2rem;
+    }
 }
 
 .property-hero, .property-description, .property-features, .icon-list, .property-card, .specific {
@@ -96,6 +101,7 @@
     font-size: 1.8rem;
   }
 }
+
 
 
 .property-description {
@@ -243,6 +249,16 @@
 
 .dot {
   background-color: $color-secondary!important;
+}
+
+.flickity-page-dots {
+  @include media-queries-max-width(tablet) {
+    bottom: -50px;
+  }
+
+  @include media-queries-max-width(mobile) {
+    bottom: -70px;
+  }
 }
 
 .flickity-button-icon {
