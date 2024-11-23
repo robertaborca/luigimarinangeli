@@ -3,11 +3,17 @@
 @import "../abstracts/maps";
 @import "../base/animations";
 
+.consulenze-body {
+    background-color: $color-grey-light;
+
+}
+
 .consulenza-fast, .consulenza-personalizzata {
     padding: 15rem;
     @include flex-rows;
     align-items: center;
-    background-color: $color-grey-light;
+    justify-content: center;
+
 
     .property-link {
         margin-bottom: 5rem;
@@ -15,6 +21,10 @@
 
     .property-hero {
         margin-bottom: 5rem;
+    }
+
+    h1 {
+        font-size: 4rem;
     }
 }
 

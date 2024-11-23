@@ -9,6 +9,7 @@ const link3= document.getElementById("link-3");
 
 
 function navBar() {
+    void(0);
       navigationBar.classList.toggle("responsive");
       navLogo1.classList.toggle("hide");
       navLogo2.classList.toggle("hide");

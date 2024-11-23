@@ -36,50 +36,57 @@
     <body>
         <!--HEADER-->
         <header>
-            <nav class="navbar" id="navBar" role="menu">
+            <nav class="navbar" id="navBar" aria-label="Contenitore del menù di navigazione">
                 <!--MENU-->
-                <ul class="navbar__menu" id="menu" role="menu" aria-label="navigation-menu">
+                <ul class="navbar__menu" id="menu" role="menu" aria-label="menù di navigazione">
 
-                    <li class="navbar__menu-item navbar__logo" role="none">
+                    <li class="navbar__menu-item navbar__logo" role="menuitem" aria-label="elemento del menù di navigazione">
                         <!--LOGO-->
-                        <a href="#">
+                        <a href="./index.html" aria-label="Link alla home page" aria-current="page">
                         <img src="IMG/luigi-marinangeli-consulente-immobiliare-logo-piccolo.svg" alt="Logo Luigi Marinangeli" class="navbar__img" width="60" height="60">
                         </a>
                         <img id="logo-1" src="IMG/luigi-marinangeli-consulente-immobiliare-ancona-firma.svg" alt="Firma di Luigi Marinangeli" class="navbar__signature"  width="180" height="60">
                         <img id="logo-2" src="IMG/luigi-marinangeli-consulente-immobiliare-ancona-firma-gold.svg" alt="Firma di Luigi Marinangeli" class="navbar__signature hide"  width="180" height="60">
                     </li>                    
-                    <li class="navbar__menu-item" role="none">
-                        <a href="#chi-sono" class="navbar__menu-item--link no-display--1" role="menuitem" tabindex="0">
+                    <li class="navbar__menu-item" role="menuitem" aria-label="elemento del menù di navigazione">
+                        <a href="#chi-sono" class="navbar__menu-item--link no-display--1" aria-label="Link alla sezione 'Chi sono' di questa pagina" tabindex="0">
                             Chi sono
                         </a>
                     </li>
 
-                    <li class="navbar__menu-item" role="none">
-                        <a href="#i-miei-servizi" class="navbar__menu-item--link no-display--2" role="menuitem" tabindex="0">
+                    <li class="navbar__menu-item" role="menuitem" aria-label="elemento del menù di navigazione">
+                        <a href="#i-miei-servizi" class="navbar__menu-item--link no-display--2" aria-label="Link alla sezione 'I miei servizi' di questa pagina" tabindex="0">
                             I miei servizi
                         </a>
                     </li>
 
-                    <li class="navbar__menu-item" role="none">
-                        <a href="#consulenze" id="link-1" class="navbar__menu-item--link no-display--3" role="menuitem" tabindex="0">
+                    <li class="navbar__menu-item" role="menuitem" aria-label="elemento del menù di navigazione">
+                        <a href="#consulenze" id="link-1" class="navbar__menu-item--link no-display--3" aria-label="Link alla sezione 'Consulenze' di questa pagina" tabindex="0">
                             Consulenze
                         </a>
                     </li>
 
-                    <li class="navbar__menu-item" role="none">
-                      <a href="#immobili" id="link-2" class="navbar__menu-item--link no-display--3" role="menuitem" tabindex="0">
+                    <li class="navbar__menu-item" role="menuitem" aria-label="elemento del menù di navigazione">
+                      <a href="#immobili" id="link-2" class="navbar__menu-item--link no-display--3" tabindex="0" aria-label="Link alla sezione 'I miei immobili' di questa pagina">
                           I miei immobili
                       </a>
                   </li>
 
-                    <li class="navbar__menu-item" role="none">
-                        <a href="#contatti" id="link-3" class="navbar__menu-item--link no-display--3" role="menuitem" tabindex="0">
+                    <li class="navbar__menu-item" role="menuitem" aria-label="elemento del menù di navigazione">
+                        <a href="#contatti" id="link-3" class="navbar__menu-item--link no-display--3" aria-label="Link alla sezione 'Contatti' di questa pagina" tabindex="0">
                             Contatti
                         </a>
                     </li>
                 </ul>
-                <a href="javascript:void(0);" class="nav-icon" id="hamburger">
-                  <i class="fa fa-bars"></i>
+                <a href="#" class="nav-icon" id="hamburger" 
+                data-toggle="collapse" 
+                data-target="#menu" 
+                aria-controls="menu" 
+                aria-haspopup="menu"
+                aria-expanded="true"
+                aria-label="Chiudi o apri il menù di navigazione"
+                tabindex="0">
+                  <i title="menu ad hamburger" class="fa fa-bars"></i>
                 </a>
             </nav>
         </header>
@@ -88,7 +95,7 @@
         <main class="main">
 
             <!--HERO-->
-            <article class="hero">
+            <article class="hero" aria-label="banner">
                     <h2 class="hero__h2"><span>I</span>l mio lavoro, la mia passione.</h2>
                     <h1 class="hero__title">Sono Luigi, e ti guido nella vendita del tuo immobile.</h1>
                     <div class="btn-container">
@@ -101,7 +108,7 @@
             </article>
             <!-- HERO ENDS -->
 
-            <article id="chi-sono" class="article article__about">
+            <article id="chi-sono" class="article article__about" aria-roledescription="Sezione 'Chi sono'">
                 <h2 class="article__about--h2">Chi sono</h2>
                 <h3 class="article__about--h3">Da più di 40 anni nel settore immobiliare come titolare di agenzia.</h3>
                 
@@ -118,20 +125,20 @@
                     <br>Perché vendere o comprare casa è un lavoro che va fatto su misura, con ascolto, meticolosità e attenzione. <span class="span span--6"><br>NESSUN COMPROMESSO SULLA QUALITA'.</span>
                       <br><span class="span span--7">Scegli di farlo insieme a me.</span></span>
                     </p>
-                    <button class="read-more">Mostra di più +</button>
+                    <button class="read-more" aria-label="Clicca per allungare o accorciare il testo">Mostra di più +</button>
 
                   </div>
                     <figure>
-                        <img src="IMG/luigi-marinangeli-consulente-immobiliare-ancona-senigallia-acquisto-case.webp" class="article__about--img" alt="Foto a mezzo di busto di Luigi Marinangeli consulente immobiliare ad Ancona e Senigallia">
+                        <img src="IMG/luigi-marinangeli-consulente-immobiliare-ancona-senigallia-acquisto-case.webp" class="article__about--img" alt="Foto a mezzo di busto di Luigi Marinangeli consulente immobiliare ad Ancona e Senigallia" height="500px" width="333px">
                     </figure>
                 </div>
 
                 <div class="btn-container article__about--btn--container">
                     <!-- ABOUT BTN -->
-                    <a href="#consulenze" class="btn article__about--btn">Consulenze
+                    <a href="#consulenze" aria-label="Link alla sezione consulenze di questa pagina" class="btn article__about--btn">Consulenze
                     </a>
                         
-                    <a id="button-contatti" href="#contatti" class="btn  article__about--btn">Contatti</a> 
+                    <a id="button-contatti" aria-label="Link alla sezione contatti della pagina" href="#contatti" class="btn article__about--btn">Contatti</a> 
                 </div>
             </article>
             <!-- ABOUT ENDS -->
@@ -140,7 +147,7 @@
 
             <!-- SERVIZI STARTS -->
              <div class="order">
-            <article id="i-miei-servizi" class="grey article article__servizi">
+            <article id="i-miei-servizi" class="grey article article__servizi" aria-roledescription="Sezione 'I miei servizi'">
                 <h2 class="article__servizi--h2">I miei servizi</h2>
                 <ul class="cards">
                     <li class="cards_item">
@@ -152,7 +159,7 @@
                             l’ubicazione dell’immobile, l’andamento attuale del mercato, i valori delle
                             compravendite ed altri importanti fattori, darà il giusto prezzo della tua
                             casa.</span></p>
-                            <button class="read-more">Mostra di più +</button>
+                            <button class="read-more" aria-label="Clicca per leggere di più">Mostra di più +</button>
                         </div>
                         <i class="icon fa-solid fa-chart-line"></i>
                       </div>
@@ -165,7 +172,7 @@
                               valorizzare al meglio il tuo immobile. Il servizio che offro serve a<span class="dots"> ...</span><span class="more"> mettere
                               in luce le potenzialità della tua casa, incrementandone la visibilità online e
                               aumentando il grado di interesse dei potenziali acquirenti.</span></p>
-                            <button class="read-more">Mostra di più +</button>
+                            <button class="read-more" aria-label="Clicca per leggere di più">Mostra di più +</button>
                           </div>
                           <i class="icon fa-solid fa-camera-retro"></i>
                         </div>
@@ -177,7 +184,7 @@
                             <p class="card_text">Utilizzo diversi strumenti di promozione e marketing per dare extra-
                               visibilità al tuo immobile. La tua casa sarà inoltre<span class="dots"> ...</span><span class="more"> presente sui principali
                               portali immobiliari per favorire un rapido incontro tra domanda e offerta.</span></p>
-                            <button class="read-more">Mostra di più +</button>
+                            <button class="read-more" aria-label="Clicca per leggere di più">Mostra di più +</button>
                           </div>
                           <i class="icon fa-regular fa-clipboard"></i>
                         </div>
@@ -191,7 +198,7 @@
                               l’arte di preparare<span class="dots"> ...</span><span class="more"> il tuo immobile alla vendita valorizzandone gli
                               ambienti. È nei primi minuti della visita che si decide l’acquisto della tua
                               casa.</span></p>
-                            <button class="read-more">Mostra di più +</button>
+                            <button class="read-more" aria-label="Clicca per leggere di più">Mostra di più +</button>
                           </div>
                           <i class="icon fa-solid fa-house-chimney"></i>
                         </div>
@@ -204,7 +211,7 @@
                               gestire in maniera professionale. Il mio metodo permette di selezionare i<span class="dots"> ...</span><span class="more"> 
                                 potenziali acquirenti ben prima di invitarli all’open house. Le percentuali
                               di successo sono cosi elevatissime.</span></p>
-                            <button class="read-more">Mostra di più +</button>
+                            <button class="read-more" aria-label="Clicca per leggere di più">Mostra di più +</button>
                           </div>
                           <i class="icon fa-solid fa-door-open"></i>
                         </div>
@@ -217,7 +224,7 @@
                               il prodotto creditizio<span class="dots"> ...</span><span class="more">più adatto alle esigenze dell’acquirente. Un
                               passaggio importante per dare certezze all’acquirente e tranquillità al
                               venditore.</span></p>
-                            <button class="read-more">Mostra di più +</button>
+                            <button class="read-more" aria-label="Clicca per leggere di più">Mostra di più +</button>
                           </div>
                           <i class="icon fa-solid fa-handshake"></i>
                         </div>
@@ -230,7 +237,7 @@
                               alle normative in vigore sia urbanistiche<span class="dots"> ...</span><span class="more">che catastali. Possiamo trovare
                               insieme le giuste soluzioni che garantiscono la corretta gestione durante
                               l’intero processo della compravendita della tua casa.</span> </p>
-                            <button class="read-more">Mostra di più +</button>
+                            <button class="read-more" aria-label="Clicca per leggere di più">Mostra di più +</button>
                           </div>
                           <i class="icon fa-solid fa-user-tie"></i>
                         </div>
@@ -242,7 +249,7 @@
                             <p class="card_text">Si tratta di una forma di pubblicità online che si concentra sull&#39;utilizzo
                               delle piattaforme<span class="dots"> ...</span><span class="more"> di social media per raggiungere il pubblico target.
                               Metterò a disposizione i miei canali social per promuovere il tuo immobile.</p>
-                            <button class="read-more">Mostra di più +</span></button>
+                            <button class="read-more" aria-label="Clicca per leggere di più">Mostra di più +</span></button>
                           </div>
                           <i class="icon fa-brands fa-square-instagram"></i>
                         </div>
@@ -255,7 +262,7 @@
                               alcun imprevisto. Grazie ad una mia attenta<span class="dots"> ...</span><span class="more"> analisi di tutta la
                               documentazione necessaria, l’acquirente e il venditore verranno tutelati
                               allo stesso modo.</span></p>
-                            <button class="read-more">Mostra di più +</button>
+                            <button class="read-more" aria-label="Clicca per leggere di più">Mostra di più +</button>
                           </div>
                           <i class="icon fa-solid fa-award"></i>
                         </div>
@@ -264,13 +271,13 @@
             </article>
 
             <!-- CONSULENZE STARTS -->
-            <article id="consulenze" class="article article__consulenze">
+            <article id="consulenze" class="article article__consulenze" aria-roledescription="Sezione 'Consulenze'">
               <h2 class="article__consulenze--h2">Consulenze</h2>
 
               <div class="article__consulenze--row">
                 <div class="article__consulenze--card">
                   <div class="article__consulenze--card-header article__consulenze--card-header--1">
-                    <img src="IMG/luigi-marinangeli-consulente-immobiliare-consulenza-fast-per-la-vendita-immobile-a-senigallia-e-ancona.webp" alt="Consulenza Fast per la vendita del tuo immobile.">
+                    <img src="IMG/luigi-marinangeli-consulente-immobiliare-consulenza-fast-per-la-vendita-immobile-a-senigallia-e-ancona.webp" alt="Consulenza Fast per la vendita del tuo immobile." height="225px" width="465px">
                     <h3 class="article__consulenze--h3">Consulenza Fast</h3>
                   </div>
                   <div class="article__consulenze--card-body">
@@ -288,13 +295,13 @@
                       <br>
                       Costo: € 75,00
                     </p>
-                    <a href="consulenza-fast.html" class="article__consulenze--card-body--btn article__consulenze--card-body--btn--1">Prenota</a>
+                    <a target="_blank" href="consulenza-fast.html" class="article__consulenze--card-body--btn article__consulenze--card-body--btn--1">Prenota</a>
                   </div>
                 </div>
 
                 <div class="article__consulenze--card">
                   <div class="article__consulenze--card-header article__consulenze--card-header--2">
-                    <img src="IMG/luigi-marinangeli-consulente-immobiliare-consulenza-personalizzata-per-la-vendita-immobile-a-senigallia-e-ancona.webp" alt="Consulenza Personalizzata per la vendita del tuo immobile.">
+                    <img src="IMG/luigi-marinangeli-consulente-immobiliare-consulenza-personalizzata-per-la-vendita-immobile-a-senigallia-e-ancona.webp" alt="Consulenza Personalizzata per la vendita del tuo immobile." height="225px" width="465px">
                     <h3 class="article__consulenze--h3 different">Consulenza Personalizzata</h3>
                   </div>
                   <div class="article__consulenze--card-body">
@@ -314,7 +321,7 @@
                       <i>Richiedi un preventivo e prenota la <strong class="blue">tua</strong> consulenza e porta a termine i tuoi
                       progetti con successo.</i>
                     </p>
-                    <a href="consulenza-personalizzata.html" class="article__consulenze--card-body--btn article__consulenze--card-body--btn--2">Richiedi un preventivo</a>
+                    <a target="_blank" href="consulenza-personalizzata.html" aria-label="Link alla pagina per la consulenza personalizzata" class="article__consulenze--card-body--btn article__consulenze--card-body--btn--2">Richiedi un preventivo</a>
                   </div>
                 </div>
 
@@ -324,235 +331,234 @@
             <!-- CONSULENZE ENDS -->
 
             <!-- I MIEI IMMOBILI STARTS -->
-            <article id="immobili" class="grey article article__immobili">
+            <article id="immobili" class="grey article article__immobili" aria-roledescription="Sezione 'I miei immobili'">
               <h2 class="article__immobili--h2">I miei immobili</h2>
-              <div class="slide-container swiper">
+              <div class="slide-container swiper" aria-roledescription="Carosello di carte con i vari immobili">
                 <div class="slide-content">
                     <div class="card-wrapper swiper-wrapper">
-
-                        <div class="card swiper-slide">
+                        <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
                             <div class="image-content">
     
                                 <div class="card-image">
-                                   <img src="IMG/LM275/villino-indipendente-in-vendita-senigallia.webp" alt="Villino indipendente su due piani con giardino in vendita a Senigallia" class="card-img">
+                                   <img src="IMG/LM275/villino-indipendente-in-vendita-senigallia.webp" alt="Villino indipendente su due piani con giardino in vendita a Senigallia" class="card-img" height="330px" width="330px">
                                 </div>
                             </div>
     
                             <div class="card-content">
-                                <h3 class="name">Senigallia</h3>
+                                <h3 title="località dell'immobile" class="name">Senigallia</h3>
                                 <h4>Villino indipendente</h4>
-                                <p class="price">€ 365.000,00</p>
+                                <p title="prezzo dell'immobile" class="price">€ 365.000,00</p>
 
                                 <div class="house-services">
                                   <ul class="services">
-                                    <li><i class="fa-solid fa-ruler-combined"></i> 120m²</li>
-                                    <li><i class="fa-solid fa-door-open"></i> 5</li>
-                                    <li><i class="fa-solid fa-bath"></i> 2</li>
-                                    <li><i class="fa-solid fa-car-side"></i> 1</li>
+                                    <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 120m²</li>
+                                    <li><i title="Numero di stanze" class="fa-solid fa-door-open"></i> 5</li>
+                                    <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 2</li>
+                                    <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 1</li>
                                   </ul>
                                 </div>
-                                <a href="./CASE/villino-indipendente-senigallia.html" class="button">Vedi di più +</a>
+                                <a target="_blank" href="./CASE/villino-indipendente-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
                             </div>
                         </div>
-                        <div class="card swiper-slide">
+                        <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
                           <div class="image-content">
   
                               <div class="card-image">
-                                 <img src="IMG/LM221/grande-appartamento-a-senigallia.webp" alt="Grande appartamento in vendita a Senigallia" class="card-img">
+                                 <img src="IMG/LM221/grande-appartamento-a-senigallia.webp" alt="Grande appartamento in vendita a Senigallia" class="card-img" height="330px" width="330px">
                               </div>
                           </div>
   
                           <div class="card-content">
-                              <h3 class="name">Senigallia</h3>
+                              <h3 title="località dell'immobile" class="name">Senigallia</h3>
                               <h4>Spazioso appartamento</h4>
-                              <p class="price">€ 290.000,00</p>
+                              <p title="prezzo dell'immobile" class="price">€ 290.000,00</p>
 
                               <div class="house-services">
                                 <ul class="services">
-                                  <li><i class="fa-solid fa-ruler-combined"></i> 87m²</li>
-                                  <li><i class="fa-solid fa-door-open"></i> 4</li>
-                                  <li><i class="fa-solid fa-bath"></i> 2</li>
-                                  <li><i class="fa-solid fa-car-side"></i> 0</li>
+                                  <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 87m²</li>
+                                  <li><i title="Numero di stanze" class="fa-solid fa-door-open"></i> 4</li>
+                                  <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 2</li>
+                                  <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 0</li>
                                 </ul>
                               </div>
-                              <a href="./CASE/grande-appartamento-a-senigallia.html" class="button">Vedi di più +</a>
+                              <a target="_blank" href="./CASE/grande-appartamento-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
                           </div>
                         </div>
 
-                        <div class="card swiper-slide">
+                        <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
                           <div class="image-content">
   
                               <div class="card-image">
-                                 <img src="IMG/LM249/luminoso-e-accogliente-appartamento-a-senigallia.webp" alt=" Grande e luminoso appartamento sul mare in vendita a Senigallia" class="card-img">
+                                 <img src="IMG/LM249/luminoso-e-accogliente-appartamento-a-senigallia.webp" alt=" Grande e luminoso appartamento sul mare in vendita a Senigallia" class="card-img" height="330px" width="330px">
                               </div>
                           </div>
   
                           <div class="card-content">
-                              <h3 class="name">Senigallia</h3>
+                              <h3 title="Località dell'immobile" class="name">Senigallia</h3>
                               <h4>Appartamento sul mare</h4>
-                              <p class="price">€ 350.000,00</p>
+                              <p title="Prezzo dell'immobile" class="price">€ 350.000,00</p>
 
                               <div class="house-services">
                                 <ul class="services">
-                                  <li><i class="fa-solid fa-ruler-combined"></i> 131m²</li>
-                                  <li><i class="fa-solid fa-door-open"></i> 6</li>
-                                  <li><i class="fa-solid fa-bath"></i> 2</li>
-                                  <li><i class="fa-solid fa-car-side"></i> 1</li>
+                                  <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 131m²</li>
+                                  <li><i title="Numero di stanze" class="fa-solid fa-door-open"></i> 6</li>
+                                  <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 2</li>
+                                  <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 1</li>
                                 </ul>
                               </div>
-                              <a href="./CASE/appartamento-sul-mare-senigallia.html" class="button">Vedi di più +</a>
+                              <a target="_blank" href="./CASE/appartamento-sul-mare-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
 
                           </div>
                       </div>
 
-                      <div class="card swiper-slide">
+                      <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
                         <div class="image-content">
 
                             <div class="card-image">
-                               <img src="IMG/LM274/esclusivo-appartamento-in-vendita-a-senigallia-al-ciarnin.webp" alt="Bellissimo appartamento in vendita al Ciarnin" class="card-img">
+                               <img src="IMG/LM274/esclusivo-appartamento-in-vendita-a-senigallia-al-ciarnin.webp" alt="Bellissimo appartamento in vendita al Ciarnin" class="card-img" height="330px" width="330px">
                             </div>
                         </div>
 
                         <div class="card-content">
-                            <h3 class="name">Senigallia</h3>
+                            <h3 title="Località dell'immobile" class="name">Senigallia</h3>
                             <h4>Appartamento al Ciarnin</h4>
-                            <p class="price">Prezzo su richiesta</p>
+                            <p title="Prezzo dell'immobile" class="price">Prezzo su richiesta</p>
 
                             <div class="house-services">
                               <ul class="services">
-                                <li><i class="fa-solid fa-ruler-combined"></i> 115m²</li>
-                                <li><i class="fa-solid fa-door-open"></i> 6</li>
-                                <li><i class="fa-solid fa-bath"></i> 2</li>
-                                <li><i class="fa-solid fa-car-side"></i> 1</li>
+                                <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 115m²</li>
+                                <li><i title="Numero di stanze" class="fa-solid fa-door-open"></i> 6</li>
+                                <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 2</li>
+                                <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 1</li>
                               </ul>
                             </div>
-                            <a href="./CASE/favoloso-appartamento-al-ciarnin.html" class="button">Vedi di più +</a>
+                            <a target="_blank" href="./CASE/favoloso-appartamento-al-ciarnin.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
                         </div>
                     </div>
-                    <div class="card swiper-slide">
+                    <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
                       <div class="image-content">
 
                           <div class="card-image">
-                             <img src="IMG/LM270/villa-in-vendita-a-borgo-molino-senigallia.webp" alt="Villa in vendita Borgo Molino, Senigallia" class="card-img">
+                             <img src="IMG/LM270/villa-in-vendita-a-borgo-molino-senigallia.webp" alt="Villa in vendita Borgo Molino, Senigallia" class="card-img" height="330px" width="330px">
                           </div>
                       </div>
 
                       <div class="card-content">
-                          <h3 class="name">Senigallia</h3>
+                          <h3 title="Località dell'immobile" class="name">Senigallia</h3>
                           <h4>Villa a Borgo Molino</h4>
-                          <p class="price">€ 549.000,00</p>
+                          <p title="Prezzo dell'immobile" class="price">€ 549.000,00</p>
 
                           <div class="house-services">
                             <ul class="services">
-                              <li><i class="fa-solid fa-ruler-combined"></i> 120m²</li>
-                              <li><i class="fa-solid fa-door-open"></i> 7</li>
-                              <li><i class="fa-solid fa-bath"></i> 2</li>
-                              <li><i class="fa-solid fa-car-side"></i> 1</li>
+                              <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 120m²</li>
+                              <li><i title="Numero di stanze" class="fa-solid fa-door-open"></i> 7</li>
+                              <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 2</li>
+                              <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 1</li>
                             </ul>
                           </div>
-                          <a href="./CASE/villa-in-vendita-a-Borgo-Molino-Senigallia.html" class="button">Vedi di più +</a>
+                          <a target="_blank" href="./CASE/villa-in-vendita-a-Borgo-Molino-Senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
                       </div>
                   </div>
-                  <div class="card swiper-slide">
+                  <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
                     <div class="image-content">
 
                         <div class="card-image">
-                           <img src="IMG/LM271/casa-a-schiera-panoramica-in-vendita-a-casine-di-ostra-ancona.webp" alt="Casa a schiera in vendita a Casine di Ostra" class="card-img">
+                           <img src="IMG/LM271/casa-a-schiera-panoramica-in-vendita-a-casine-di-ostra-ancona.webp" alt="Casa a schiera in vendita a Casine di Ostra" class="card-img" height="330px" width="330px">
                         </div>
                     </div>
 
                     <div class="card-content">
-                        <h3 class="name">Casine di Ostra</h3>
+                        <h3 title="Località dell'immobile" class="name">Casine di Ostra</h3>
                         <h4>Villa a schiera</h4>
-                        <p class="price">€ 230.000,00</p>
+                        <p title="Prezzo dell'immobile" class="price">€ 230.000,00</p>
 
                         <div class="house-services">
                           <ul class="services">
-                            <li><i class="fa-solid fa-ruler-combined"></i> 132m²</li>
-                            <li><i class="fa-solid fa-door-open"></i> 5+</li>
-                            <li><i class="fa-solid fa-bath"></i> 3</li>
-                            <li><i class="fa-solid fa-car-side"></i> 3</li>
+                            <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 132m²</li>
+                            <li><i title="Numero di stanze" class="fa-solid fa-door-open"></i> 5+</li>
+                            <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 3</li>
+                            <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 3</li>
                           </ul>
                         </div>
-                        <a href="./CASE/villa-a-schiera-in-vendita-a-casine-di-ostra.html" class="button">Vedi di più +</a>
+                        <a target="_blank" href="./CASE/villa-a-schiera-in-vendita-a-casine-di-ostra.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
                     </div>
                 </div>
-                <div class="card swiper-slide">
+                <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
                   <div class="image-content">
 
                       <div class="card-image">
-                         <img src="IMG/LM268/appartamento-indipendente-in-vendita-a-marina-di-montemarciano.webp" alt="Appartamento indipendente in vendita a Marina di Montemarciano" class="card-img">
+                         <img src="IMG/LM268/appartamento-indipendente-in-vendita-a-marina-di-montemarciano.webp" alt="Appartamento indipendente in vendita a Marina di Montemarciano" class="card-img" height="330px" width="330px">
                       </div>
                   </div>
 
                   <div class="card-content">
-                      <h3 class="name">Montemarciano</h3>
+                      <h3 title="Località dell'immobile" class="name">Montemarciano</h3>
                       <h4>Appartamento indipendente</h4>
-                      <p class="price">€ 220.000,00</p>
+                      <p title="Prezzo dell'immobile" class="price">€ 220.000,00</p>
 
                       <div class="house-services">
                         <ul class="services">
-                          <li><i class="fa-solid fa-ruler-combined"></i> 105m²</li>
-                          <li><i class="fa-solid fa-door-open"></i>4+</li>
-                          <li><i class="fa-solid fa-bath"></i> 2</li>
-                          <li><i class="fa-solid fa-car-side"></i> 1</li>
+                          <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 105m²</li>
+                          <li><i title="Numero di stanze" class="fa-solid fa-door-open"></i>4+</li>
+                          <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 2</li>
+                          <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 1</li>
                         </ul>
                       </div>
-                      <a href="./CASE/appartamento-indipendente-in-vendita-a-marina-di-montemarciano.html" class="button">Vedi di più +</a>
+                      <a target="_blank" href="./CASE/appartamento-indipendente-in-vendita-a-marina-di-montemarciano.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
                   </div>
               </div>
-              <div class="card swiper-slide">
+              <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
                 <div class="image-content">
 
                     <div class="card-image">
-                       <img src="IMG/LM267/grazioso-appartamento-in-vendita-a-barbara.webp" alt="Grazioso appartamento semi-nuovo in vendita a Barbara" class="card-img">
+                       <img src="IMG/LM267/grazioso-appartamento-in-vendita-a-barbara.webp" alt="Grazioso appartamento semi-nuovo in vendita a Barbara" class="card-img" height="330px" width="330px">
                     </div>
                 </div>
 
                 <div class="card-content">
-                    <h3 class="name">Barbara</h3>
+                    <h3 title="Località dell'immobile" class="name">Barbara</h3>
                     <h4>Appartamento semi-nuovo</h4>
-                    <p class="price">€ 95.000,00</p>
+                    <p title="Prezzo dell'immobile" class="price">€ 95.000,00</p>
 
                     <div class="house-services">
                       <ul class="services">
-                        <li><i class="fa-solid fa-ruler-combined"></i> 82m²</li>
-                        <li><i class="fa-solid fa-door-open"></i> 3</li>
-                        <li><i class="fa-solid fa-bath"></i> 1</li>
-                        <li><i class="fa-solid fa-car-side"></i> 1</li>
+                        <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 82m²</li>
+                        <li><i title="Numero di stanze" class="fa-solid fa-door-open"></i> 3</li>
+                        <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 1</li>
+                        <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 1</li>
                       </ul>
                     </div>
-                    <a href="./CASE/appartamento-semi-nuovo-in-vendita-a-barbara.html" class="button">Vedi di più +</a>
+                    <a target="_blank" href="./CASE/appartamento-semi-nuovo-in-vendita-a-barbara.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
                 </div>
             </div>
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
               <div class="image-content">
 
                   <div class="card-image">
-                     <img src="IMG/LM272/villa-lussuosa-immersa-nel-verde-in-vendita-a-senigallia-le-saline.webp" alt="Villa lussuosa immersa nel verde in vendita alle Saline Senigallia" class="card-img">
+                     <img src="IMG/LM272/villa-lussuosa-immersa-nel-verde-in-vendita-a-senigallia-le-saline.webp" alt="Villa lussuosa immersa nel verde in vendita alle Saline Senigallia" class="card-img" height="330px" width="330px">
                   </div>
               </div>
 
               <div class="card-content">
-                  <h3 class="name">Senigallia, Saline</h3>
+                  <h3 title="Località dell'immobile" class="name">Senigallia, Saline</h3>
                   <h4>Villa di lusso</h4>
-                  <p class="price">€ 1.500.000,00</p>
+                  <p title="Prezzo dell'immobile" class="price">€ 1.500.000,00</p>
 
                   <div class="house-services">
                     <ul class="services">
-                      <li><i class="fa-solid fa-ruler-combined"></i> 360m²</li>
-                      <li><i class="fa-solid fa-door-open"></i>5+</li>
-                      <li><i class="fa-solid fa-bath"></i>3+</li>
-                      <li><i class="fa-solid fa-car-side"></i>3+</li>
+                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 360m²</li>
+                      <li><i title="Numero di stanze" class="fa-solid fa-door-open"></i>5+</li>
+                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>3+</li>
+                      <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i>3+</li>
                     </ul>
                   </div>
-                  <a href="./CASE/lussuosa-villa-in-vendita-alle-saline-senigallia.html" class="button">Vedi di più +</a>
+                  <a target="_blank" href="./CASE/lussuosa-villa-in-vendita-alle-saline-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
               </div>
           </div>
                       </div>
                     </div>
-                <div class="swiper-button-next swiper-navBtn"></div>
-                <div class="swiper-button-prev swiper-navBtn"></div>
+                <button aria-label="Vai avanti di un immobile" class="swiper-button-next swiper-navBtn"></button>
+                <button aria-label="Torna indietro un immobile" class="swiper-button-prev swiper-navBtn"></button>
                 <div class="swiper-pagination"></div>
             </div>
       </article>
@@ -562,10 +568,10 @@
             <!-- I MIEI IMMOBILI ENDS -->
 
             <!-- CONTATTI STARTS -->
-            <article id="contatti" class="article article__contatti">
+            <article id="contatti" class="article article__contatti" aria-roledescription="Sezione 'Contatti'">
                   <h2 class="article__contatti--h2">Contatti</h2>
                     <div class="article__contatti--dettagli--title">
-                          <img src="IMG/luigi-marinangeli-consulente-immobiliare-logo-grande.svg" alt="Logo Luigi Marinangeli consulente immobiliare" class="article__contatti--logo">
+                          <img src="IMG/luigi-marinangeli-consulente-immobiliare-logo-grande.svg" alt="Logo Luigi Marinangeli consulente immobiliare" class="article__contatti--logo" height="100px" width="100px">
                           <h3 class="article__contatti--dettagli--title-title"><i>Luigi</i><br>
                             Marinangeli <br><span>Consulente Immobiliare</span>
                           </h3>
@@ -574,30 +580,30 @@
                           <ul class="article__contatti--icon-list">
                           <li>
                               <i class="icon fas fa-phone"></i>
-                              <a href="callto:+393356199476" class="article__contatti--link link link--right">+39 335.6199476</a>
+                              <a aria-label="Link per telefonare direttamente a Luigi Marinangeli" href="callto:+393356199476" class="article__contatti--link link link--right">+39 335.6199476</a>
                           </li>
                           <li>
                               <i class="icon fas fa-at"></i>
-                              <a href="mailto:info@lecasediluigi.com" class="article__contatti--link link link--right">info@lecasediluigi.com</a>
+                              <a aria-label="Link per inviare una email a Luigi Marinangeli" href="mailto:info@lecasediluigi.com" class="article__contatti--link link link--right">info@lecasediluigi.com</a>
                           </li>
                           <li>
                               <i class="icon fab fa-facebook-f"></i>
-                              <a href="https://www.facebook.com/share/yfGNqDAxoRqWp9po/" class="article__contatti--link link link--right facebook" target="_blank" rel="noreferrer">Luigi Marinangeli</a>
+                              <a target="_blank" aria-label="Link della pagina Facebook di Luigi Marinangeli" href="https://www.facebook.com/share/yfGNqDAxoRqWp9po/" class="article__contatti--link link link--right facebook" target="_blank" rel="noreferrer">Luigi Marinangeli</a>
                           </li>
                           <li>
                               <i class="icon fab fa-instagram"></i>
-                              <a href="https://www.instagram.com/lecasediluigi/" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">lecasediluigi</a>
+                              <a target="_blank" aria-label="Link alla pagina Instagram di Luigi Marinangeli" href="https://www.instagram.com/lecasediluigi/" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">lecasediluigi</a>
                           </li>
                           <li>
                             <i class="icon fa-solid fa-location-dot"></i>
-                            <a href="https://maps.app.goo.gl/1MXiadStF7hYBNdH6" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">Via Carlo Pisacane 10, Senigallia (AN)</a>
+                            <a target="_blank" aria-label="Link a Google Maps" href="https://maps.app.goo.gl/1MXiadStF7hYBNdH6" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">Via Carlo Pisacane 10, Senigallia (AN)</a>
                         </li>
                       </ul>
                 <!-- SEND EMAIL -->
-                  <div class="wrapper">
+                  <div labelledby="mandami-una-email" class="wrapper" id="wrapper">
                       <a class="cta" href="mailto:info@lecasediluigi.com">
-                        <span>SCRIVIMI UNA EMAIL</span>
-                        <span>
+                        <span id="mandami-una-email">SCRIVIMI UNA EMAIL</span>
+                        <span label="freccia decorativa">
                           <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                               <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
@@ -624,10 +630,10 @@
                     <p class="footer__title"><i>Luigi</i><br>
                        Marinangeli <br><span>Consulente Immobiliare</span>
                     </p>
-                    <p class="footer__address">
+                    <p title="Indirizzo" class="footer__address">
                       Via Carlo Pisacane 10, Senigallia (AN)
                     </p>
-                    <p class="footer__times">
+                    <p title="Orario" class="footer__times">
                       Lunedì &mdash; Venerdì: 
                       9:00 / 12:30 &mdash; 16:00 / 19:30
                       <br>
@@ -637,23 +643,23 @@
                     <ul class="footer--icon-list">
                       <li>
                           <i class="icon fas fa-phone"></i>
-                          <a href="callto:+393356199476" class="article__contatti--link link link--right">Chiama</a>
+                          <a aria-label="Chiama Luigi Marinangeli" href="callto:+393356199476" class="article__contatti--link link link--right">Chiama</a>
                       </li>
                       <li>
                           <i class="icon fas fa-at"></i>
-                          <a href="mailto:marinangeli@neoclassic.it" class="article__contatti--link link link--right">Email</a>
+                          <a aria-label="Manda una mail a Luigi Marinangeli" href="mailto:info@lecasediluigi.com" class="article__contatti--link link link--right">Email</a>
                       </li>
                       <li>
                           <i class="icon fab fa-facebook-f"></i>
-                          <a href="https://www.facebook.com/share/yfGNqDAxoRqWp9po/" class="article__contatti--link link link--right facebook" target="_blank" rel="noreferrer">Facebook</a>
+                          <a target="_blank" aria-label="Link alla pagina Facebook di Luigi Marinangeli" href="https://www.facebook.com/share/yfGNqDAxoRqWp9po/" class="article__contatti--link link link--right facebook" target="_blank" rel="noreferrer">Facebook</a>
                       </li>
                       <li>
                           <i class="icon fab fa-instagram"></i>
-                          <a href="https://www.instagram.com/lecasediluigi/" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">Instagram</a>
+                          <a target="_blank" aria-label="Link alla pagina Instagram di Luigi Marinangeli" href="https://www.instagram.com/lecasediluigi/" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">Instagram</a>
                       </li>
                       <li>
                         <i class="icon fa-solid fa-location-dot"></i>
-                        <a href="https://maps.app.goo.gl/1MXiadStF7hYBNdH6" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">Google Maps</a>
+                        <a target="_blank" aria-label="Link a Google Maps" href="https://maps.app.goo.gl/1MXiadStF7hYBNdH6" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">Google Maps</a>
                     </li>
                   </ul>
             </div>

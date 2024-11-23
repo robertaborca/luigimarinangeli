@@ -649,7 +649,7 @@ body {
           }
           .price{
             font-size: 1.4rem;
-            color: rgba($color-primary, .7);
+            color: $color-primary;
           }
 
           .services {
@@ -661,7 +661,7 @@ body {
             font-size: 16px;
             color: #FFF;
             padding: 8px 16px;
-            background-color: $color-secondary;
+            background-color: $color-secondary-darker;
             border-radius: 6px;
             margin: 14px;
             cursor: pointer;
@@ -677,6 +677,12 @@ body {
           }
           .swiper-navBtn:hover{
             color: $color-primary;
+          }
+
+          .swiper-pagination-bullet {
+            margin-right: 1.5rem;
+            width: 1.8rem;
+            height: 1.8rem;
           }
           .swiper-navBtn::before,
           .swiper-navBtn::after{
@@ -862,11 +868,7 @@ body {
           }
         }
 
-        .cta:focus {
-          outline: none; 
-        }
-
-        .cta:hover {
+        .cta:hover, cta:focus {
           transition: 0.5s;
           box-shadow: 1rem 1rem 0 $color-secondary;
         }
@@ -877,6 +879,11 @@ body {
         }
 
         .cta:hover  span:nth-child(2) {
+          transition: 0.5s;
+          margin-right: 4.5rem;
+        }
+
+        .cta:focus  span:nth-child(2) {
           transition: 0.5s;
           margin-right: 4.5rem;
         }

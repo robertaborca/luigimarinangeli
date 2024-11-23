@@ -2,6 +2,16 @@
     position: relative;
     font-size: 1.8rem;
 
+    transition: all 400ms linear;
+    border: none;
+    transform: scale(1);
+
+    &:focus-visible {
+    outline: 2px dashed $color-primary;
+    outline-offset: 1rem;
+    }
+
+
     &:visited,
     &:link {
       color: inherit;
