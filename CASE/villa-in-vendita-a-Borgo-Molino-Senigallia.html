@@ -23,29 +23,28 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
         <!--FONT AWESOME-->
-        <script src="https://kit.fontawesome.com/fe91d29f6f.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/fe91d29f6f.js" crossorigin="anonymous" async defer></script>
 
 
         <!--FAVICON-->
         <link rel="icon" type="image/svg+xml" href="../favicon.svg">
         <link rel="icon" type="image/png" href="../favicon.png">  
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-        <link rel="stylesheet" media="screen" type="text/css" href="../CSS/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" media="all">
+        <link rel="stylesheet" media="screen" type="text/css" href="../CSS/style.css" media="all">
 
     </head>
     <!--HEADER-->
     <header>
-        <nav class="navbar" id="navBar" role="menu">
+        <nav class="navbar" id="navBar" role="none">
             <!--MENU-->
-            <ul class="navbar__menu" id="menu" role="menu" aria-label="navigation-menu">
+            <ul class="navbar__menu" id="menu" role="menu" aria-label="menù di navigazione">
 
-                <li class="navbar__menu-item navbar__logo" role="none">
+                <li class="navbar__menu-item navbar__logo" role="menuitem">
                     <!--LOGO-->
-                    <a href="../index.html">
+                    <a href="../index.html" aria-label="Link alla home page">
                         <img src="../IMG/luigi-marinangeli-consulente-immobiliare-logo-piccolo.svg" alt="Logo Luigi Marinangeli" class="navbar__img" width="60" height="60">
                     </a>
-                    <a href="../index.html">
+                    <a href="../index.html" aria-label="Link alla home page">
                         <img src="../IMG/luigi-marinangeli-consulente-immobiliare-ancona-firma.svg" alt="Firma di Luigi Marinangeli" class="navbar__signature"  width="180" height="60">
                     </a>
                 </li>                    
@@ -53,7 +52,7 @@
     </header>
     <body>
         <main class="main property-main">
-                    <a class="link link--left property-link" href="../index.html#immobili">Torna indietro</a>
+                    <a class="link link--left property-link" aria-label="Link alla sezione immobili della Home Page" href="../index.html#immobili">Torna indietro</a>
                     <div class="property-hero">
                         <div class="property-title">
                             <h1>Villa moderna con giardino</h1>
@@ -77,7 +76,7 @@
                                             </p> 
                     <ul class="property-features">
                         <li class="property-feature">
-                            <i class="icon property-icon fa-solid fa-euro-sign"></i>
+                            <i title="prezzo dell'immobile" class="icon property-icon fa-solid fa-euro-sign"></i>
                             <p>€ 549.000,00</p>
                         </li>
                         <li class="property-feature">
@@ -85,7 +84,7 @@
                             <p>Libero da subito</p>
                         </li>
                         <li class="property-feature">
-                            <i class="icon property-icon fa-solid fa-fire"></i>
+                            <i title="tipo di riscaldamento" class="icon property-icon fa-solid fa-fire"></i>
                             <p>Gas, radiatore, autonomo</p>
                         </li>
                         <li class="property-feature">
@@ -113,63 +112,64 @@
 
                 <div>
 
-                    <div class="carousel" data-flickity='{ "imagesLoaded": true, "lazyLoad": 2, "wrapAround": true }'>
+                                        <div class="carousel" title="carosello di immagini dell'immobile" data-flickity='{ "imagesLoaded": true, "lazyLoad": 2, "wrapAround": true }'>
+
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/moderna-villa-in-vendita-a-borgo-molino-senigallia.webp" alt="Vista della facciata della villa e del giardino privato.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/moderna-villa-in-vendita-a-borgo-molino-senigallia.webp" alt="Vista della facciata della villa e del giardino privato.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/splendida-villa-indipendente-con-giardino-privato-in-vendita-a-senigallia-borgo-molino.webp" alt="Giardino privato pavimentato e con ciottolato e posto auto privato.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/splendida-villa-indipendente-con-giardino-privato-in-vendita-a-senigallia-borgo-molino.webp" alt="Giardino privato pavimentato e con ciottolato e posto auto privato.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/villa-in-vendita-a-senigallia-con-sette-vani-e-due-bagni.webp" alt="Uno dei due bagni della villa con box doccia.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/villa-in-vendita-a-senigallia-con-sette-vani-e-due-bagni.webp" alt="Uno dei due bagni della villa con box doccia.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/villa-moderna-vicino-al-mare-recentemente-ristrutturata-in-vendita-a-senigallia-borgo-molino.webp" alt="Ingresso su ampio salone con parquet in legno di pregio.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/villa-moderna-vicino-al-mare-recentemente-ristrutturata-in-vendita-a-senigallia-borgo-molino.webp" alt="Ingresso su ampio salone con parquet in legno di pregio.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/villa-con-sette-camere-e-due-bagni-in-vendita-a-senigallia.webp" alt="Luminosa cucina abitabile con molte finestre.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/villa-con-sette-camere-e-due-bagni-in-vendita-a-senigallia.webp" alt="Luminosa cucina abitabile con molte finestre.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/spaziosa-villa-con-grande-giardino-privato-in-vendita-a-borgo-molino-portone-senigallia.webp" alt="Spaziosa cucina abitabile arredata.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/spaziosa-villa-con-grande-giardino-privato-in-vendita-a-borgo-molino-portone-senigallia.webp" alt="Spaziosa cucina abitabile arredata.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/villa-in-vendita-a-borgo-molino-portone-senigallia-su-tre-livelli.webp" alt="Scale interne per accedere ai diversi livelli della villa.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/villa-in-vendita-a-borgo-molino-portone-senigallia-su-tre-livelli.webp" alt="Scale interne per accedere ai diversi livelli della villa.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/villa-indipendente-su-tre-livelli-con-grande-giardino-privato-arredato-recentemente-ristrutturata-in-vendita-a-senigallia.webp" alt="Salotto con parquet di pregio, luminoso e con camino.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/villa-indipendente-su-tre-livelli-con-grande-giardino-privato-arredato-recentemente-ristrutturata-in-vendita-a-senigallia.webp" alt="Salotto con parquet di pregio, luminoso e con camino.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/splendida-villa-con-tre-camere-da-letto-vicino-al-mare-in-vendita-a-senigallia.webp" alt="Una delle tre confortevoli e spaziose camere da letto.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/splendida-villa-con-tre-camere-da-letto-vicino-al-mare-in-vendita-a-senigallia.webp" alt="Una delle tre confortevoli e spaziose camere da letto.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/villa-indipendente-vicino-al-mare-con-grande-giardino-privato-in-vendita-a-borgo-molino-portone-senigallia.webp" alt="Un'altra camera da letto con accesso al bagno privato.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/villa-indipendente-vicino-al-mare-con-grande-giardino-privato-in-vendita-a-borgo-molino-portone-senigallia.webp" alt="Un'altra camera da letto con accesso al bagno privato.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/villa-indipendente-con-sette-vani-tre-camere-da-letto-e-giardino-privato-in-vendita-a-senigallia.webp" alt="La camera da letto, spaziosa e luminosa e dotata di bagno privato al 1° piano.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/villa-indipendente-con-sette-vani-tre-camere-da-letto-e-giardino-privato-in-vendita-a-senigallia.webp" alt="La camera da letto, spaziosa e luminosa e dotata di bagno privato al 1° piano.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/villa-su-tre-livelli-con-giardino-privato-vicino-al-mare-senigallia.webp" alt="Giardino privato con ciottolato e una fontanella.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/villa-su-tre-livelli-con-giardino-privato-vicino-al-mare-senigallia.webp" alt="Giardino privato con ciottolato e una fontanella.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/esclusiva-villa-in-vendita-a-borgo-molino-senigallia-con-giardino-privato-e-tre-camere-da-letto.webp" alt="Secondo bagno con lavandino moderno.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/esclusiva-villa-in-vendita-a-borgo-molino-senigallia-con-giardino-privato-e-tre-camere-da-letto.webp" alt="Secondo bagno con lavandino moderno.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/villa-su-tre-piani-con-giardino-privato-vicino-al-mare-in-vendita-a-senigallia-borgo-molino.webp" alt="Terza camera da letto con finestra rotonda nella mansarda della villa.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/villa-su-tre-piani-con-giardino-privato-vicino-al-mare-in-vendita-a-senigallia-borgo-molino.webp" alt="Terza camera da letto con finestra rotonda nella mansarda della villa.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/villa-indipendente-con-parcheggio-privato-giardino-e-tre-livelli-in-vendita-a-borgo-molino-senigallia.webp" alt="Angolo divano nella camera da letto nella mansarda della villa.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/villa-indipendente-con-parcheggio-privato-giardino-e-tre-livelli-in-vendita-a-borgo-molino-senigallia.webp" alt="Angolo divano nella camera da letto nella mansarda della villa.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/villa-con-due-bagni-e-tre-camere-da-letto-in-vendita--a-borgo-molino-vicino-al-mare-senigallia.webp" alt="Il bagno privato della camera da letto nella mansarda della villa.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/villa-con-due-bagni-e-tre-camere-da-letto-in-vendita--a-borgo-molino-vicino-al-mare-senigallia.webp" alt="Il bagno privato della camera da letto nella mansarda della villa.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/villa-con-giardino-privato-a-due-passi-dal-mare-con-due-bagni-e-tre-camere-da-letto-in-vendita-a-senigallia-borgo-molino.webp" alt="Bagno della mansarda con il box doccia.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/villa-con-giardino-privato-a-due-passi-dal-mare-con-due-bagni-e-tre-camere-da-letto-in-vendita-a-senigallia-borgo-molino.webp" alt="Bagno della mansarda con il box doccia.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/villa-indipendente-con-giardino-pavimentato-e-tre-piani-in-vendita-a-borgo-molino-senigallia.webp" alt="Casetta degli attrezzi nella parte pavimentata del giardino privato della villa.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/villa-indipendente-con-giardino-pavimentato-e-tre-piani-in-vendita-a-borgo-molino-senigallia.webp" alt="Casetta degli attrezzi nella parte pavimentata del giardino privato della villa.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM270/villa-su-tre-piani-con-giardino-privato-privacy-e-spaziosa-in-vendita-a-senigallia.webp" alt="Terza camera da letto nella mansarda della villa.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM270/villa-su-tre-piani-con-giardino-privato-privacy-e-spaziosa-in-vendita-a-senigallia.webp" alt="Terza camera da letto nella mansarda della villa.">
                         </div>
                       </div>
                     </div>
@@ -177,34 +177,34 @@
                     <div class="icon-list">
                         <div class="icon-group--4">
                             <div class="icon-group">
-                                <img src="../IMG/icona--stanze.svg" alt="Icona numero di stanze" class="house-listing--icon">
+                                <img src="../IMG/icona--stanze.svg" alt="Icona numero di stanze" class="house-listing--icon" width="70" height="70">
                                 <p class="icon-text">7 stanze</p>
                             </div>
                             <div class="icon-group">
-                                <img src="../IMG/icona--metri-quadri.svg" alt="Icona metri quadri" class="house-listing--icon">
+                                <img src="../IMG/icona--metri-quadri.svg" alt="Icona metri quadri" class="house-listing--icon" width="70" height="70">
                                 <p class="icon-text">120m²</p>
                             </div>
                             <div class="icon-group">
-                                <img src="../IMG/icona--bagni.svg" alt="Icona bagni" class="house-listing--icon">
+                                <img src="../IMG/icona--bagni.svg" alt="Icona bagni" class="house-listing--icon" width="70" height="70">
                                 <p class="icon-text">2 bagni</p>
                             </div>
                             <div class="icon-group">
-                                <img src="../IMG/icona--giardino.svg" alt="Icona giardino" class="house-listing--icon">
+                                <img src="../IMG/icona--giardino.svg" alt="Icona spazi aperti" class="house-listing--icon" width="70" height="70">
                                 <p class="icon-text">160m²
                                 </p>
                             </div>
                         </div>
                         <div class="icon-group--3">   
                             <div class="icon-group">
-                                <img src="../IMG/icona--garage.svg" alt="Icona garage" class="house-listing--icon">
+                                <img src="../IMG/icona--garage.svg" alt="Icona garage" class="house-listing--icon" width="70" height="70">
                                 <p class="icon-text">1 posto auto</p>
                             </div>
                             <div class="icon-group">
-                                <img src="../IMG/icona--piano.svg" alt="Icona piano" class="house-listing--icon">
+                                <img src="../IMG/icona--piano.svg" alt="Icona piano" class="house-listing--icon" width="70" height="70">
                                 <p class="icon-text">3 livelli</p>
                             </div>
                             <div class="icon-group">
-                                <img src="../IMG/icona--spiaggia.svg" alt="Icona spiaggia" class="house-listing--icon">
+                                <img src="../IMG/icona--spiaggia.svg" alt="Icona vicino alla spiaggia" class="house-listing--icon" width="70" height="70">
                                 <p class="icon-text">Spiaggia</p>
                             </div>
                         </div>
@@ -289,34 +289,32 @@
                     <ul class="article__contatti--icon-list property--contacts">
                         <li>
                             <i class="icon fa-solid fa-arrow-left"></i>
-                            <a href="../index.html#immobili" class="article__contatti--link link link--right">Indietro</a>
+                            <a href="../index.html#immobili" aria-label="link alla sezione immobili della Home Page" class="article__contatti--link link link--right">Indietro</a>
                         </li>
                         <li>
                             <i class="icon fas fa-phone"></i>
-                            <a href="callto:+393356199476" class="article__contatti--link link link--right">+39 335.6199476</a>
+                            <a href="callto:+393356199476" aria-label="chiama Luigi Marinangeli" class="article__contatti--link link link--right">+39 335.6199476</a>
                         </li>
                         <li>
                             <i class="icon fas fa-at"></i>
-                            <a href="mailto:info@lecasediluigi.com" class="article__contatti--link link link--right">Email</a>
+                            <a href="mailto:info@lecasediluigi.com" aria-label="Scrivi una mail a Luigi Marinangeli" class="article__contatti--link link link--right">Email</a>
                         </li>
                     </ul>
         </main>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-        <script src="../scripts/script.js" async defer></script>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" async defer></script>
     </body>
     
-<footer class="footer">
+ <footer class="footer">
             <div class="footer__content">
                     <img src="../IMG/luigi-marinangeli-consulente-immobiliare-logo-piccolo.svg" alt="Logo Luigi Marinangeli consulente immobiliare" class="footer__image" width="60" height="60">
                     
                     <p class="footer__title"><i>Luigi</i><br>
                        Marinangeli <br><span>Consulente Immobiliare</span>
                     </p>
-                    <p class="footer__address">
+                    <p title="Indirizzo" class="footer__address">
                       Via Carlo Pisacane 10, Senigallia (AN)
                     </p>
-                    <p class="footer__times">
+                    <p title="Orario" class="footer__times">
                       Lunedì &mdash; Venerdì: 
                       9:00 / 12:30 &mdash; 16:00 / 19:30
                       <br>
@@ -326,23 +324,23 @@
                     <ul class="footer--icon-list">
                       <li>
                           <i class="icon fas fa-phone"></i>
-                          <a href="callto:+393356199476" class="article__contatti--link link link--right">Chiama</a>
+                          <a aria-label="Chiama Luigi Marinangeli" href="callto:+393356199476" class="article__contatti--link link link--right">Chiama</a>
                       </li>
                       <li>
                           <i class="icon fas fa-at"></i>
-                          <a href="mailto:info@lecasediluigi.com" class="article__contatti--link link link--right">Email</a>
+                          <a aria-label="Manda una mail a Luigi Marinangeli" href="mailto:info@lecasediluigi.com" class="article__contatti--link link link--right">Email</a>
                       </li>
                       <li>
                           <i class="icon fab fa-facebook-f"></i>
-                          <a href="https://www.facebook.com/share/yfGNqDAxoRqWp9po/" class="article__contatti--link link link--right facebook" target="_blank" rel="noreferrer">Facebook</a>
+                          <a target="_blank" aria-label="Link alla pagina Facebook di Luigi Marinangeli" href="https://www.facebook.com/share/yfGNqDAxoRqWp9po/" class="article__contatti--link link link--right facebook" target="_blank" rel="noreferrer">Facebook</a>
                       </li>
                       <li>
                           <i class="icon fab fa-instagram"></i>
-                          <a href="https://www.instagram.com/lecasediluigi/" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">Instagram</a>
+                          <a target="_blank" aria-label="Link alla pagina Instagram di Luigi Marinangeli" href="https://www.instagram.com/lecasediluigi/" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">Instagram</a>
                       </li>
                       <li>
                         <i class="icon fa-solid fa-location-dot"></i>
-                        <a href="https://maps.app.goo.gl/1MXiadStF7hYBNdH6" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">Google Maps</a>
+                        <a target="_blank" aria-label="Link a Google Maps" href="https://maps.app.goo.gl/1MXiadStF7hYBNdH6" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">Google Maps</a>
                     </li>
                   </ul>
             </div>

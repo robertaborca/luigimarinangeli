@@ -23,29 +23,28 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
         <!--FONT AWESOME-->
-        <script src="https://kit.fontawesome.com/fe91d29f6f.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/fe91d29f6f.js" crossorigin="anonymous" async defer></script>
 
 
         <!--FAVICON-->
         <link rel="icon" type="image/svg+xml" href="../favicon.svg">
         <link rel="icon" type="image/png" href="../favicon.png">  
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-        <link rel="stylesheet" media="screen" type="text/css" href="../CSS/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" media="all">
+        <link rel="stylesheet" media="screen" type="text/css" href="../CSS/style.css" media="all">
 
     </head>
     <!--HEADER-->
     <header>
-        <nav class="navbar" id="navBar" role="menu">
+        <nav class="navbar" id="navBar" role="none">
             <!--MENU-->
-            <ul class="navbar__menu" id="menu" role="menu" aria-label="navigation-menu">
+            <ul class="navbar__menu" id="menu" role="menu" aria-label="menù di navigazione">
 
-                <li class="navbar__menu-item navbar__logo" role="none">
+                <li class="navbar__menu-item navbar__logo" role="menuitem">
                     <!--LOGO-->
-                    <a href="../index.html">
+                    <a href="../index.html" aria-label="Link alla home page">
                         <img src="../IMG/luigi-marinangeli-consulente-immobiliare-logo-piccolo.svg" alt="Logo Luigi Marinangeli" class="navbar__img" width="60" height="60">
                     </a>
-                    <a href="../index.html">
+                    <a href="../index.html" aria-label="Link alla home page">
                         <img src="../IMG/luigi-marinangeli-consulente-immobiliare-ancona-firma.svg" alt="Firma di Luigi Marinangeli" class="navbar__signature"  width="180" height="60">
                     </a>
                 </li>                    
@@ -53,7 +52,7 @@
     </header>
     <body>
         <main class="main property-main">
-                    <a class="link link--left property-link" href="../index.html#immobili">Torna indietro</a>
+                    <a class="link link--left property-link" aria-label="Link alla sezione immobili della Home Page" href="../index.html#immobili">Torna indietro</a>
                     <div class="property-hero">
                         <div class="property-title">
                             <h1>Villa a schiera</h1>
@@ -74,7 +73,7 @@
                     </p> 
                     <ul class="property-features">
                         <li class="property-feature">
-                            <i class="icon property-icon fa-solid fa-euro-sign"></i>
+                            <i title="prezzo dell'immobile" class="icon property-icon fa-solid fa-euro-sign"></i>
                             <p>€ 230.000,00</p>
                         </li>
                         <li class="property-feature">
@@ -82,7 +81,7 @@
                             <p>Vista: Panoramica</p>
                         </li>
                         <li class="property-feature">
-                            <i class="icon property-icon fa-solid fa-fire"></i>
+                            <i title="tipo di riscaldamento" class="icon property-icon fa-solid fa-fire"></i>
                             <p>Gas, radiatore, autonomo</p>
                         </li>
                         <li class="property-feature">
@@ -95,78 +94,79 @@
 
                 <div>
 
-                    <div class="carousel" data-flickity='{ "imagesLoaded": true, "lazyLoad": 2, "wrapAround": true }'>
+                                        <div class="carousel" title="carosello di immagini dell'immobile" data-flickity='{ "imagesLoaded": true, "lazyLoad": 2, "wrapAround": true }'>
+
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/casa-a-schiera-di-quattro-piani-con-giardino-e-garage-in-vendita-a-casine-di-ostra.webp" alt="Giardino della casa a schiera con posto auto coperto.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/casa-a-schiera-di-quattro-piani-con-giardino-e-garage-in-vendita-a-casine-di-ostra.webp" alt="Giardino della casa a schiera con posto auto coperto.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/villa-a-schiera-con-tre-camere-da-letto-in-vendita-a-casine-di-ostra.webp" alt="Villa a schiera completamente recintata e posto auto coperto.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/villa-a-schiera-con-tre-camere-da-letto-in-vendita-a-casine-di-ostra.webp" alt="Villa a schiera completamente recintata e posto auto coperto.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/villa-a-schiera-con-giardino-privato-tre-camere-due-cucine-e-tre-bagni-in-vendita-a-casine-di-ostra.webp" alt="Una delle camere da letto della villa a schiera con due letti singoli.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/villa-a-schiera-con-giardino-privato-tre-camere-due-cucine-e-tre-bagni-in-vendita-a-casine-di-ostra.webp" alt="Una delle camere da letto della villa a schiera con due letti singoli.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/villa-a-schiera-con-giardino-privato-e-vista-panoramica-a-casine-di-ostra-in-vendita.webp" alt="Giardino privato pavimentato e con erba nella villetta a schiera.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/villa-a-schiera-con-giardino-privato-e-vista-panoramica-a-casine-di-ostra-in-vendita.webp" alt="Giardino privato pavimentato e con erba nella villetta a schiera.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/villa-a-schiera-con-bellissima-vista-panoramica-su-quattro-livelli-in-vendita-a-casine-di-ostra.webp" alt="Ampia sala con scale in legno per salire al livello superiore.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/villa-a-schiera-con-bellissima-vista-panoramica-su-quattro-livelli-in-vendita-a-casine-di-ostra.webp" alt="Ampia sala con scale in legno per salire al livello superiore.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/villa-a-schiera-in-vendita-a-casine-di-ostra-con-tre-bagni-e-tre-camere-da-letto.webp" alt="Uno dei tre bagni della villa a schiera.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/villa-a-schiera-in-vendita-a-casine-di-ostra-con-tre-bagni-e-tre-camere-da-letto.webp" alt="Uno dei tre bagni della villa a schiera.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/casa-a-schiera-con-cinque-balconi-e-grande-giardino-privato-in-vendita-a-casine-di-ostra.webp" alt="Uno dei cinque balconi presenti nella casa a schiera.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/casa-a-schiera-con-cinque-balconi-e-grande-giardino-privato-in-vendita-a-casine-di-ostra.webp" alt="Uno dei cinque balconi presenti nella casa a schiera.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/casa-a-schiera-con-vista-mozzafiato-e-tre-camere-da-letto-in-vendita-a-casine-di-ostra.webp" alt="Una delle camere da letto della casa, con un letto singolo.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/casa-a-schiera-con-vista-mozzafiato-e-tre-camere-da-letto-in-vendita-a-casine-di-ostra.webp" alt="Una delle camere da letto della casa, con un letto singolo.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/grande-casa-a-schiera-con-enorme-giardino-privato-e-bellissimo-panorama-in-vendita-a-casine-di-ostra.webp" alt="Una delle camere da letto della casa, con un letto matrimoniale.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/grande-casa-a-schiera-con-enorme-giardino-privato-e-bellissimo-panorama-in-vendita-a-casine-di-ostra.webp" alt="Una delle camere da letto della casa, con un letto matrimoniale.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/villa-su-quattro-livelli-con-grande-giardino-in-vendita-a-casine-di-ostra.webp" alt="Scale di legno alle spalle del salone per accedere ai livelli superiori.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/villa-su-quattro-livelli-con-grande-giardino-in-vendita-a-casine-di-ostra.webp" alt="Scale di legno alle spalle del salone per accedere ai livelli superiori.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/casa-a-schiera-in-vendita-a-casine-di-ostra-con-due-cucine-e-tre-bagni.webp" alt="Una delle due cucine della casa.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/casa-a-schiera-in-vendita-a-casine-di-ostra-con-due-cucine-e-tre-bagni.webp" alt="Una delle due cucine della casa.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/villa-a-schiera-dotata-di-ampia-mansarda-in-vendita-a-casine-di-ostra.webp" alt="Mansarda al quarto piano della casa con camino.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/villa-a-schiera-dotata-di-ampia-mansarda-in-vendita-a-casine-di-ostra.webp" alt="Mansarda al quarto piano della casa con camino.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/casa-a-schiera-in-vendita-a-casine-di-ostra-con-ampio-giardino-e-posto-auto-coperto.webp" alt="Uno dei tre bagni della casa a schiera, con vasca e doccia.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/casa-a-schiera-in-vendita-a-casine-di-ostra-con-ampio-giardino-e-posto-auto-coperto.webp" alt="Uno dei tre bagni della casa a schiera, con vasca e doccia.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/casa-a-schiera-vicino-al-mare-immersa-nella-natura-con-vista-panoramica-in-vendita-a-casine-di-ostra.webp" alt="Corridoio luminoso con vista su camera matrimoniale.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/casa-a-schiera-vicino-al-mare-immersa-nella-natura-con-vista-panoramica-in-vendita-a-casine-di-ostra.webp" alt="Corridoio luminoso con vista su camera matrimoniale.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/casa-a-schiera-su-quattro-livelli-con-garage-a-mansarda-in-vendita-a-casine-di-ostra.webp" alt="Ampio e luminoso salottino nella mansarda della casa.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/casa-a-schiera-su-quattro-livelli-con-garage-a-mansarda-in-vendita-a-casine-di-ostra.webp" alt="Ampio e luminoso salottino nella mansarda della casa.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/villa-a-schiera-con-quattro-piani-garage-giardino-tre-camere-da-letto-in-vendita-a-casine-di-ostra.webp" alt="Stanza nella mansarda.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/villa-a-schiera-con-quattro-piani-garage-giardino-tre-camere-da-letto-in-vendita-a-casine-di-ostra.webp" alt="Stanza nella mansarda.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/grande-casa-a-schiera-in-vendita-con-grandi-spazi-esterni-a-casine-di-ostra.webp" alt="Uno dei grandi cinque balconi della casa a schiera, con vista panoranmica.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/grande-casa-a-schiera-in-vendita-con-grandi-spazi-esterni-a-casine-di-ostra.webp" alt="Uno dei grandi cinque balconi della casa a schiera, con vista panoranmica.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/casa-a-schiera-con-tre-bagni-e-cinque-camere-due-cucine-in-vendita-a-casine-di-ostra.webp" alt="Uno dei tre bagni di servizio, uno per piano.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/casa-a-schiera-con-tre-bagni-e-cinque-camere-due-cucine-in-vendita-a-casine-di-ostra.webp" alt="Uno dei tre bagni di servizio, uno per piano.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/casa-a-schiera-in-vendita-con-tre-bagni-e-tre-camere-da-letto-a-casine-di-ostra.webp" alt="Uno dei bagni della casa con box doccia.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/casa-a-schiera-in-vendita-con-tre-bagni-e-tre-camere-da-letto-a-casine-di-ostra.webp" alt="Uno dei bagni della casa con box doccia.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/grande-villa-a-schiera-con-grande-giardino-privato-e-cinque-camere-in-vendita-a-casine-di-ostra.webp" alt="Grande sala con tavolo da pranzo.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/grande-villa-a-schiera-con-grande-giardino-privato-e-cinque-camere-in-vendita-a-casine-di-ostra.webp" alt="Grande sala con tavolo da pranzo.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/villa-a-schiera-a-casine-di-ostra-con-bellissimo-panorama-e-grande-giardino-in-vendita.webp" alt="La vista panoramica da uno dei cinque balconi della casa.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/villa-a-schiera-a-casine-di-ostra-con-bellissimo-panorama-e-grande-giardino-in-vendita.webp" alt="La vista panoramica da uno dei cinque balconi della casa.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/casa-a-schiera-con-giardino-su-quattro-piani-vendesi-a-casine-di-ostra.webp" alt="Altra grande sala con tavolo da pranzo.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/casa-a-schiera-con-giardino-su-quattro-piani-vendesi-a-casine-di-ostra.webp" alt="Altra grande sala con tavolo da pranzo.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/villa-a-schiera-grande-e-con-due-cucine-e-tre-bagni-in-vendita-a-casine-di-ostra.webp" alt="Una delle due grandi cucine della casa.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/villa-a-schiera-grande-e-con-due-cucine-e-tre-bagni-in-vendita-a-casine-di-ostra.webp" alt="Una delle due grandi cucine della casa.">
                         </div>
                         <div class="carousel-cell">
-                            <img src="../IMG/LM271/casa-a-schiera-in-vendita-esclusiva-a-casine-di-ostra.webp" alt="Un'altra angolatura della grande sala con tavolo da pranzo.">
+                            <img loading="lazy" width="534" height="400" src="../IMG/LM271/casa-a-schiera-in-vendita-esclusiva-a-casine-di-ostra.webp" alt="Un'altra angolatura della grande sala con tavolo da pranzo.">
                         </div>
                       </div>
                     </div>
@@ -174,34 +174,34 @@
                     <div class="icon-list">
                         <div class="icon-group--4">
                             <div class="icon-group">
-                                <img src="../IMG/icona--stanze.svg" alt="Icona numero di stanze" class="house-listing--icon">
+                                <img src="../IMG/icona--stanze.svg" alt="Icona numero di stanze" class="house-listing--icon" width="70" height="70">
                                 <p class="icon-text">5+ stanze</p>
                             </div>
                             <div class="icon-group">
-                                <img src="../IMG/icona--metri-quadri.svg" alt="Icona metri quadri" class="house-listing--icon">
+                                <img src="../IMG/icona--metri-quadri.svg" alt="Icona metri quadri" class="house-listing--icon" width="70" height="70">
                                 <p class="icon-text">132 m²</p>
                             </div>
                             <div class="icon-group">
-                                <img src="../IMG/icona--bagni.svg" alt="Icona bagni" class="house-listing--icon">
+                                <img src="../IMG/icona--bagni.svg" alt="Icona bagni" class="house-listing--icon" width="70" height="70">
                                 <p class="icon-text">3 bagni</p>
                             </div>
                             <div class="icon-group">
-                                <img src="../IMG/icona--giardino.svg" alt="Icona giardino" class="house-listing--icon">
+                                <img src="../IMG/icona--giardino.svg" alt="Icona spazi aperti" class="house-listing--icon" width="70" height="70">
                                 <p class="icon-text">240m²
                                 </p>
                             </div>
                         </div>
                         <div class="icon-group--3">   
                             <div class="icon-group">
-                                <img src="../IMG/icona--garage.svg" alt="Icona garage" class="house-listing--icon">
+                                <img src="../IMG/icona--garage.svg" alt="Icona garage" class="house-listing--icon" width="70" height="70">
                                 <p class="icon-text">1 garage</p>
                             </div>
                             <div class="icon-group">
-                                <img src="../IMG/icona--piano.svg" alt="Icona piano" class="house-listing--icon">
+                                <img src="../IMG/icona--piano.svg" alt="Icona piano" class="house-listing--icon" width="70" height="70">
                                 <p class="icon-text">4 Livelli</p>
                             </div>
                             <div class="icon-group">
-                                <img src="../IMG/icona--vista.svg" alt="Icona spiaggia" class="house-listing--icon">
+                                <img src="../IMG/icona--vista.svg" alt="Icona vicino alla spiaggia" class="house-listing--icon" width="70" height="70">
                                 <p class="icon-text">Panorama</p>
                             </div>
                         </div>
@@ -248,34 +248,32 @@
                     <ul class="article__contatti--icon-list property--contacts">
                         <li>
                             <i class="icon fa-solid fa-arrow-left"></i>
-                            <a href="../index.html#immobili" class="article__contatti--link link link--right">Indietro</a>
+                            <a href="../index.html#immobili" aria-label="link alla sezione immobili della Home Page" class="article__contatti--link link link--right">Indietro</a>
                         </li>
                         <li>
                             <i class="icon fas fa-phone"></i>
-                            <a href="callto:+393356199476" class="article__contatti--link link link--right">+39 335.6199476</a>
+                            <a href="callto:+393356199476" aria-label="chiama Luigi Marinangeli" class="article__contatti--link link link--right">+39 335.6199476</a>
                         </li>
                         <li>
                             <i class="icon fas fa-at"></i>
-                            <a href="mailto:info@lecasediluigi.com" class="article__contatti--link link link--right">Email</a>
+                            <a href="mailto:info@lecasediluigi.com" aria-label="Scrivi una mail a Luigi Marinangeli" class="article__contatti--link link link--right">Email</a>
                         </li>
                     </ul>
         </main>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-        <script src="../scripts/script.js" async defer></script>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" async defer></script>
     </body>
     
-<footer class="footer">
+ <footer class="footer">
             <div class="footer__content">
                     <img src="../IMG/luigi-marinangeli-consulente-immobiliare-logo-piccolo.svg" alt="Logo Luigi Marinangeli consulente immobiliare" class="footer__image" width="60" height="60">
                     
                     <p class="footer__title"><i>Luigi</i><br>
                        Marinangeli <br><span>Consulente Immobiliare</span>
                     </p>
-                    <p class="footer__address">
+                    <p title="Indirizzo" class="footer__address">
                       Via Carlo Pisacane 10, Senigallia (AN)
                     </p>
-                    <p class="footer__times">
+                    <p title="Orario" class="footer__times">
                       Lunedì &mdash; Venerdì: 
                       9:00 / 12:30 &mdash; 16:00 / 19:30
                       <br>
@@ -285,23 +283,23 @@
                     <ul class="footer--icon-list">
                       <li>
                           <i class="icon fas fa-phone"></i>
-                          <a href="callto:+393356199476" class="article__contatti--link link link--right">Chiama</a>
+                          <a aria-label="Chiama Luigi Marinangeli" href="callto:+393356199476" class="article__contatti--link link link--right">Chiama</a>
                       </li>
                       <li>
                           <i class="icon fas fa-at"></i>
-                          <a href="mailto:info@lecasediluigi.com" class="article__contatti--link link link--right">Email</a>
+                          <a aria-label="Manda una mail a Luigi Marinangeli" href="mailto:info@lecasediluigi.com" class="article__contatti--link link link--right">Email</a>
                       </li>
                       <li>
                           <i class="icon fab fa-facebook-f"></i>
-                          <a href="https://www.facebook.com/share/yfGNqDAxoRqWp9po/" class="article__contatti--link link link--right facebook" target="_blank" rel="noreferrer">Facebook</a>
+                          <a target="_blank" aria-label="Link alla pagina Facebook di Luigi Marinangeli" href="https://www.facebook.com/share/yfGNqDAxoRqWp9po/" class="article__contatti--link link link--right facebook" target="_blank" rel="noreferrer">Facebook</a>
                       </li>
                       <li>
                           <i class="icon fab fa-instagram"></i>
-                          <a href="https://www.instagram.com/lecasediluigi/" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">Instagram</a>
+                          <a target="_blank" aria-label="Link alla pagina Instagram di Luigi Marinangeli" href="https://www.instagram.com/lecasediluigi/" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">Instagram</a>
                       </li>
                       <li>
                         <i class="icon fa-solid fa-location-dot"></i>
-                        <a href="https://maps.app.goo.gl/1MXiadStF7hYBNdH6" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">Google Maps</a>
+                        <a target="_blank" aria-label="Link a Google Maps" href="https://maps.app.goo.gl/1MXiadStF7hYBNdH6" class="article__contatti--link link link--right" target="_blank" rel="noreferrer">Google Maps</a>
                     </li>
                   </ul>
             </div>

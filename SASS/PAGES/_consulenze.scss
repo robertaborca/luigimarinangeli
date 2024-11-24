@@ -14,17 +14,54 @@
     align-items: center;
     justify-content: center;
 
+    @include media-queries-max-width(small-desktop) {
+        padding: 8rem;
+    }
+
+    @include media-queries-max-width(tablet) {
+        padding: 5rem;
+    }
+
+    @include media-queries-max-width(large-mobile) {
+        padding: 2.5rem;
+    }
+
 
     .property-link {
         margin-bottom: 5rem;
+
+        @include media-queries-max-width(small-desktop) {
+            margin-top: 5rem;
+        }
+
+        @include media-queries-max-width(tablet) {
+            margin-top: 7rem;
+        }
+
+        @include media-queries-max-width(tablet) {
+            margin-top: 9rem;
+        }
     }
 
     .property-hero {
         margin-bottom: 5rem;
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
     }
 
     h1 {
         font-size: 4rem;
+
+        @include media-queries-max-width(medium-tablet) {
+            font-size: 3rem;
+        }
+    }
+
+    h2 {
+        @include media-queries-max-width(medium-tablet) {
+            font-size: 2rem;
+        }
     }
 }
 
