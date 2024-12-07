@@ -599,6 +599,12 @@ body {
         align-items: center;
         justify-content: center;
 
+        .swipe-left {
+          @include media-queries-min-width(tablet) {
+            display: none;
+          }
+        }
+
 
         h2 {
             flex-basis: 100%;
