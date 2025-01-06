@@ -1,4 +1,25 @@
-// READ MORE BTNS
+// READ MORE BTN CHISONO
+var buttons1 = document.getElementById("read-more");
+buttons1.addEventListener("click", readMore);
+function readMore() {
+  var content1 = document.getElementById("more");
+ content1.classList.toggle("show");
+  var buttonText1 = content1.classList.contains("show") ? "Mostra meno -" : "Mostra di più +";
+  buttons1.innerHTML = buttonText1;
+
+  dots1();
+}
+
+function dots1() {
+  var dots1 = document.getElementById("dots");
+  dots1.classList.toggle("hidden-dots");
+}
+
+
+
+
+
+// READ MORE BTNS SERVIZI
 document.querySelectorAll("button.read-more").forEach(function(button) {
 button.addEventListener( 'click' , changeClass);
 });
@@ -48,7 +69,7 @@ var swiper = new Swiper(".slide-content", {
       0: {
           slidesPerView: 1,
       },
-      520: {
+      650: {
           slidesPerView: 2,
       },
       950: {

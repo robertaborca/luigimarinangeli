@@ -14,7 +14,7 @@
     overflow: hidden;
     top:0;
     width: 100vw;
-    padding: map-get($padding, tiny);
+    padding: map-get($padding, small);
     opacity: 0.96;
     z-index: 999;
     @include shadow($color-primary-lighter);
@@ -141,8 +141,6 @@
         @include media-queries-max-width(tablet) {
 
         @include flex-columns;
-        background-color: $color-primary;
-        color: $color-white;
         opacity: 1;
 
         .no-display--3 {
@@ -154,14 +152,9 @@
             @include flex-columns;
             align-items: flex-start;
             gap: 2rem;
-
-            li a {
-                color: $color-white!important;
-            }
         }
 
         #hamburger {
-            color: $color-white!important;
             margin: 0;
         }
 
