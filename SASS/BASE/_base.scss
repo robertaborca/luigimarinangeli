@@ -52,6 +52,24 @@ body {
   @include flex-rows;
 }
 
+.WidgetTitle__Inner-sc-ruy1gu-1 {
+  display: flex;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.WidgetTitle__Header-sc-ruy1gu-2 {
+  margin-left: 10%;
+  flex-basis: 100%;
+}
+
+#recensioni {
+  @include flex-rows;
+  align-items: center;
+  justify-content: center;
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////7
 // HERO
 .hero {

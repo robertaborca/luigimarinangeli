@@ -39,7 +39,7 @@ h1 {
         };
 }
 
-h2 {
+h2, .WidgetTitle__Header-sc-ruy1gu-2 {
         font-size:map-get($font-size, header2);
         font-family: "SUSE", sans-serif;
         letter-spacing: 2px;
