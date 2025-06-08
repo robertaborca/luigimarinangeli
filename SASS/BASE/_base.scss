@@ -378,6 +378,13 @@ body {
   
 
     &__servizi {
+
+      &--h2-2 {
+          background-image: linear-gradient(to left, $color-secondary 0%, $color-secondary  75%, $color-secondary-light 100%);
+
+      }
+
+
         @include flex-rows;
         align-items: center;
 
@@ -442,6 +449,9 @@ body {
                 }
 
                 @include media-queries-max-width(tablet) {
+
+                  font-size: 2rem;
+
                     .more {
                         display: none;
                     }
@@ -464,14 +474,29 @@ body {
                   font-family: 'SUSE', sans-serif;
                   font-optical-sizing: auto;
                   font-style: normal;
+
+                  &-2 {
+                    background-image: linear-gradient(to left, $color-secondary 0%, $color-secondary  75%, $color-secondary-light 100%);
+
+                  }
+                  
+
+                  @include media-queries-max-width(tablet) {
+                    font-size: 2.3rem!important;
+                  }
             }
     
             .icon {    
-                background-image: linear-gradient(to left, $color-secondary 0%, $color-secondary  75%, $color-secondary-light  100%);
+                background-image: linear-gradient(to left, $color-secondary 0%, $color-secondary  75%, $color-secondary-light 100%);
                 -webkit-background-clip: text;
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
                 font-size: 4rem;
+
+                &-2 {
+                background-image: linear-gradient(to left, $color-primary 0%, $color-primary-light  75%, $color-primary-lighter 100%);
+
+                }
                }
           }
       
@@ -486,7 +511,7 @@ body {
         }
 
         @include media-queries-max-width(swiper) {
-          flex-basis: 75%;
+          flex-basis: 80%;
         }
 
         @include media-queries-max-width(large-mobile) {
