@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richiedi una consulenza - Luigi Marinangeli Consulente Immobiliare</title>
+    <meta name="description" content="Richiedi una consulenza immobiliare con Luigi Marinangeli. Consulenza Fast (€75) o Personalizzata. Oltre 40 anni di esperienza nel settore.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+
+</head>
+<body>
+     <!-- Navigation -->
+    <nav class="navbar--landing">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html" aria-label="Link alla home page" aria-current="page" target="_blank">
+                    <img src="../IMG/luigi-marinangeli-consulente-immobiliare-logo-piccolo.svg" loading="lazy" alt="Logo Luigi Marinangeli" class="navbar__img" width="60" height="60">
+                </a>
+                <img id="logo-1" src="../IMG/luigi-marinangeli-consulente-immobiliare-ancona-firma.svg" loading="lazy" alt="Firma di Luigi Marinangeli" class="navbar__signature"  width="180" height="60">
+            </div>
+            <div class="nav-menu">
+                <a href="immobili.html" class="nav-link hidden--landing">I miei immobili</a>
+                <a href="consulenza.html" class="nav-link hidden--landing active">Consulenza</a>
+                <a href="vendi-casa.html" class="nav-link hidden--landing">Vendi casa</a>
+                <a href="tel:+390714608590" class="btn btn--landing btn-primary--landing chiama--landing hidden-mobile--landing">Chiama ora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="hero-section--landing">
+        <div class="container--landing">
+            <h1 id="consulenza-landing">Richiedi una consulenza con me</h1>
+            <p>Scegli tra una consulenza rapida o personalizzata. Con oltre 40 anni di esperienza, sono qui per aiutarti in ogni fase del tuo progetto immobiliare.</p>
+        </div>
+    </section>
+
+    <!-- Consultation Types -->
+    <section class="consultation-types">
+        <div class="container--landing">
+            <div class="consultation-grid">
+                <!-- Fast Consultation -->
+                <div class="consultation-card">
+                    <div class="consultation-icon">⏱️</div>
+                    <h3>CONSULENZA FAST</h3>
+                    <p class="consultation-subtitle">Per i tuoi problemi urgenti.</p>
+                    <div class="price">€75</div>
+                    <ul class="features">
+                        <li>📞 Telefonata dedicata di 45 minuti</li>
+                        <li>💬 Supporto email per 7 giorni</li>
+                        <li>✅ Chiarimenti immediati e concreti</li>
+                        <li>✅ Risoluzione problematiche dell'ultimo minuto</li>
+
+                    </ul>
+                    <p class="paragraph-consulenze">Perfetta per inquadrare rapidamente problematiche specifiche legate all'acquisto di un immobile o per ottenere chiarimenti su questioni burocratiche.</p>
+                    <button class="btn btn--landing btn-primary--landing btn--consulenze-landing" onclick="showForm('fast')">
+                        Seleziona consulenza Fast
+                    </button>
+                </div>
+
+                <!-- Personalized Consultation -->
+                <div class="consultation-card">
+                    <div class="consultation-icon">👥</div>
+                    <h3>CONSULENZA PERSONALIZZATA</h3>
+                    <p class="consultation-subtitle">La mia esperienza al tuo servizio.</p>
+                    <div class="price">Preventivo su misura</div>
+                    <ul class="features">
+                        <li>✅ Valutazione immobili</li>
+                        <li>✅ Eredità, testamento, successioni</li>
+                        <li>✅ Assistenza completa compravendita</li>
+                        <li>✅ 40 anni di esperienza a tua disposizione</li>
+                    </ul>
+                    <p class="paragraph-consulenze">Consulenza su misura per ogni tua esigenza. Ti accompagnerò passo dopo passo durante tutte le fasi, garantendo trasparenza e ascolto fino alla chiusura.</p>
+                    <button class="btn btn--landing btn-primary--landing btn--consulenze-landing" onclick="showForm('personalizzata')">
+                        Richiedi preventivo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Consulenza Fast -->
+    <section class="form-section" id="fastForm" style="display: none;">
+        <div class="container">
+            <div class="form-card">
+                <h3>MODULO CONSULENZA FAST</h3>
+                <p>Compila il modulo in tutti i suoi campi per prendere un appuntamento per una consulenza fast.</p>
+
+                <iframe title="modulo da compilare per prenotare una consulenza fast con Luigi Marinangeli" src="https://docs.google.com/forms/d/e/1FAIpQLSdgMqAZsT4nS_dqr3gXYNPgtyf625FQgmxM0qwqtTlTkuOtVA/viewform?embedded=true" width="640" height="1480" frameborder="0" marginheight="0" marginwidth="0">Caricamento…</iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Consulenza Personalizzata -->
+    <section class="form-section" id="personalizedForm" style="display: none;">
+        <div class="container">
+            <div class="form-card">
+                <h3>MODULO CONSULENZA PERSONALIZZATA</h3>
+                <p>Compila il modulo sottostante in tutti i suoi campi per ottenere il tuo preventivo personalizzato.</p>
+
+                <iframe title="modulo da compilare per prenotare una consulenza personalizzata con Luigi Marinangeli" src="https://docs.google.com/forms/d/e/1FAIpQLScI2GoLFuVzORPEu5ld4i1yedf6wHcg6AfTR66t5xRQ7l0a6A/viewform?embedded=true" width="640" height="1436" frameborder="0" marginheight="0" marginwidth="0">Caricamento…</iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact -->
+    <section class="emergency-contact">
+        <div class="container">
+            <div class="emergency-content">
+                <h3>Hai bisogno di aiuto immediato?</h3>
+                <p>Chiamami direttamente per una consulenza telefonica gratuita</p>
+                <a href="tel:+390714608590" class="btn btn--landing btn-primary--landing btn-consulenza-chiama">
+                    📞 Chiama ora: +39 071.4608590
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showForm(type) {
+            document.getElementById('fastForm').style.display = 'none';
+            document.getElementById('personalizedForm').style.display = 'none';
+            
+            if (type === 'fast') {
+                document.getElementById('fastForm').style.display = 'block';
+            } else {
+                document.getElementById('personalizedForm').style.display = 'block';
+            }
+            
+            // Scroll to form
+            document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function hideForm() {
+            document.getElementById('fastForm').style.display = 'none';
+            document.getElementById('personalizedForm').style.display = 'none';
+        }
+
+        function submitFastForm(event) {
+            event.preventDefault();
+            alert('Grazie! La tua richiesta per la Consulenza Fast è stata inviata. Ti contatterò al più presto.');
+            hideForm();
+        }
+
+        function submitPersonalizedForm(event) {
+            event.preventDefault();
+            alert('Grazie! La tua richiesta per la Consulenza Personalizzata è stata inviata. Ti invierò un preventivo personalizzato al più presto.');
+            hideForm();
+        }
+    </script>
+</body>
+</html>

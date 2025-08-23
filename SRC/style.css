@@ -1,0 +1,666 @@
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'SUSE', sans-serif;
+    font-weight: 600;
+}
+
+.container--landing {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.selling-hero, .value-proposition, .services-section, .process-section {
+    margin-bottom: 4rem;
+}
+
+/* Navigation */
+.navbar--landing {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar--landing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+
+.nav-brand span {
+    color: #374151;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #355f6f;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #685930!important;
+}
+
+/* Buttons */
+.btn--landing {
+    display: inline-block;
+    padding: 1.5rem 1.5rem!important;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1.5rem!important;
+    font-family: inherit;
+}
+
+.btn-consulenza-chiama {
+    display: inline-block!important;
+}
+
+.btn--vendi {
+    font-size: 1.7rem!important;
+}
+
+.btn-primary--landing {
+    background: #355f6f;
+    color: white;
+}
+
+.btn-primary--landing:hover {
+    background: #537886;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #355f6f;
+    border: 2px solid #355f6f;
+}
+
+/* .btn-outline:hover {
+    background: #355f6f;
+    color: white;
+} */
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+.btn-full--landing {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+/* Hero Section */
+.hero-section--landing {
+    background: linear-gradient(135deg, #355f6f, #537886);
+    color: white;
+    padding: 4rem 0 4rem;
+    text-align: center;
+    margin-top: 12rem;
+}
+
+#immobili-landing, #consulenza-landing, #vendi-landing {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-family: 'SUSE', sans-serif;
+    background-image: none;
+    -webkit-text-fill-color: white;
+}
+
+.hero-section p {
+    font-size: 1.35rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.selling-hero {
+        background: linear-gradient(135deg, #355f6f, #537886);
+}
+
+.rating {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.stars {
+    font-size: 1.5rem;
+}
+
+/* Sections */
+section {
+    padding: 4rem 0;
+}
+
+.section-alt {
+    background: #f9fafb;
+}
+
+/* Properties Grid */
+.properties-section {
+    padding: 4rem 0;
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.property-card--landing {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.property-card--landing:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px rgba(0,0,0,0.15);
+}
+
+.property-image--landing {
+    height: 200px;
+    background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #9ca3af;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+.property-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #fbbf24;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.property-type {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 99999;
+}
+
+.property-content {
+    padding: 1.5rem;
+}
+
+.property-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.property-title--landing {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    flex: 1;
+}
+
+.property-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #355f6f;
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+
+.property-location--landing {
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.property-description--landing {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.property-features--landing {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #6b7280;
+}
+
+/* Consultation Types */
+.consultation-types {
+    padding: 4rem 0;
+    background: #f9fafb;
+}
+
+.consultation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.consultation-card {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.consultation-card:hover,
+.consultation-card.selected {
+    border-color: #355f6f;
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1);
+}
+
+.consultation-logo {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+}
+
+.consultation-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.paragraph-consulenze {
+    text-align: justify;
+    margin-bottom: 1.7rem;
+    padding: 1.5rem;
+}
+
+.btn--consulenze-landing {
+    margin-bottom: 1.7rem;
+}
+
+.chiama--landing {
+    border: 1px solid #355f6f;
+    padding: 7px;
+    transition: all .4s linear;
+}
+
+.chiama--landing:hover {
+    border: 1px solid white;
+    background-color: #355f6f;
+    color: white;
+    transform: scale(1.1);
+}
+
+.consultation-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #355f6f;
+}
+
+.consultation-subtitle {
+    color: #6b7280;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #355f6f;
+    margin-bottom: 1.5rem;
+}
+
+.features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.features li {
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+/* Services Grid */
+.services-section {
+    background: #f9fafb;
+}
+
+.services-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    color: #355f6f;
+    text-transform: uppercase;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #355f6f;
+}
+
+.service-card p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Process Steps */
+
+.process-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    color: #355f6f;
+    text-transform: uppercase;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.step {
+    text-align: center;
+}
+
+.step-number {
+    width: 5rem;
+    height: 5rem;
+    background: #AA9C77;
+    color: #355f6f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+}
+
+.step h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.step p {
+    color: #6b7280;
+}
+
+/* Value Proposition */
+.value-proposition {
+    padding: 3rem 0;
+}
+
+.value-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.value-content h2 {
+    margin-bottom: 1.5rem;
+    color: #355f6f;
+    font-size: rem;
+    text-transform: uppercase;
+}
+
+.value-content p {
+    font-size: 1.5rem;
+    color: #374151;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.highlight {
+    color: #355f6f;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.highlight strong {
+    font-size: 2.5rem;
+}
+
+
+/* Contact Sections */
+.contact-section,
+.emergency-contact,
+.final-cta {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.final-cta .container--landing {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.emergency-contact {
+    background: #f9fafb;
+}
+
+.final-cta {
+    background-image: linear-gradient(to left, #0e3543, #537886);
+    color: white;
+}
+
+.final-cta h2 {
+    background-image: linear-gradient(to left, #685930, #F9F2DD);
+    text-transform: uppercase;
+}
+
+
+.contact-content h2,
+.emergency-content h3,
+.final-cta h2 {
+    margin-bottom: 1rem;
+    font-size: 3rem!important;
+}
+
+.contact-content p,
+.emergency-content p,
+.final-cta p {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.contact-buttons,
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .hidden--landing { 
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .nav-menu .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+    }
+    
+    .properties-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .consultation-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-buttons,
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .hidden-mobile--landing {
+        display: none!important;
+    }
+
+    .container--landing {
+        padding: 0 15px;
+    }
+    
+    .navbar--landing .container {
+        padding: 1rem 15px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .nav-menu {
+        gap: 0.5rem;
+    }
+    
+    .nav-link {
+        font-size: 0.875rem;
+    }
+    
+    .hero-section {
+        padding: 6rem 0 3rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+    
+    .consultation-card,
+    .service-card,
+    .form-card {
+        padding: 1.5rem;
+    }
+    
+    .property-content {
+        padding: 1rem;
+    }
+}
