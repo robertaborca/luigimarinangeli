@@ -45,6 +45,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap" rel="stylesheet" media="all">
         <!--FONT AWESOME-->
         <script src="https://kit.fontawesome.com/fe91d29f6f.js" crossorigin="anonymous" async defer></script>
+        <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css" >
 
 
         <!--FAVICON-->
@@ -388,132 +389,63 @@
             <!-- I MIEI IMMOBILI STARTS -->
             <article id="immobili" class="article article__immobili" aria-roledescription="Sezione 'I miei immobili'">
               <h2 class="article__immobili--h2">I miei immobili</h2>
+
               <div class="slide-container swiper" aria-roledescription="Carosello di carte con i vari immobili">
                 <div class="slide-content">
                     <div class="card-wrapper swiper-wrapper">
-                        <!-- <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
-                            <div class="image-content">
-    
-                                <div class="card-image">
-                                   <img src="IMG/LM275/villino-indipendente-in-vendita-senigallia.webp" loading="lazy" alt="Villino indipendente su due piani con giardino in vendita a Senigallia" class="card-img" height="330px" width="330px">
-                                </div>
-                            </div>
-    
-                            <div class="card-content">
-                                <h3 title="località dell'immobile" class="name">Senigallia</h3>
-                                <h4>Villino indipendente</h4>
-                                <p title="prezzo dell'immobile" class="price">€ 350.000</p>
 
-                                <div class="house-services">
-                                  <ul class="services">
-                                    <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 120m²</li>
-                                    <li><i title="Numero di camere" class="fa-solid fa-bed"></i> 5</li>
-                                    <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 2</li>
-                                    <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 1</li>
-                                  </ul>
-                                </div>
-                                <a href="./CASE/villino-indipendente-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
-                            </div>
-                        </div> -->
-                        <!-- <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
-                          <div class="image-content">
-  
-                              <div class="card-image">
-                                 <img src="IMG/LM221/grande-appartamento-a-senigallia.webp" loading="lazy" alt="Grande appartamento in vendita a Senigallia" class="card-img card-image--center" height="330px" width="330px">
-                              </div>
-                          </div>
-  
-                          <div class="card-content">
-                              <h3 title="località dell'immobile" class="name">Senigallia</h3>
-                              <h4>Spazioso appartamento</h4>
-                              <p title="prezzo dell'immobile" class="price">€ 290.000</p>
-
-                              <div class="house-services">
-                                <ul class="services">
-                                  <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 87m²</li>
-                                  <li><i title="Numero di camere" class="fa-solid fa-bed"></i> 4</li>
-                                  <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 2</li>
-                                  <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 0</li>
-                                </ul>
-                              </div>
-                              <a href="./CASE/grande-appartamento-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
-                          </div>
-                        </div> -->
-
-                        <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
-                          <div class="image-content">
-  
-                              <div class="card-image">
-                                 <img src="IMG/LM282/stabilimento-balneare-vicino-alla-rotonda-di-senigallia-in-vendita.webp" loading="lazy" alt=" Stabilimento balneare in vendita a Senigallia" class="card-img card-image--center" height="330px" width="330px">
-                              </div>
-                          </div>
-  
-                          <div class="card-content">
-                              <h3 title="Località dell'immobile" class="name">Senigallia</h3>
-                              <h4>Stabilimento balneare</h4>
-                              <p title="Prezzo dell'immobile" class="price">€ 425.000</p>
-
-                              <div class="house-services">
-                                <ul class="services">
-                                  <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 1.400m²</li>
-                                  <li><i title="Numero di bar" class="fa-solid fa-wine-glass"></i> 1</li>
-                                  <li><i title="Campi sportivi" class="fa-solid fa-volleyball"></i> 1+</li>
-                                </ul>
-                              </div>
-                              <a href="./CASE/stabilimento-balneare-rotonda-di-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
-
-                          </div>
-                      </div>
-
-                      <!-- <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
+                      <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
                         <div class="image-content">
-
-                            <div class="card-image">
-                               <img src="IMG/LM274/esclusivo-appartamento-in-vendita-a-senigallia-al-ciarnin.webp" loading="lazy" alt="Bellissimo appartamento in vendita al Ciarnin" class="card-img card-image--center" height="330px" width="330px">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <h3 title="Località dell'immobile" class="name">Senigallia</h3>
-                            <h4>Appartamento al Ciarnin</h4>
-                            <p title="Prezzo dell'immobile" class="price">Prezzo su richiesta</p>
-
-                            <div class="house-services">
-                              <ul class="services">
-                                <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 115m²</li>
-                                <li><i title="Numero di camere" class="fa-solid fa-bed"></i> 6</li>
-                                <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 2</li>
-                                <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 1</li>
-                              </ul>
-                            </div>
-                            <a href="./CASE/favoloso-appartamento-al-ciarnin.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
-                        </div>
-                    </div> -->
-
-                    <!-- <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
-                      <div class="image-content">
-
                           <div class="card-image">
-                             <img src="IMG/LM270/villa-in-vendita-a-borgo-molino-senigallia.webp" loading="lazy" alt="Villa in vendita Borgo Molino, Senigallia" class="card-img card-image--center" height="330px" width="330px">
-                          </div>
-                      </div>
+                       <img src="IMG/LM284/villa-singola-con-giardino-privato-in-vendita-a-senigallia-borgo-bicchia.webp" loading="lazy" alt="Villa singola con giardino privato su due livalli" class="card-img" height="330px" width="330px">
+                    </div>
+                </div>
+  
+                <div class="card-content">
+                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
+                  <h4>La casa con gli oblò</h4>
+                  <p title="Prezzo dell'immobile" class="price">€ 225.000</p>
+  
+                  <div class="house-services">
+                    <ul class="services">
+                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 90m²</li>
+                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>3</li>
+                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>2</li>
+                      <li> <i title="Presenza di Garage"class="fa-solid fa-warehouse"></i>
+                            <i class="fa-solid fa-car-side"></i></i></li>
+                    </ul>
+                  </div>
+                  <a href="./CASE/la-casa-con-gli-oblò-in-vendita-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
+                </div>
+              </div>
 
-                      <div class="card-content">
-                          <h3 title="Località dell'immobile" class="name">Senigallia</h3>
-                          <h4>Villa in Via Capanna</h4>
-                          <p title="Prezzo dell'immobile" class="price">€ 469.000</p>
+              <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
+                <div class="image-content">
+  
+                    <div class="card-image">
+                       <img src="IMG/LM279/appartamento-vista-mare-ammobiliato-in-vendita-a-senigallia.webp" loading="lazy" alt="Appartamento vista mare ammobiliato in vendita a Senigallia" class="card-img" height="330px" width="330px">
+                    </div>
+                </div>
+  
+                <div class="card-content">
+                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
+                  <h4>Appartamento vista mare</h4>
+                  <p title="Prezzo dell'immobile" class="price">€ 180.000</p>
+  
+                  <div class="house-services">
+                    <ul class="services">
+                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 55m²</li>
+                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>1</li>
+                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>1</li>
+                      <li> <i title="Presenza di Garage"class="fa-solid fa-warehouse"></i>
+                            <i class="fa-solid fa-car-side"></i></i></li>
+                    </ul>
+                  </div>
+                  <a href="./CASE/appartamento-vista-mare-ammobiliato-in-vendita-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
+                </div>
+              </div>
 
-                          <div class="house-services">
-                            <ul class="services">
-                              <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 120m²</li>
-                              <li><i title="Numero di camere" class="fa-solid fa-bed"></i> 7</li>
-                              <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 2</li>
-                              <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 1</li>
-                            </ul>
-                          </div>
-                          <a href="./CASE/villa-in-vendita-in-Via-Capanna-Senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
-                      </div>
-                  </div> -->
+              
                   <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
                     <div class="image-content">
 
@@ -532,36 +464,121 @@
                             <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 132m²</li>
                             <li><i title="Numero di camere" class="fa-solid fa-bed"></i> 4</li>
                             <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 3</li>
-                            <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 3</li>
+                            <li>
+                            <i title="Presenza di Garage"class="fa-solid fa-warehouse"></i>
+                            <i class="fa-solid fa-car-side"></i>
+                          </li>
                           </ul>
                         </div>
                         <a href="./CASE/villa-a-schiera-in-vendita-a-casine-di-ostra.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
                     </div>
                 </div>
-                <!-- <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
-                  <div class="image-content">
 
-                      <div class="card-image">
-                         <img src="IMG/LM268/appartamento-indipendente-in-vendita-a-marina-di-montemarciano.webp" loading="lazy" alt="Appartamento indipendente in vendita a Marina di Montemarciano" class="card-img card-image--center" height="330px" width="330px">
-                      </div>
+                <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
+              <div class="image-content">
+
+                  <div class="card-image">
+                     <img src="IMG/LM283/villino-immerso-nel-verde-con-dependence-in-vendita-a-senigallia.webp" loading="lazy" alt="Villino immersa nel verde con dependence in vendita Scapezzano, Senigallia" class="card-img" height="330px" width="330px">
                   </div>
+              </div>
 
-                  <div class="card-content">
-                      <h3 title="Località dell'immobile" class="name">Montemarciano</h3>
-                      <h4>Appartamento indipendente</h4>
-                      <p title="Prezzo dell'immobile" class="price">€ 220.000</p>
+              <div class="card-content">
+                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
+                  <h4>L'oasi di Scapezzano</h4>
+                  <p title="Prezzo dell'immobile" class="price">€ 490.000</p>
 
-                      <div class="house-services">
-                        <ul class="services">
-                          <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 105m²</li>
-                          <li><i title="Numero di camere" class="fa-solid fa-bed"></i>4+</li>
-                          <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 2</li>
-                          <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 1</li>
-                        </ul>
-                      </div>
-                      <a href="./CASE/appartamento-indipendente-in-vendita-a-marina-di-montemarciano.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
+                  <div class="house-services">
+                    <ul class="services">
+                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 153m²+</li>
+                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>4</li>
+                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>3</li>
+                      <li> <i title="Presenza di Garage"class="fa-solid fa-warehouse"></i>
+                            <i class="fa-solid fa-car-side"></i></i></li>
+                    </ul>
                   </div>
-              </div> -->
+                  <a href="./CASE/villino-in-vendita-a-scapezzano-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
+              </div>
+              </div>
+
+              <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
+              <div class="image-content">
+
+                  <div class="card-image">
+                     <img src="IMG/LM272/villa-lussuosa-immersa-nel-verde-in-vendita-a-senigallia-le-saline.webp" loading="lazy" alt="Villa lussuosa immersa nel verde in vendita alle Saline Senigallia" class="card-img" height="330px" width="330px">
+                  </div>
+              </div>
+
+              <div class="card-content">
+                  <h3 title="Località dell'immobile" class="name">Senigallia, Saline</h3>
+                  <h4>Villa di lusso</h4>
+                  <p title="Prezzo dell'immobile" class="price">€ 1.350.000</p>
+
+                  <div class="house-services">
+                    <ul class="services">
+                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 360m²</li>
+                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>8</li>
+                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>5</li>
+                      <li> <i title="Presenza di Garage"class="fa-solid fa-warehouse"></i>
+                            <i class="fa-solid fa-car-side"></i></i></li>
+                    </ul>
+                  </div>
+                  <a href="./CASE/lussuosa-villa-in-vendita-alle-saline-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
+              </div>
+              </div>
+
+              
+              <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
+                <div class="image-content">
+  
+                    <div class="card-image">
+                       <img src="IMG/LM281/mini-appartamento-in-vendita-a-senigallia-tra-porto-e-centro-storico.webp" loading="lazy" alt="Mini Appartamento tra il porto e il centro storico in vendita a Senigallia" class="card-img" height="330px" width="330px">
+                    </div>
+                </div>
+  
+                <div class="card-content">
+                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
+                  <h4>App.to centro vista mare</h4>
+                  <p title="Prezzo dell'immobile" class="price">€ 245.000</p>
+  
+                  <div class="house-services">
+                    <ul class="services">
+                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 55m²</li>
+                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>2</li>
+                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>1</li>
+                    </ul>
+                  </div>
+                  <a href="./CASE/mini-appartamento-in-vendita-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
+                </div>
+              </div>
+
+              
+              <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
+                <div class="image-content">
+  
+                    <div class="card-image">
+                       <img src="IMG/LM280/villetta-a-schiera-in-vendita-a-senigallia.webp" loading="lazy" alt="Villetta a schiera panoramica e recentemente ristrutturata in vendita a Senigallia" class="card-img" height="330px" width="330px">
+                    </div>
+                </div>
+  
+                <div class="card-content">
+                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
+                  <h4>Villetta a schiera</h4>
+                  <p title="Prezzo dell'immobile" class="price">€ 420.000</p>
+  
+                  <div class="house-services">
+                    <ul class="services">
+                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 173m²</li>
+                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>3</li>
+                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>2</li>
+                      <li> <i title="Presenza di Garage"class="fa-solid fa-warehouse"></i>
+                            <i class="fa-solid fa-car-side"></i></i></li>
+                    </ul>
+                  </div>
+                  <a href="./CASE/villetta-a-schiera-panoramica-in-vendita-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
+                </div>
+              </div>
+
+              
               <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
                 <div class="image-content">
 
@@ -580,61 +597,13 @@
                         <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 82m²</li>
                         <li><i title="Numero di camere" class="fa-solid fa-bed"></i> 2</li>
                         <li><i title="Numero di bagni" class="fa-solid fa-bath"></i> 1</li>
-                        <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i> 1</li>
+                            <li><i title="Presenza di Garage"class="fa-solid fa-warehouse"></i>
+                            <i class="fa-solid fa-car-side"></i></i></li>
                       </ul>
                     </div>
                     <a href="./CASE/appartamento-semi-nuovo-in-vendita-a-barbara.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
                 </div>
-            </div>
-            <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
-              <div class="image-content">
-
-                  <div class="card-image">
-                     <img src="IMG/LM272/villa-lussuosa-immersa-nel-verde-in-vendita-a-senigallia-le-saline.webp" loading="lazy" alt="Villa lussuosa immersa nel verde in vendita alle Saline Senigallia" class="card-img" height="330px" width="330px">
-                  </div>
-              </div>
-
-              <div class="card-content">
-                  <h3 title="Località dell'immobile" class="name">Senigallia, Saline</h3>
-                  <h4>Villa di lusso</h4>
-                  <p title="Prezzo dell'immobile" class="price">€ 1.350.000</p>
-
-                  <div class="house-services">
-                    <ul class="services">
-                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 360m²</li>
-                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>8</li>
-                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>3+</li>
-                      <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i>3+</li>
-                    </ul>
-                  </div>
-                  <a href="./CASE/lussuosa-villa-in-vendita-alle-saline-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
-              </div>
-              </div>
-
-              <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
-              <div class="image-content">
-
-                  <div class="card-image">
-                     <img src="IMG/LM283/villino-immerso-nel-verde-con-dependence-in-vendita-a-senigallia.webp" loading="lazy" alt="Villino immersa nel verde con dependence in vendita Scapezzano, Senigallia" class="card-img" height="330px" width="330px">
-                  </div>
-              </div>
-
-              <div class="card-content">
-                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
-                  <h4>L'oasi di Scapezzano</h4>
-                  <p title="Prezzo dell'immobile" class="price">€ 490.000</p>
-
-                  <div class="house-services">
-                    <ul class="services">
-                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 153m²+</li>
-                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>4</li>
-                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>3</li>
-                      <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i>1+</li>
-                    </ul>
-                  </div>
-                  <a href="./CASE/villino-in-vendita-a-scapezzano-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
-              </div>
-              </div>
+            </div>                      
 
               <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
                 <div class="image-content">
@@ -654,7 +623,8 @@
                       <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 83m²</li>
                       <li><i title="Numero di camere" class="fa-solid fa-bed"></i>2</li>
                       <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>1</li>
-                      <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i>1</li>
+                      <li> <i title="Presenza di Garage"class="fa-solid fa-warehouse"></i>
+                            <i class="fa-solid fa-car-side"></i></i></li>
                     </ul>
                   </div>
                   <a href="./CASE/appartamento-sul-mare-in-vendita-a-marzocca.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
@@ -662,106 +632,30 @@
               </div>
 
               <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
-                <div class="image-content">
+                  <div class="image-content">
   
-                    <div class="card-image">
-                       <img src="IMG/LM281/mini-appartamento-in-vendita-a-senigallia-tra-porto-e-centro-storico.webp" loading="lazy" alt="Mini Appartamento tra il porto e il centro storico in vendita a Senigallia" class="card-img" height="330px" width="330px">
-                    </div>
-                </div>
-  
-                <div class="card-content">
-                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
-                  <h4>Mini appartamento</h4>
-                  <p title="Prezzo dell'immobile" class="price">€ 245.000</p>
-  
-                  <div class="house-services">
-                    <ul class="services">
-                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 55m²</li>
-                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>2</li>
-                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>1</li>
-                      <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i>0</li>
-                    </ul>
+                      <div class="card-image">
+                          <img src="IMG/LM282/stabilimento-balneare-vicino-alla-rotonda-di-senigallia-in-vendita.webp" loading="lazy" alt=" Stabilimento balneare in vendita a Senigallia" class="card-img card-image--center" height="330px" width="330px">
+                      </div>
                   </div>
-                  <a href="./CASE/mini-appartamento-in-vendita-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
-                </div>
+  
+                  <div class="card-content">
+                      <h3 title="Località dell'immobile" class="name">Senigallia</h3>
+                      <h4>Stabilimento balneare</h4>
+                      <p title="Prezzo dell'immobile" class="price">€ 425.000</p>
+
+                      <div class="house-services">
+                          <ul class="services">
+                            <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 1.400m²</li>
+                            <li><i title="Numero di bar" class="fa-solid fa-wine-glass"></i> 1</li>
+                            <li><i title="Campi sportivi" class="fa-solid fa-volleyball"></i> 1+</li>
+                          </ul>
+                      </div>
+                      <a href="./CASE/stabilimento-balneare-rotonda-di-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
+
+                   </div>
               </div>
 
-              
-              <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
-                <div class="image-content">
-  
-                    <div class="card-image">
-                       <img src="IMG/LM279/appartamento-vista-mare-ammobiliato-in-vendita-a-senigallia.webp" loading="lazy" alt="Appartamento vista mare ammobiliato in vendita a Senigallia" class="card-img" height="330px" width="330px">
-                    </div>
-                </div>
-  
-                <div class="card-content">
-                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
-                  <h4>Appartamento vista mare</h4>
-                  <p title="Prezzo dell'immobile" class="price">€ 180.000</p>
-  
-                  <div class="house-services">
-                    <ul class="services">
-                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 55m²</li>
-                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>1</li>
-                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>1</li>
-                      <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i>1</li>
-                    </ul>
-                  </div>
-                  <a href="./CASE/appartamento-vista-mare-ammobiliato-in-vendita-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
-                </div>
-              </div>
-
-              <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
-                <div class="image-content">
-  
-                    <div class="card-image">
-                       <img src="IMG/LM280/villetta-a-schiera-in-vendita-a-senigallia.webp" loading="lazy" alt="Villetta a schiera panoramica e recentemente ristrutturata in vendita a Senigallia" class="card-img" height="330px" width="330px">
-                    </div>
-                </div>
-  
-                <div class="card-content">
-                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
-                  <h4>Villetta a schiera</h4>
-                  <p title="Prezzo dell'immobile" class="price">€ 420.000</p>
-  
-                  <div class="house-services">
-                    <ul class="services">
-                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 173m²</li>
-                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>3</li>
-                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>2</li>
-                      <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i>1+</li>
-                    </ul>
-                  </div>
-                  <a href="./CASE/villetta-a-schiera-panoramica-in-vendita-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
-                </div>
-              </div>
-
-              
-              <div class="card swiper-slide" aria-roledescription="Carta con una breve descrizione dell'immobile">
-                <div class="image-content">
-  
-                    <div class="card-image">
-                       <img src="IMG/LM284/villa-singola-con-giardino-privato-in-vendita-a-senigallia-borgo-bicchia.webp" loading="lazy" alt="Villa singola con giardino privato su due livalli" class="card-img" height="330px" width="330px">
-                    </div>
-                </div>
-  
-                <div class="card-content">
-                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
-                  <h4>La casa con gli oblò</h4>
-                  <p title="Prezzo dell'immobile" class="price">€ 225.000</p>
-  
-                  <div class="house-services">
-                    <ul class="services">
-                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 90m²</li>
-                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>3</li>
-                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>2</li>
-                      <li><i title="Numero di posti auto" class="fa-solid fa-car-side"></i>1</li>
-                    </ul>
-                  </div>
-                  <a href="./CASE/la-casa-con-gli-oblò-in-vendita-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
-                </div>
-              </div>
 
                       </div>
                     </div>

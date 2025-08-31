@@ -121,6 +121,11 @@
 .property-text {
   flex-basis: 50%;
 
+  ul {
+    list-style: outside;
+    list-style-position: outside;
+  }
+
   @include media-queries-max-width(tablet) {
     flex-basis: 100%;
   }
@@ -237,15 +242,24 @@
   }
 }
 
+.cta {
+  margin-top: 3rem;
+  font-size: 2.6rem;
+  font-weight: 500;
+
+}
+
+
 .carousel {
-  background: rgba($color-secondary, .5);
+  background: white;
   margin-bottom: 6rem;
 }
 
 .carousel img {
   display: block;
   height: 45rem;
-  margin-left: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .dot {
