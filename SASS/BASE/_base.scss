@@ -65,11 +65,242 @@ body {
 }
 
 #recensioni {
-  @include flex-rows;
-  align-items: center;
-  justify-content: center;
-}
+            padding: 60px 0;
+            background: linear-gradient(135deg, rgba(53, 95, 111, 0.9) 0%, rgba(53, 95, 111, 0.7) 50%, rgba(53, 95, 111, 0.85) 100%);
+            position: relative;
+            overflow: hidden;
+        }
 
+        #recensioni::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            color: white!important;
+            background-image: none;
+            -webkit-background-clip:unset;
+            background-clip: unset;
+            -webkit-text-fill-color:#FFF;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            font-family: "SUSE", sans-serif;
+        }
+
+        .reviews-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .reviews-grid {
+            display: flex;
+            gap: 25px;
+            transition: transform 0.5s ease-in-out;
+            min-height: 400px;
+        }
+
+        .review-card {
+            min-width: 350px;
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4285f4, #34a853, #fbbc05, #ea4335);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .reviewer-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #355f6f, #4a7c95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            margin-right: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .reviewer-info h3 {
+            font-size: 1.6rem!important;
+            color: #1a1a1a!important;
+            margin-bottom: 5px;
+        }
+
+        .review-date {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .rating-stars {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 15px;
+        }
+
+        .star {
+            color: #ffd700;
+            font-size: 18px;
+        }
+
+        .star.empty {
+            color: #ddd;
+        }
+
+        .review-text {
+            flex-grow: 1;
+            color: #444!important;
+            line-height: 1.6;
+            font-size: 1.6rem!important;
+        }
+
+        .google-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .google-logo {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        .google-text {
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .carousel-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-btn:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .carousel-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: scale(1);
+        }
+
+        .carousel-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .reviews-container {
+                padding: 20px;
+            }
+            
+            // .review-card {
+            //     min-width: 280px;
+            // }
+            
+            .carousel-controls {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .review-card {
+                min-width: 320px;
+                padding: 20px;
+                // margin-right:15%;
+            }
+            
+            .section-title {
+                font-size: 1.7rem;
+                margin-bottom: 2rem;
+            }
+        }
 //////////////////////////////////////////////////////////////////////////////////////////////7
 // HERO
 .hero {

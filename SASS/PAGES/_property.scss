@@ -247,7 +247,6 @@
   margin-top: 3rem;
   font-size: 2.6rem;
   font-weight: 500;
-
 }
 
 
@@ -259,8 +258,12 @@
 .carousel img {
   display: block;
   height: 45rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
+
+  @include media-queries-min-width(large-mobile) {
+    
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
 }
 
 .dot {
