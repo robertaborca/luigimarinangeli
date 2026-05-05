@@ -52,9 +52,7 @@ window.addEventListener("load", () => {
 var swiper = new Swiper(".slide-content", {
   slidesPerView: 3,
   spaceBetween: 25,
-  centerSlide: 'true',
-  fade: 'true',
-  grabCursor: 'true',
+  grabCursor: true,
   //pagination: {
    // el: ".swiper-pagination",
    // clickable: true,

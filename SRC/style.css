@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+:focus-visible {
+    outline: 3px solid #355f6f;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -285,6 +291,10 @@ section {
 }
 
 /* Consultation Types */
+iframe {
+    max-width: 100%;
+}
+
 .consultation-types {
     padding: 4rem 0;
     background: #f9fafb;
@@ -292,7 +302,7 @@ section {
 
 .consultation-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -306,10 +316,9 @@ section {
     cursor: pointer;
     position: relative;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .consultation-card:hover,
@@ -326,17 +335,20 @@ section {
 
 .consultation-icon {
     font-size: 4rem;
-    margin-bottom: 1rem;
 }
 
 .paragraph-consulenze {
     text-align: justify;
-    margin-bottom: 1.7rem;
-    padding: 1.5rem;
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .btn--consulenze-landing {
-    margin-bottom: 1.7rem;
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .chiama--landing {
@@ -354,31 +366,31 @@ section {
 
 .consultation-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
     color: #355f6f;
 }
 
 .consultation-subtitle {
     color: #6b7280;
     font-style: italic;
-    margin-bottom: 1.5rem;
 }
 
 .price {
     font-size: 2rem;
     font-weight: 700;
     color: #355f6f;
-    margin-bottom: 1.5rem;
 }
 
 .features {
     list-style: none;
     text-align: left;
-    margin-bottom: 1.5rem;
+    width: 100%;
 }
 
 .features li {
-    padding: 0.5rem 0;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.4rem 0;
     font-size: 1.5rem;
 }
 
@@ -492,7 +504,7 @@ section {
 .value-content h2 {
     margin-bottom: 1.5rem;
     color: #355f6f;
-    font-size: rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
 }
 
@@ -567,29 +579,45 @@ section {
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
-    .hidden--landing { 
-        display: none;
-    }
-}
-
-
 @media (max-width: 768px) {
     .nav-menu {
         gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
     }
-    
+
     .nav-menu .btn {
         padding: 0.5rem 1rem;
         font-size: 0.875rem;
+    }
+
+    .nav-link {
+        font-size: 1.3rem;
     }
     
     .hero-section h1 {
         font-size: 2rem;
     }
-    
+
     .hero-section p {
         font-size: 1rem;
+    }
+
+    .hero-section--landing {
+        margin-top: 8rem;
+        padding: 3rem 0;
+    }
+
+    #consulenza-landing, #immobili-landing, #vendi-landing {
+        font-size: 2.2rem;
+    }
+
+    .emergency-content h3 {
+        font-size: 2.2rem !important;
+    }
+
+    .emergency-content p {
+        font-size: 1.5rem;
     }
     
     .properties-grid {
@@ -634,24 +662,51 @@ section {
     
     .navbar--landing .container {
         padding: 1rem 15px;
-        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .nav-menu {
+        gap: 0.75rem;
         justify-content: center;
     }
-    
-    .nav-menu {
-        gap: 0.5rem;
-    }
-    
+
     .nav-link {
-        font-size: 0.875rem;
+        font-size: 1.2rem;
     }
     
     .hero-section {
         padding: 6rem 0 3rem;
     }
-    
+
     .hero-section h1 {
         font-size: 1.75rem;
+    }
+
+    .hero-section--landing {
+        margin-top: 6rem;
+        padding: 2.5rem 0;
+    }
+
+    #consulenza-landing, #immobili-landing, #vendi-landing {
+        font-size: 1.8rem;
+    }
+
+    .hero-section--landing p {
+        font-size: 1.2rem;
+    }
+
+    .emergency-content h3 {
+        font-size: 1.8rem !important;
+    }
+
+    .emergency-content p {
+        font-size: 1.3rem;
+    }
+
+    .features li {
+        font-size: 1.3rem;
     }
     
     .consultation-card,
