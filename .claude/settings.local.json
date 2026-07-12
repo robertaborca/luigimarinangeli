@@ -3,7 +3,10 @@
     "allow": [
       "Bash(BASE=\"/c/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/CASE\" __NEW_LINE_817344d055a18d40__ echo \"=== LINK TAG VERIFICATION ===\" for f in \"appartamento-centro-storico-senigallia.html\" \"la-casa-con-gli-oblò-in-vendita-a-senigallia.html\" \"casa-bifamiliare-con-giardino-in-vendita-a-senigallia.html\" \"luminoso-trilocale-in-vendita-a-senigallia-le-saline.html\" \"lussuosa-villa-in-vendita-alle-saline-senigallia.html\" \"mini-appartamento-in-vendita-a-senigallia.html\" \"stabilimento-balneare-rotonda-di-senigallia.html\" \"villetta-a-schiera-panoramica-in-vendita-a-senigallia.html\")",
       "Bash(do echo:*)",
-      "WebFetch(domain:www.lecasediluigi.com)"
+      "WebFetch(domain:www.lecasediluigi.com)",
+      "Bash(powershell -Command \"Get-Content 'c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/consulenza-fast.html' | Select-Object -Last 80\")",
+      "Bash(powershell -Command \"Get-Content 'c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/consulenza-personalizzata.html' | Select-Object -Last 80\")",
+      "Bash(powershell -Command \"Get-Content 'c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/analisi-documentale.html' | Select-Object -Last 100\")"
     ]
   }
 }

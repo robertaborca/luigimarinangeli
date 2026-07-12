@@ -8,7 +8,7 @@
   <!-- HOME -->
   <url>
     <loc>https://www.lecasediluigi.com/</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
@@ -16,19 +16,19 @@
   <!-- LANDING PAGES SRC -->
   <url>
     <loc>https://www.lecasediluigi.com/SRC/immobili.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.lecasediluigi.com/SRC/consulenza.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.lecasediluigi.com/SRC/vendi-casa.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -36,19 +36,19 @@
   <!-- CONSULENZE -->
   <url>
     <loc>https://www.lecasediluigi.com/consulenza-fast.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.lecasediluigi.com/consulenza-personalizzata.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.lecasediluigi.com/analisi-documentale.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -56,49 +56,61 @@
   <!-- IMMOBILI IN VENDITA -->
   <url>
     <loc>https://www.lecasediluigi.com/CASE/lussuosa-villa-in-vendita-alle-saline-senigallia.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.lecasediluigi.com/CASE/appartamento-centro-storico-senigallia.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.lecasediluigi.com/CASE/casa-bifamiliare-con-giardino-in-vendita-a-senigallia.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.lecasediluigi.com/CASE/la-casa-con-gli-obl%C3%B2-in-vendita-a-senigallia.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.lecasediluigi.com/CASE/luminoso-trilocale-in-vendita-a-senigallia-le-saline.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.lecasediluigi.com/CASE/mini-appartamento-in-vendita-a-senigallia.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.lecasediluigi.com/CASE/villetta-a-schiera-panoramica-in-vendita-a-senigallia.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.lecasediluigi.com/CASE/stabilimento-balneare-rotonda-di-senigallia.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/CASE/casa-colonica-ristrutturata-barbara-senigallia.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/CASE/appartamento-moderno-in-vendita-senigallia-villa-torlonia.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>

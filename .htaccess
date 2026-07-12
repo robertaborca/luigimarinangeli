@@ -1,0 +1,11 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Redirect HTTP → HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# Redirect non-www → www
+RewriteCond %{HTTP_HOST} ^lecasediluigi\.com [NC]
+RewriteRule ^(.*)$ https://www.lecasediluigi.com/$1 [L,R=301]
