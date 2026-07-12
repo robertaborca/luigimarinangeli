@@ -6,7 +6,24 @@
       "WebFetch(domain:www.lecasediluigi.com)",
       "Bash(powershell -Command \"Get-Content 'c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/consulenza-fast.html' | Select-Object -Last 80\")",
       "Bash(powershell -Command \"Get-Content 'c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/consulenza-personalizzata.html' | Select-Object -Last 80\")",
-      "Bash(powershell -Command \"Get-Content 'c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/analisi-documentale.html' | Select-Object -Last 100\")"
+      "Bash(powershell -Command \"Get-Content 'c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/analisi-documentale.html' | Select-Object -Last 100\")",
+      "Bash(npx --yes chromium-cli --version)",
+      "Bash(command -v chromium-cli)",
+      "Bash(command -v playwright)",
+      "Bash(python3 -c \"import playwright\")",
+      "Bash(node -e \"require\\('playwright'\\)\")",
+      "Bash('C:\\\\Program Files \\(x86\\)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe' --headless=new --disable-gpu --hide-scrollbars '--user-data-dir=C:\\\\Users\\\\rober\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-rober-OneDrive-Desktop-New-folder-luigimarinangeli\\\\8f5a88d4-a5a0-40c4-ad40-144007aa48b7\\\\scratchpad\\\\profC_768' '--screenshot=C:\\\\Users\\\\rober\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-rober-OneDrive-Desktop-New-folder-luigimarinangeli\\\\8f5a88d4-a5a0-40c4-ad40-144007aa48b7\\\\scratchpad\\\\full_768.png' --window-size=768,1024 'file:///c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/index.html')",
+      "Bash('C:\\\\Program Files \\(x86\\)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe' --headless=new --disable-gpu --remote-debugging-port=9333 --window-size=768,1024 '--user-data-dir=C:\\\\Users\\\\rober\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-rober-OneDrive-Desktop-New-folder-luigimarinangeli\\\\8f5a88d4-a5a0-40c4-ad40-144007aa48b7\\\\scratchpad\\\\profD_768' about:blank)",
+      "Bash(echo \"PID $!\")",
+      "Bash(curl -s http://localhost:9333/json/version)",
+      "Bash(node shot.js 9333 'file:///c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/index.html' '#immobili' cdp_immobili_768.png)",
+      "Bash(node diag.js 9333 'file:///c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/index.html' 649 700 768 784 950)",
+      "Bash(node diag2.js 9333 'file:///c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/index.html' 768)",
+      "Bash(node diag3.js 9333 'file:///c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/index.html' 649 700 768 784 950)",
+      "Bash(node diag4.js 9333 'file:///c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/index.html' 649 768 950 1200)",
+      "Bash(node diag6.js 9333 'file:///c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/index.html' 768 1024 912 1368 820 1180 1440 900 1920 1080)",
+      "Bash(node diag6.js 9333 'file:///c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/index.html' 768 1024 912 1368 820 1180 950 1200 1440 900 1920 1080)",
+      "Bash(taskkill //F //IM msedge.exe //T)"
     ]
   }
 }

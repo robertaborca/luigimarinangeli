@@ -405,11 +405,15 @@ body {
     width: 100vw;
     padding: map-get($padding,medium);
 
+    @include media-queries-max-width(small-desktop) {
+      min-height: auto;
+    }
+
     @include media-queries-max-width(tablet) {
       justify-content: center;
       padding: 3rem;
-    } 
-    
+    }
+
 
     h2 {
         margin-left: 10%;
@@ -859,10 +863,13 @@ body {
         .property-carousel{
             max-width: 1120px;
             width: 100%;
+            min-width: 0;
             padding: 40px 0;
             position: relative;
+            overflow: hidden;
           }
           .property-carousel__viewport{
+            width: calc(100% - 80px);
             margin: 0 40px;
             overflow-x: auto;
             overflow-y: hidden;
@@ -878,6 +885,7 @@ body {
           .property-carousel__list{
             display: flex;
             gap: 2.5rem;
+            min-width: 0;
           }
           .card{
             background-color: #FFF;
@@ -988,6 +996,7 @@ body {
 
           @media screen and (max-width: 768px) {
             .property-carousel__viewport{
+              width: calc(100% - 20px);
               margin: 0 10px;
             }
 
