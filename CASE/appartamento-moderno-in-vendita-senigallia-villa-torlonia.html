@@ -79,8 +79,6 @@
         <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="Le Case di Luigi" />
         <link rel="manifest" href="../site.webmanifest" />
-        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"></noscript>
         <link rel="stylesheet" type="text/css" href="../CSS/style.css">
 
     </head>
@@ -88,8 +86,8 @@
     <!--HEADER-->
     <header>
         <nav class="navbar" id="navBar">
-            <ul class="navbar__menu" id="menu" role="menu" aria-label="menù di navigazione">
-                <li class="navbar__menu-item navbar__logo" role="menuitem">
+            <ul class="navbar__menu" id="menu" aria-label="menù di navigazione">
+                <li class="navbar__menu-item navbar__logo">
                     <a href="../index.html" aria-label="Link alla home page">
                         <img src="../IMG/luigi-marinangeli-consulente-immobiliare-logo-piccolo.svg" alt="Logo Luigi Marinangeli agente immobiliare Senigallia" class="navbar__img" width="60" height="60">
                     </a>
@@ -134,20 +132,31 @@
                 <a href="tel:+393793691313" class="cta link link--right">Appartamento pronto da vivere. Contattami per una visita o maggiori informazioni.</a>
             </div>
 
-            <div>
-                <div class="carousel" title="carosello di immagini dell'appartamento a Senigallia Villa Torlonia" data-flickity='{ "imagesLoaded": true, "lazyLoad": 2, "wrapAround": true, "groupCells": "120%"}'>
-                    <div class="carousel-cell"><img loading="lazy" width="534" height="400" src="../IMG/LM291/esterno-palazzina-appartamento-villa-torlonia-senigallia.webp" alt="Vista esterna della palazzina di recente costruzione a Senigallia Villa Torlonia"></div>
-                    <div class="carousel-cell"><img loading="lazy" width="534" height="400" src="../IMG/LM291/soggiorno-cucina-vista-appartamento-senigallia-villa-torlonia.webp" alt="Luminoso soggiorno con cucina a vista dell'appartamento a Senigallia Villa Torlonia"></div>
-                    <div class="carousel-cell"><img loading="lazy" width="534" height="400" src="../IMG/LM291/cucina-arredata-appartamento-moderno-senigallia.webp" alt="Cucina arredata dell'appartamento moderno in vendita a Senigallia"></div>
-                    <div class="carousel-cell"><img loading="lazy" width="534" height="400" src="../IMG/LM291/camera-matrimoniale-appartamento-villa-torlonia-senigallia.webp" alt="Camera matrimoniale dell'appartamento in vendita a Senigallia Villa Torlonia"></div>
-                    <div class="carousel-cell"><img loading="lazy" width="534" height="400" src="../IMG/LM291/bagno-appartamento-moderno-senigallia-villa-torlonia.webp" alt="Bagno dell'appartamento moderno a Senigallia Villa Torlonia"></div>
-                    <div class="carousel-cell"><img loading="lazy" width="534" height="400" src="../IMG/LM291/terrazzo-coperto-appartamento-senigallia.webp" alt="Terrazzo coperto dell'appartamento in vendita a Senigallia Villa Torlonia"></div>
-                    <div class="carousel-cell"><img loading="lazy" width="534" height="400" src="../IMG/LM291/balcone-coperto-appartamento-villa-torlonia-senigallia.webp" alt="Balcone coperto con vista aperta dell'appartamento a Senigallia Villa Torlonia"></div>
-                    <div class="carousel-cell"><img loading="lazy" width="534" height="400" src="../IMG/LM291/garage-ampio-appartamento-senigallia-villa-torlonia.webp" alt="Garage da 23m² incluso nell'appartamento a Senigallia Villa Torlonia"></div>
-                    <div class="carousel-cell"><img loading="lazy" width="534" height="400" src="../IMG/LM291/dettaglio-arredo-soggiorno-appartamento-senigallia.webp" alt="Dettaglio arredo del soggiorno dell'appartamento arredato a Senigallia"></div>
-                    <div class="carousel-cell"><img loading="lazy" width="534" height="400" src="../IMG/LM291/ingresso-appartamento-pronto-da-vivere-senigallia.webp" alt="Ingresso dell'appartamento pronto da vivere a Senigallia zona Villa Torlonia"></div>
+            
+                <div class="property-gallery" aria-roledescription="Galleria immagini dell'immobile">
+                    <div class="property-gallery__viewport" id="propertyGalleryViewport" tabindex="0" role="region" aria-label="Galleria immagini dell'immobile, scorri per vedere altre foto">
+                      <div class="property-gallery__list" id="propertyGalleryList">
+                    <div class="property-gallery__cell"><img loading="lazy" width="1600" height="1600" src="../IMG/LM291/esterno-palazzina-appartamento-villa-torlonia-senigallia.webp" alt="Vista esterna della palazzina di recente costruzione a Senigallia Villa Torlonia"></div>
+                    <div class="property-gallery__cell"><img loading="lazy" width="1600" height="1600" src="../IMG/LM291/soggiorno-cucina-vista-appartamento-senigallia-villa-torlonia.webp" alt="Luminoso soggiorno con cucina a vista dell'appartamento a Senigallia Villa Torlonia"></div>
+                    <div class="property-gallery__cell"><img loading="lazy" width="1600" height="1600" src="../IMG/LM291/cucina-arredata-appartamento-moderno-senigallia.webp" alt="Cucina arredata dell'appartamento moderno in vendita a Senigallia"></div>
+                    <div class="property-gallery__cell"><img loading="lazy" width="1600" height="1600" src="../IMG/LM291/camera-matrimoniale-appartamento-villa-torlonia-senigallia.webp" alt="Camera matrimoniale dell'appartamento in vendita a Senigallia Villa Torlonia"></div>
+                    <div class="property-gallery__cell"><img loading="lazy" width="1600" height="1600" src="../IMG/LM291/bagno-appartamento-moderno-senigallia-villa-torlonia.webp" alt="Bagno dell'appartamento moderno a Senigallia Villa Torlonia"></div>
+                    <div class="property-gallery__cell"><img loading="lazy" width="1440" height="1920" src="../IMG/LM291/terrazzo-coperto-appartamento-senigallia.webp" alt="Terrazzo coperto dell'appartamento in vendita a Senigallia Villa Torlonia"></div>
+                    <div class="property-gallery__cell"><img loading="lazy" width="1600" height="1600" src="../IMG/LM291/balcone-coperto-appartamento-villa-torlonia-senigallia.webp" alt="Balcone coperto con vista aperta dell'appartamento a Senigallia Villa Torlonia"></div>
+                    <div class="property-gallery__cell"><img loading="lazy" width="1600" height="1600" src="../IMG/LM291/garage-ampio-appartamento-senigallia-villa-torlonia.webp" alt="Garage da 23m² incluso nell'appartamento a Senigallia Villa Torlonia"></div>
+                    <div class="property-gallery__cell"><img loading="lazy" width="1470" height="1019" src="../IMG/LM291/dettaglio-arredo-soggiorno-appartamento-senigallia.webp" alt="Dettaglio arredo del soggiorno dell'appartamento arredato a Senigallia"></div>
+                    <div class="property-gallery__cell"><img loading="lazy" width="1024" height="1024" src="../IMG/LM291/ingresso-appartamento-pronto-da-vivere-senigallia.webp" alt="Ingresso dell'appartamento pronto da vivere a Senigallia zona Villa Torlonia"></div>
                 </div>
-            </div>
+                    </div>
+                    <button class="gallery-btn gallery-btn--prev" id="propertyGalleryPrev" aria-label="Immagine precedente" disabled>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15,18 9,12 15,6"></polyline></svg>
+                    </button>
+                    <button class="gallery-btn gallery-btn--next" id="propertyGalleryNext" aria-label="Immagine successiva">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9,18 15,12 9,6"></polyline></svg>
+                    </button>
+                    <div class="gallery-dots" id="propertyGalleryDots"></div>
+                  </div>
+            
 
             <div class="icon-list">
                 <div class="icon-group--4">
@@ -235,7 +244,7 @@
             </ul>
         </main>
 
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" defer></script>
+        <script src="../scripts/property-gallery.min.js" defer></script>
 
         <footer class="footer">
             <div class="footer__content">

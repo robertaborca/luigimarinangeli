@@ -143,15 +143,6 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-text-fill-color: white;
 }
 
-.hero-section p {
-    font-size: 1.35rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .selling-hero {
         background: linear-gradient(135deg, #355f6f, #537886);
 }
@@ -171,10 +162,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Sections */
 section {
     padding: 4rem 0;
-}
-
-.section-alt {
-    background: #f9fafb;
 }
 
 /* Properties Grid */
@@ -233,6 +220,7 @@ section {
     top: 1rem;
     right: 1rem;
     background: white;
+    color: #374151;
     padding: 0.25rem 0.75rem;
     border-radius: 0.375rem;
     font-size: 1.5rem;
@@ -321,16 +309,9 @@ iframe {
     gap: 1rem;
 }
 
-.consultation-card:hover,
-.consultation-card.selected {
+.consultation-card:hover {
     border-color: #355f6f;
     box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1);
-}
-
-.consultation-logo {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 1rem;
 }
 
 .consultation-icon {
@@ -364,7 +345,7 @@ iframe {
     transform: scale(1.1);
 }
 
-.consultation-card h3 {
+.consultation-card h2 {
     font-size: 1.5rem;
     color: #355f6f;
 }
@@ -557,7 +538,7 @@ iframe {
 
 
 .contact-content h2,
-.emergency-content h3,
+.emergency-content h2,
 .final-cta h2 {
     margin-bottom: 1rem;
     font-size: 3rem!important;
@@ -595,14 +576,6 @@ iframe {
         font-size: 1.3rem;
     }
     
-    .hero-section h1 {
-        font-size: 2rem;
-    }
-
-    .hero-section p {
-        font-size: 1rem;
-    }
-
     .hero-section--landing {
         margin-top: 8rem;
         padding: 3rem 0;
@@ -612,7 +585,7 @@ iframe {
         font-size: 2.2rem;
     }
 
-    .emergency-content h3 {
+    .emergency-content h2 {
         font-size: 2.2rem !important;
     }
 
@@ -636,18 +609,10 @@ iframe {
         grid-template-columns: 1fr;
     }
     
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-    
     .contact-buttons,
     .cta-buttons {
         flex-direction: column;
         align-items: center;
-    }
-    
-    .form-buttons {
-        flex-direction: column;
     }
 }
 
@@ -676,14 +641,6 @@ iframe {
         font-size: 1.2rem;
     }
     
-    .hero-section {
-        padding: 6rem 0 3rem;
-    }
-
-    .hero-section h1 {
-        font-size: 1.75rem;
-    }
-
     .hero-section--landing {
         margin-top: 6rem;
         padding: 2.5rem 0;
@@ -697,7 +654,7 @@ iframe {
         font-size: 1.2rem;
     }
 
-    .emergency-content h3 {
+    .emergency-content h2 {
         font-size: 1.8rem !important;
     }
 
@@ -710,8 +667,7 @@ iframe {
     }
     
     .consultation-card,
-    .service-card,
-    .form-card {
+    .service-card {
         padding: 1.5rem;
     }
     

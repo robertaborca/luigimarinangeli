@@ -56,7 +56,7 @@
     }
 }
 
-.property-hero, .property-description, .property-features, .icon-list, .property-card, .specific {
+.property-hero, .property-description, .property-features, .icon-list, .property-card {
   background-color: rgba($color-white, .6);
   padding: 3rem;
   border: 1px solid rgba($color-secondary, .7);
@@ -250,38 +250,208 @@
 }
 
 
-.carousel {
+.property-gallery {
+  position: relative;
   background: white;
   margin-bottom: 6rem;
+  width: 100%;
+  min-width: 0;
 }
 
-.carousel img {
-  display: block;
-  height: 45rem;
+.property-gallery__viewport {
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 
-  @include media-queries-min-width(large-mobile) {
-    
-    margin-left: 3rem;
-    margin-right: 3rem;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
-.dot {
-  background-color: $color-secondary!important;
+.property-gallery__list {
+  display: flex;
+  min-width: 0;
 }
 
-.flickity-page-dots {
+.property-gallery__cell {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    display: block;
+    max-height: 45rem;
+    max-width: calc(100% - 6rem);
+    width: auto;
+    height: auto;
+    cursor: zoom-in;
+
+    @include media-queries-min-width(tablet) {
+      max-height: 40rem;
+    }
+  }
+}
+
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid $color-primary;
+  background-color: $color-primary;
+  color: $color-secondary-lighter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  z-index: 2;
+
+  &:hover:not(:disabled) {
+    background-color: $color-secondary-lighter;
+    color: $color-primary;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &--prev {
+    left: 1rem;
+  }
+
+  &--next {
+    right: 1rem;
+  }
+}
+
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+
   @include media-queries-max-width(tablet) {
-    bottom: -50px;
-  }
-
-  @include media-queries-max-width(mobile) {
-    bottom: -70px;
+    margin-top: 1.5rem;
   }
 }
 
-.flickity-button-icon {
-  fill: $color-primary;
+.gallery-dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: $color-secondary;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0;
+
+  &.active {
+    background-color: $color-primary;
+    transform: scale(1.2);
+  }
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.lightbox__img {
+  max-width: 92vw;
+  max-height: 88vh;
+  object-fit: contain;
+}
+
+.lightbox__close,
+.lightbox__prev,
+.lightbox__next {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: $color-white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+.lightbox__close {
+  top: 2rem;
+  right: 2rem;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.lightbox__prev,
+.lightbox__next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+.lightbox__prev {
+  left: 2rem;
+}
+
+.lightbox__next {
+  right: 2rem;
+}
+
+@include media-queries-max-width(tablet) {
+  .lightbox__close {
+    top: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .lightbox__prev,
+  .lightbox__next {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .lightbox__prev {
+    left: 1rem;
+  }
+
+  .lightbox__next {
+    right: 1rem;
+  }
 }
 
 
@@ -327,15 +497,6 @@
   }
 }
 
-.specific ul {
-  @include flex-columns;
-  gap: 1rem;
-
-  li {
-    @include flex-rows;
-    gap: 2rem;
-  }
-}
 
 .property--contacts {
   @include flex-rows;
@@ -344,13 +505,5 @@
   gap: 2rem;
   margin-top: 6rem;
 }
-
-@media screen and ( min-width: 768px ) {
-     .carousel-cell img {
-       height: 40rem;
-     }
-   }
-
-
 
 

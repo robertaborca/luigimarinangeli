@@ -1,0 +1,148 @@
+(function () {
+    const viewport = document.getElementById("propertyGalleryViewport");
+    const list = document.getElementById("propertyGalleryList");
+    if (!viewport || !list) return;
+
+    const slides = Array.from(list.children);
+    const images = slides.map((slide) => slide.querySelector("img"));
+    const prevBtn = document.getElementById("propertyGalleryPrev");
+    const nextBtn = document.getElementById("propertyGalleryNext");
+    const dotsContainer = document.getElementById("propertyGalleryDots");
+
+    function renderDots() {
+        dotsContainer.innerHTML = slides.map((_, i) =>
+            `<button type="button" class="gallery-dot${i === 0 ? " active" : ""}" data-index="${i}" aria-label="Vai alla foto ${i + 1}"></button>`
+        ).join("");
+        dotsContainer.querySelectorAll(".gallery-dot").forEach((dot) => {
+            dot.addEventListener("click", () => {
+                const i = parseInt(dot.dataset.index, 10);
+                if (slides[i]) {
+                    viewport.scrollTo({ left: slides[i].offsetLeft, behavior: "smooth" });
+                }
+            });
+        });
+    }
+
+    function updateActiveState() {
+        let closest = 0;
+        let closestDist = Infinity;
+        slides.forEach((slide, i) => {
+            const dist = Math.abs(slide.offsetLeft - viewport.scrollLeft);
+            if (dist < closestDist) {
+                closestDist = dist;
+                closest = i;
+            }
+        });
+        dotsContainer.querySelectorAll(".gallery-dot").forEach((dot, i) => {
+            dot.classList.toggle("active", i === closest);
+        });
+        prevBtn.disabled = viewport.scrollLeft <= 1;
+        nextBtn.disabled = viewport.scrollLeft >= viewport.scrollWidth - viewport.clientWidth - 1;
+    }
+
+    function scrollByCards(direction) {
+        viewport.scrollBy({ left: direction * viewport.clientWidth, behavior: "smooth" });
+    }
+
+    prevBtn.addEventListener("click", () => scrollByCards(-1));
+    nextBtn.addEventListener("click", () => scrollByCards(1));
+
+    let scrollTimer;
+    viewport.addEventListener("scroll", () => {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(updateActiveState, 100);
+    }, { passive: true });
+
+    if (slides.length > 1) {
+        renderDots();
+        updateActiveState();
+
+        // Layout can still shift after this point (images finishing load,
+        // fonts swapping in, etc.), which changes viewport.scrollWidth and
+        // can leave the prev/next buttons stuck in a stale disabled state.
+        // Recompute whenever the scrollable content actually resizes.
+        if (typeof ResizeObserver !== "undefined") {
+            const resizeObserver = new ResizeObserver(() => updateActiveState());
+            resizeObserver.observe(list);
+            resizeObserver.observe(viewport);
+        }
+        window.addEventListener("load", updateActiveState);
+    } else {
+        dotsContainer.style.display = "none";
+        prevBtn.style.display = "none";
+        nextBtn.style.display = "none";
+    }
+
+    // Fullscreen lightbox
+    const icon = (inner) =>
+        `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">${inner}</svg>`;
+
+    const lightbox = document.createElement("div");
+    lightbox.className = "lightbox";
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.setAttribute("aria-label", "Immagine a schermo intero");
+    lightbox.hidden = true;
+    lightbox.innerHTML = `
+        <button type="button" class="lightbox__close" aria-label="Chiudi">${icon('<line x1="6" y1="6" x2="18" y2="18"></line><line x1="18" y1="6" x2="6" y2="18"></line>')}</button>
+        <button type="button" class="lightbox__prev" aria-label="Foto precedente">${icon('<polyline points="15,18 9,12 15,6"></polyline>')}</button>
+        <img class="lightbox__img" src="" alt="">
+        <button type="button" class="lightbox__next" aria-label="Foto successiva">${icon('<polyline points="9,18 15,12 9,6"></polyline>')}</button>
+    `;
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = lightbox.querySelector(".lightbox__img");
+    const lightboxClose = lightbox.querySelector(".lightbox__close");
+    const lightboxPrev = lightbox.querySelector(".lightbox__prev");
+    const lightboxNext = lightbox.querySelector(".lightbox__next");
+
+    let lightboxIndex = 0;
+    let lastFocused = null;
+
+    function showLightboxImage(i) {
+        let next = Math.min(Math.max(0, i), images.length - 1);
+        while (!images[next] && next > 0 && next < images.length - 1) {
+            next += i > lightboxIndex ? 1 : -1;
+        }
+        if (!images[next]) return;
+        lightboxIndex = next;
+        const img = images[lightboxIndex];
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxPrev.disabled = !images.slice(0, lightboxIndex).some(Boolean);
+        lightboxNext.disabled = !images.slice(lightboxIndex + 1).some(Boolean);
+    }
+
+    function openLightbox(i) {
+        lastFocused = document.activeElement;
+        showLightboxImage(i);
+        lightbox.hidden = false;
+        document.body.style.overflow = "hidden";
+        lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+        lightbox.hidden = true;
+        document.body.style.overflow = "";
+        if (lastFocused) lastFocused.focus();
+    }
+
+    images.forEach((img, i) => {
+        if (img) img.addEventListener("click", () => openLightbox(i));
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightboxPrev.addEventListener("click", () => showLightboxImage(lightboxIndex - 1));
+    lightboxNext.addEventListener("click", () => showLightboxImage(lightboxIndex + 1));
+
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (lightbox.hidden) return;
+        if (e.key === "Escape") closeLightbox();
+        else if (e.key === "ArrowLeft") showLightboxImage(lightboxIndex - 1);
+        else if (e.key === "ArrowRight") showLightboxImage(lightboxIndex + 1);
+    });
+})();

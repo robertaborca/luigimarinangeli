@@ -36,10 +36,6 @@ body {
     background-color: transparent;
 }
 
-.full-length {
-    flex-basis: 100%;
-}
-
 .main {
     padding-top: map-get($padding,large);
 }
@@ -50,18 +46,6 @@ body {
 
 .order {
   @include flex-rows;
-}
-
-.WidgetTitle__Inner-sc-ruy1gu-1 {
-  display: flex;
-  text-transform: uppercase;
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
-.WidgetTitle__Header-sc-ruy1gu-2 {
-  margin-left: 10%;
-  flex-basis: 100%;
 }
 
 #recensioni {
@@ -174,11 +158,6 @@ body {
             margin-bottom: 5px;
         }
 
-        .review-date {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
         .rating-stars {
             display: flex;
             gap: 3px;
@@ -188,10 +167,6 @@ body {
         .star {
             color: #f5a623;
             font-size: 20px;
-        }
-
-        .star.empty {
-            color: #ddd;
         }
 
         .review-text {
@@ -579,26 +554,12 @@ body {
               font-family: "SUSE", sans-serif;
               font-size: map-get($font-size, header2);
 
-              &--1, &--2, &--4, &--6 {
+              &--1 {
                 background-image: linear-gradient(to left, $color-secondary 0%, $color-secondary  75%, $color-secondary-light  100%);
                 -webkit-background-clip: text;
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
                 font-weight: bold;
-              }
-
-
-              &--3, &--5, &--7 {
-                background-image: linear-gradient(to bottom, $color-primary-darker 0%, $color-primary  51%, $color-primary-darker  100%);
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                font-weight: bold;
-
-              }     
-              
-              &--6 {
-                font-weight: 400;
               }
             }
 
@@ -889,32 +850,48 @@ body {
         align-items: center;
         justify-content: center;
 
-        .swipe-left {
-          @include media-queries-min-width(tablet) {
-            display: none;
-          }
-        }
-
 
         h2 {
             flex-basis: 100%;
         }
 
         
-        .slide-container{
+        .property-carousel{
             max-width: 1120px;
             width: 100%;
             padding: 40px 0;
-            display: flex;
+            position: relative;
           }
-          .slide-content{
+          .property-carousel__viewport{
             margin: 0 40px;
-            overflow: hidden;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+          .property-carousel__list{
+            display: flex;
+            gap: 2.5rem;
           }
           .card{
             background-color: #FFF;
             @include shadow($color-primary-lighter);
+            flex: 0 0 100%;
+            scroll-snap-align: start;
 
+            @include media-queries-min-width(swiper) {
+              flex: 0 0 calc((100% - 2.5rem) / 2);
+            }
+
+            @include media-queries-min-width(small-desktop) {
+              flex: 0 0 calc((100% - 5rem) / 3);
+            }
           }
           .image-content,
           .card-content{
@@ -985,44 +962,32 @@ body {
             background: $color-primary;
           }
           
-          .swiper-navBtn{
+          .carousel-controls {
+            margin-top: 3rem;
+          }
+
+          .carousel-btn {
+            background-color: $color-primary;
             color: $color-secondary-lighter;
-            background-color: $color-primary;
+            box-shadow: none;
             border: 1px solid $color-primary;
-            transition: all 0.3s ease;
-          }
-          .swiper-navBtn:hover, .swiper-navBtn:active{
-            color: $color-primary;
-            background-color: $color-secondary-lighter;
+
+            &:hover:not(:disabled) {
+              background-color: $color-secondary-lighter;
+              color: $color-primary;
+            }
           }
 
-          .swiper-pagination-bullet {
-            margin-right: 1.5rem;
-            width: 1.8rem;
-            height: 1.8rem;
-          }
-          .swiper-navBtn::before,
-          .swiper-navBtn::after{
-            font-size: 38px;
-          }
-          .swiper-button-next{
-            right: 0;
-          }
-          .swiper-button-prev{
-            left: 0;
-          }
-          .swiper-pagination-bullet{
+          .carousel-dots .dot {
             background-color: $color-secondary;
-            opacity: 1;
-          }
-          .swiper-pagination-bullet-active{
-            background-color: $color-primary;
+
+            &.active {
+              background-color: $color-primary;
+            }
           }
 
-          
-          
           @media screen and (max-width: 768px) {
-            .slide-content{
+            .property-carousel__viewport{
               margin: 0 10px;
             }
 
@@ -1129,10 +1094,6 @@ body {
                 }
               }
             }
-        }
-
-        &--address {
-            flex-basis: 100%;
         }
 
         &--link {
@@ -1294,37 +1255,21 @@ ul {
     list-style: none;
 }
 
-// SCREEN READERS ONLY
-.sr-only {
-	border: 0 !important;
-	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
-	-webkit-clip-path: inset(50%) !important;
-		clip-path: inset(50%) !important;  /* 2 */
-	height: 1px !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	padding: 0 !important;
-	position: absolute !important;
-	width: 1px !important;
-	white-space: nowrap !important;            /* 3 */
+// SKIP LINK
+.skip-link {
+    position: absolute;
+    top: -10rem;
+    left: 1rem;
+    z-index: 10000;
+    background-color: $color-primary-darker;
+    color: $color-white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: top 0.2s ease-in-out;
+
+    &:focus {
+        top: 1rem;
+    }
 }
 
-.sr-only-focusable:focus,
-.sr-only-focusable:active {
-	clip: auto !important;
-	-webkit-clip-path: none !important;
-		clip-path: none !important;
-	height: auto !important;
-	margin: auto !important;
-	overflow: visible !important;
-	width: auto !important;
-	white-space: normal !important;
-}
-
-#few-pics .flickity-slider {
-
-  @media only screen and(min-width: 1443px) {
-    
-    margin-left: -580px;
-  }
-}

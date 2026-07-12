@@ -34,12 +34,6 @@
         }
     }
 
-    &__address, &__times {
-        flex-basis: 100%;
-        font-size: 1.4rem;
-
-    }
-
     &__content {
         @include flex-rows;
         justify-content: center;
@@ -51,12 +45,6 @@
         @include media-queries-max-width(small-desktop) {
             padding: map-get($padding, small);
         }
-
-        // @include media-queries-max-width(tablet) {
-        //     @include flex-columns;
-        //     justify-content: center;
-        //     align-items: center;
-        // }
     }
 
     &--icon-list {

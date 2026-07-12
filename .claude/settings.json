@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run compile:sass)",
+      "Bash(curl -sf http://127.0.0.1:*)",
+      "Bash(npm run *)",
+      "Bash(npm install*)",
+      "Bash(grep*)",
+      "Bash(ls*)",
+      "Bash(find*)",
+      "Bash(node*)",
+      "Bash(cp*)",
+      "Bash(rm*)",
+      "Bash(mkdir*)",
+      "Bash(git status*)",
+      "Bash(git diff*)"
+    ]
+  }
+}
+
