@@ -41,12 +41,6 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.lecasediluigi.com/CASE/appartamento-centro-storico-senigallia.html</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://www.lecasediluigi.com/CASE/casa-bifamiliare-con-giardino-in-vendita-a-senigallia.html</loc>
     <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -59,25 +53,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.lecasediluigi.com/CASE/luminoso-trilocale-in-vendita-a-senigallia-le-saline.html</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.lecasediluigi.com/CASE/mini-appartamento-in-vendita-a-senigallia.html</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://www.lecasediluigi.com/CASE/villetta-a-schiera-panoramica-in-vendita-a-senigallia.html</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.lecasediluigi.com/CASE/stabilimento-balneare-rotonda-di-senigallia.html</loc>
     <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
@@ -91,6 +67,30 @@
   <url>
     <loc>https://www.lecasediluigi.com/CASE/appartamento-moderno-in-vendita-senigallia-villa-torlonia.html</loc>
     <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/CASE/villetta-indipendente-ciarnin-in-vendita-a-senigallia.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/CASE/appartamento-con-giardino-ciarnin-in-vendita-a-senigallia.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/CASE/villa-con-dependance-giardino-in-vendita-a-scapezzano-senigallia.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/CASE/casa-indipendente-con-giardino-in-vendita-a-senigallia-montagnola.html</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>

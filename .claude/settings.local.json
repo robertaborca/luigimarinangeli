@@ -1,5 +1,6 @@
 {
   "permissions": {
+    "defaultMode": "bypassPermissions",
     "allow": [
       "Bash(BASE=\"/c/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/CASE\" __NEW_LINE_817344d055a18d40__ echo \"=== LINK TAG VERIFICATION ===\" for f in \"appartamento-centro-storico-senigallia.html\" \"la-casa-con-gli-oblò-in-vendita-a-senigallia.html\" \"casa-bifamiliare-con-giardino-in-vendita-a-senigallia.html\" \"luminoso-trilocale-in-vendita-a-senigallia-le-saline.html\" \"lussuosa-villa-in-vendita-alle-saline-senigallia.html\" \"mini-appartamento-in-vendita-a-senigallia.html\" \"stabilimento-balneare-rotonda-di-senigallia.html\" \"villetta-a-schiera-panoramica-in-vendita-a-senigallia.html\")",
       "Bash(do echo:*)",
@@ -23,7 +24,18 @@
       "Bash(node diag4.js 9333 'file:///c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/index.html' 649 768 950 1200)",
       "Bash(node diag6.js 9333 'file:///c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/index.html' 768 1024 912 1368 820 1180 1440 900 1920 1080)",
       "Bash(node diag6.js 9333 'file:///c:/Users/rober/OneDrive/Desktop/New folder/luigimarinangeli/index.html' 768 1024 912 1368 820 1180 950 1200 1440 900 1920 1080)",
-      "Bash(taskkill //F //IM msedge.exe //T)"
+      "Bash(taskkill //F //IM msedge.exe //T)",
+      "Bash(node -e ' *)",
+      "Bash(npx node-sass *)",
+      "Bash(diff \"/d/rober/Git/tmp_compiled.css\" \"CSS/style.css\" > /tmp/diffout.txt 2>&1; wc -l /tmp/diffout.txt; head -c 3000 /tmp/diffout.txt)",
+      "Bash(git fetch *)",
+      "Bash(curl -s -o /tmp/live_style.css -w \"%{http_code}\\\\n\" https://www.lecasediluigi.com/CSS/style.css)",
+      "Bash(curl -sI https://www.lecasediluigi.com/CSS/style.css)",
+      "Bash(node check2.js)",
+      "Bash(curl -sI https://www.lecasediluigi.com/CASE/appartamento-moderno-in-vendita-senigallia-villa-torlonia.html)"
+    ],
+    "additionalDirectories": [
+      "\\tmp"
     ]
   }
 }
