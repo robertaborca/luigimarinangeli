@@ -13,8 +13,9 @@
       "Bash(rm*)",
       "Bash(mkdir*)",
       "Bash(git status*)",
-      "Bash(git diff*)"
+      "Bash(git diff*)",
+      "Bash(node shot.js \"c:\\\\Users\\\\rober\\\\OneDrive\\\\Desktop\\\\New folder\\\\luigimarinangeli\\\\index.html\")",
+      "Bash(node -e ' *)"
     ]
   }
 }
-

@@ -32,6 +32,38 @@
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/SRC/blog.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- BLOG -->
+  <url>
+    <loc>https://www.lecasediluigi.com/BLOG/vendere-casa-guida-passo-passo.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/BLOG/documenti-necessari-per-comprare-casa.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/BLOG/quanto-costa-vendere-casa-tasse-e-spese.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/BLOG/compromesso-e-rogito-differenze.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
 
   <!-- IMMOBILI IN VENDITA -->
   <url>
