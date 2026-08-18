@@ -64,6 +64,30 @@
           "position": 4,
           "url": "https://www.lecasediluigi.com/BLOG/compromesso-e-rogito-differenze.html",
           "name": "Compromesso e Rogito: le Differenze e Cosa Sapere Prima di Firmare"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.lecasediluigi.com/BLOG/comprare-casa-da-ristrutturare-vantaggi-e-rischi.html",
+          "name": "Comprare Casa da Ristrutturare: Vantaggi, Rischi e Cosa Valutare"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://www.lecasediluigi.com/BLOG/guida-ai-quartieri-di-senigallia-dove-comprare-casa.html",
+          "name": "Le Zone di Senigallia: Guida ai Quartieri per Chi Vuole Comprare Casa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://www.lecasediluigi.com/BLOG/mutuo-casa-come-funziona-cosa-serve.html",
+          "name": "Mutuo Casa: Come Funziona e Cosa Serve per Ottenerlo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://www.lecasediluigi.com/BLOG/attestato-prestazione-energetica-ape-cosa-serve.html",
+          "name": "APE: Cos'è l'Attestato di Prestazione Energetica e Perché Serve"
         }
       ]
     }
@@ -95,12 +119,14 @@
                 </a>
                 <img id="logo-1" src="../IMG/luigi-marinangeli-consulente-immobiliare-ancona-firma.svg" loading="eager" alt="Firma di Luigi Marinangeli" class="navbar__signature"  width="180" height="60">
             </div>
-            <div class="nav-menu">
+            <button type="button" class="nav-hamburger--landing" id="navHamburgerLanding" aria-label="Apri o chiudi il menù di navigazione" aria-expanded="false" aria-controls="navMenuLanding">☰</button>
+            <div class="nav-menu" id="navMenuLanding">
+                <a href="../index.html" class="nav-link hidden--landing">Home</a>
                 <a href="immobili.html" class="nav-link hidden--landing">I miei immobili</a>
                 <a href="consulenza.html" class="nav-link hidden--landing">Consulenza</a>
                 <a href="vendi-casa.html" class="nav-link hidden--landing">Vendi casa</a>
+                <a href="compra-casa.html" class="nav-link hidden--landing">Compra casa</a>
                 <a href="blog.html" class="nav-link active hidden--landing">Blog</a>
-                <a href="tel:+393793691313" class="btn--landing btn btn-primary chiama--landing hidden-mobile--landing">Chiama ora</a>
             </div>
         </div>
     </nav>
@@ -110,7 +136,7 @@
     <section class="hero-section--landing">
         <div class="container">
             <h1 id="blog-landing">Blog: guide sulla compravendita</h1>
-            <p>Consigli pratici per vendere e comprare casa a Senigallia senza sorprese</p>
+            <p>Consigli pratici per vendere e comprare casa a Senigallia, Ancona e nelle Marche, senza sorprese</p>
         </div>
     </section>
 
@@ -155,6 +181,42 @@
                     <span class="blog-card__link link link--right">Leggi l'articolo</span>
                 </a>
 
+                <!-- Comprare casa da ristrutturare -->
+                <a class="blog-card" href="../BLOG/comprare-casa-da-ristrutturare-vantaggi-e-rischi.html" aria-label="Leggi l'articolo: Comprare casa da ristrutturare, vantaggi e rischi">
+                    <i class="blog-card__icon fa-solid fa-trowel" aria-hidden="true"></i>
+                    <span class="blog-card__category">Guida all'acquisto</span>
+                    <h2 class="blog-card__title">Comprare casa da ristrutturare: vantaggi, rischi e cosa valutare</h2>
+                    <p class="blog-card__excerpt">Prezzo più basso, ma quali rischi? Cosa verificare prima di offrire e come stimare davvero i costi dei lavori.</p>
+                    <span class="blog-card__link link link--right">Leggi l'articolo</span>
+                </a>
+
+                <!-- Guida ai quartieri di Senigallia -->
+                <a class="blog-card" href="../BLOG/guida-ai-quartieri-di-senigallia-dove-comprare-casa.html" aria-label="Leggi l'articolo: Le zone di Senigallia, guida ai quartieri per chi vuole comprare casa">
+                    <i class="blog-card__icon fa-solid fa-map-location-dot" aria-hidden="true"></i>
+                    <span class="blog-card__category">Zone e quartieri</span>
+                    <h2 class="blog-card__title">Le zone di Senigallia: guida ai quartieri per chi vuole comprare casa</h2>
+                    <p class="blog-card__excerpt">Centro, Ponte Rosso, Ciarnin, Saline, frazioni collinari: come orientarsi tra le zone della città in base alle proprie esigenze.</p>
+                    <span class="blog-card__link link link--right">Leggi l'articolo</span>
+                </a>
+
+                <!-- Mutuo casa -->
+                <a class="blog-card" href="../BLOG/mutuo-casa-come-funziona-cosa-serve.html" aria-label="Leggi l'articolo: Mutuo casa, come funziona e cosa serve per ottenerlo">
+                    <i class="blog-card__icon fa-solid fa-handshake" aria-hidden="true"></i>
+                    <span class="blog-card__category">Consulenza mutui</span>
+                    <h2 class="blog-card__title">Mutuo casa: come funziona e cosa serve per ottenerlo</h2>
+                    <p class="blog-card__excerpt">Pre-delibera, documenti richiesti e tempi reali di erogazione: cosa verificare prima di offrire su un immobile.</p>
+                    <span class="blog-card__link link link--right">Leggi l'articolo</span>
+                </a>
+
+                <!-- APE -->
+                <a class="blog-card" href="../BLOG/attestato-prestazione-energetica-ape-cosa-serve.html" aria-label="Leggi l'articolo: APE, cos'è l'attestato di prestazione energetica e perché serve">
+                    <i class="blog-card__icon fa-solid fa-bolt" aria-hidden="true"></i>
+                    <span class="blog-card__category">Documenti e certificazioni</span>
+                    <h2 class="blog-card__title">APE: cos'è l'attestato di prestazione energetica e perché serve</h2>
+                    <p class="blog-card__excerpt">Classe energetica, obbligatorietà fin dall'annuncio e cosa rischia chi vende senza averlo predisposto.</p>
+                    <span class="blog-card__link link link--right">Leggi l'articolo</span>
+                </a>
+
             </div>
         </div>
     </section>
@@ -180,5 +242,6 @@
 
     <!--FONT AWESOME-->
     <script src="https://kit.fontawesome.com/fe91d29f6f.js" crossorigin="anonymous" defer></script>
+    <script src="../scripts/nav-landing.js" defer></script>
 </body>
 </html>

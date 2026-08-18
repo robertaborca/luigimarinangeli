@@ -8,7 +8,7 @@
   <!-- HOME -->
   <url>
     <loc>https://www.lecasediluigi.com/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
@@ -16,7 +16,7 @@
   <!-- LANDING PAGES SRC -->
   <url>
     <loc>https://www.lecasediluigi.com/SRC/immobili.html</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -28,13 +28,19 @@
   </url>
   <url>
     <loc>https://www.lecasediluigi.com/SRC/vendi-casa.html</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/SRC/compra-casa.html</loc>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.lecasediluigi.com/SRC/blog.html</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -64,16 +70,34 @@
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/BLOG/comprare-casa-da-ristrutturare-vantaggi-e-rischi.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/BLOG/guida-ai-quartieri-di-senigallia-dove-comprare-casa.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/BLOG/mutuo-casa-come-funziona-cosa-serve.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/BLOG/attestato-prestazione-energetica-ape-cosa-serve.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
 
   <!-- IMMOBILI IN VENDITA -->
   <url>
     <loc>https://www.lecasediluigi.com/CASE/lussuosa-villa-in-vendita-alle-saline-senigallia.html</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.lecasediluigi.com/CASE/casa-bifamiliare-con-giardino-in-vendita-a-senigallia.html</loc>
     <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
@@ -123,6 +147,24 @@
   <url>
     <loc>https://www.lecasediluigi.com/CASE/casa-indipendente-con-giardino-in-vendita-a-senigallia-montagnola.html</loc>
     <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/CASE/grande-appartamento-in-vendita-a-senigallia-via-venezia.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/CASE/appartamento-in-vendita-a-montemarciano-via-marconi.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/CASE/appartamento-nuovo-con-giardino-in-vendita-a-senigallia-ponte-rosso.html</loc>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>

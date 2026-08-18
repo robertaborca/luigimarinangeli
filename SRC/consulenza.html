@@ -129,12 +129,14 @@
                 </a>
                 <img id="logo-1" src="../IMG/luigi-marinangeli-consulente-immobiliare-ancona-firma.svg" loading="eager" alt="Firma di Luigi Marinangeli" class="navbar__signature"  width="180" height="60">
             </div>
-            <div class="nav-menu">
+            <button type="button" class="nav-hamburger--landing" id="navHamburgerLanding" aria-label="Apri o chiudi il menù di navigazione" aria-expanded="false" aria-controls="navMenuLanding">☰</button>
+            <div class="nav-menu" id="navMenuLanding">
+                <a href="../index.html" class="nav-link hidden--landing">Home</a>
                 <a href="immobili.html" class="nav-link hidden--landing">I miei immobili</a>
                 <a href="consulenza.html" class="nav-link hidden--landing active">Consulenza</a>
                 <a href="vendi-casa.html" class="nav-link hidden--landing">Vendi casa</a>
+                <a href="compra-casa.html" class="nav-link hidden--landing">Compra casa</a>
                 <a href="blog.html" class="nav-link hidden--landing">Blog</a>
-                <a href="tel:+393793691313" class="btn btn--landing btn-primary--landing chiama--landing hidden-mobile--landing">Chiama ora</a>
             </div>
         </div>
     </nav>
@@ -144,7 +146,7 @@
     <section class="hero-section--landing">
         <div class="container--landing">
             <h1 id="consulenza-landing">Richiedi una consulenza con me</h1>
-            <p>Scegli tra una consulenza rapida o personalizzata. Con oltre 45 anni di esperienza, sono qui per aiutarti in ogni fase del tuo progetto immobiliare.</p>
+            <p>Scegli tra una consulenza rapida o personalizzata. Con oltre 45 anni di esperienza a Senigallia, Ancona e nelle Marche, sono qui per aiutarti in ogni fase del tuo progetto immobiliare.</p>
         </div>
     </section>
 
@@ -224,5 +226,6 @@
     </section>
     </main>
 
+    <script src="../scripts/nav-landing.js" defer></script>
 </body>
 </html>

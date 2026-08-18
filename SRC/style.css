@@ -64,7 +64,24 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    flex-wrap: nowrap;
+    gap: 3rem;
+}
+
+.nav-menu > * {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.nav-hamburger--landing {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.4rem;
+    line-height: 1;
+    color: #355f6f;
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
 .nav-link {
@@ -78,6 +95,8 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     padding: 0.6rem 0.1rem;
     transition: color 0.3s;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .nav-link::after {
@@ -158,6 +177,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: auto;
 }
 
+.property-content .link--right {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 0.75rem;
+}
+
 /* Hero Section */
 .hero-section--landing {
     background: linear-gradient(135deg, #355f6f, #537886);
@@ -167,7 +194,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 12rem;
 }
 
-#immobili-landing, #consulenza-landing, #vendi-landing, #blog-landing {
+#immobili-landing, #consulenza-landing, #vendi-landing, #compra-landing, #blog-landing {
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -306,6 +333,7 @@ section {
     color: #6b7280;
     margin-bottom: 1rem;
     font-size: 1.4rem;
+    min-height: 6.5rem;
 }
 
 .property-features--landing {
@@ -573,6 +601,11 @@ iframe {
     color: white;
 }
 
+.final-cta .btn-outline {
+    color: white;
+    border-color: white;
+}
+
 .final-cta h2 {
     background-image: linear-gradient(to left, #685930, #F9F2DD);
     text-transform: uppercase;
@@ -602,18 +635,32 @@ iframe {
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .navbar--landing .container {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.75rem;
+        position: relative;
         padding: 1rem 15px;
     }
 
+    .nav-hamburger--landing {
+        display: block;
+    }
+
     .nav-menu {
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        background: white;
+        padding: 2rem;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .nav-menu.nav-menu--open {
+        display: flex;
     }
 
     .nav-menu .btn {
@@ -626,11 +673,11 @@ iframe {
     }
 
     .hero-section--landing {
-        margin-top: 16rem;
+        margin-top: 10rem;
         padding: 3rem 0;
     }
 
-    #consulenza-landing, #immobili-landing, #vendi-landing, #blog-landing {
+    #consulenza-landing, #immobili-landing, #vendi-landing, #compra-landing, #blog-landing {
         font-size: 2.2rem;
     }
 
@@ -678,26 +725,22 @@ iframe {
     
     .navbar--landing .container {
         padding: 1rem 15px;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.75rem;
     }
 
     .nav-menu {
-        gap: 0.75rem;
-        justify-content: center;
+        gap: 1rem;
     }
 
     .nav-link {
         font-size: 1.2rem;
     }
-    
+
     .hero-section--landing {
-        margin-top: 14rem;
+        margin-top: 10rem;
         padding: 2.5rem 0;
     }
 
-    #consulenza-landing, #immobili-landing, #vendi-landing, #blog-landing {
+    #consulenza-landing, #immobili-landing, #vendi-landing, #compra-landing, #blog-landing {
         font-size: 1.8rem;
     }
 

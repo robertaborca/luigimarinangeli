@@ -50,38 +50,50 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "url": "https://www.lecasediluigi.com/CASE/casa-bifamiliare-con-giardino-in-vendita-a-senigallia.html",
-          "name": "Casa bifamiliare con giardino – Trattativa riservata"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
           "url": "https://www.lecasediluigi.com/CASE/lussuosa-villa-in-vendita-alle-saline-senigallia.html",
           "name": "Villa di lusso alle Saline – €1.350.000"
         },
         {
           "@type": "ListItem",
-          "position": 4,
+          "position": 3,
           "url": "https://www.lecasediluigi.com/CASE/villetta-indipendente-ciarnin-in-vendita-a-senigallia.html",
           "name": "Villetta indipendente Ciarnin – Trattativa riservata"
         },
         {
           "@type": "ListItem",
-          "position": 5,
+          "position": 4,
           "url": "https://www.lecasediluigi.com/CASE/appartamento-con-giardino-ciarnin-in-vendita-a-senigallia.html",
           "name": "Appartamento con giardino Ciarnin – €360.000"
         },
         {
           "@type": "ListItem",
-          "position": 6,
+          "position": 5,
           "url": "https://www.lecasediluigi.com/CASE/villa-con-dependance-giardino-in-vendita-a-scapezzano-senigallia.html",
           "name": "L'Oasi di Scapezzano – €480.000"
         },
         {
           "@type": "ListItem",
-          "position": 7,
+          "position": 6,
           "url": "https://www.lecasediluigi.com/CASE/casa-indipendente-con-giardino-in-vendita-a-senigallia-montagnola.html",
-          "name": "Casa indipendente con giardino, Montagnola – €500.000"
+          "name": "Casa indipendente con giardino, Parco della Pace – €500.000"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://www.lecasediluigi.com/CASE/grande-appartamento-in-vendita-a-senigallia-via-venezia.html",
+          "name": "Grande appartamento, Via Venezia – €490.000"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://www.lecasediluigi.com/CASE/appartamento-in-vendita-a-montemarciano-via-marconi.html",
+          "name": "Appartamento luminoso, Montemarciano – €170.000"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://www.lecasediluigi.com/CASE/appartamento-nuovo-con-giardino-in-vendita-a-senigallia-ponte-rosso.html",
+          "name": "Appartamento nuovo con giardino, Ponte Rosso – €600.000"
         }
       ]
     }
@@ -115,12 +127,14 @@
                 </a>
                 <img id="logo-1" src="../IMG/luigi-marinangeli-consulente-immobiliare-ancona-firma.svg" loading="eager" alt="Firma di Luigi Marinangeli" class="navbar__signature"  width="180" height="60">
             </div>
-            <div class="nav-menu">
+            <button type="button" class="nav-hamburger--landing" id="navHamburgerLanding" aria-label="Apri o chiudi il menù di navigazione" aria-expanded="false" aria-controls="navMenuLanding">☰</button>
+            <div class="nav-menu" id="navMenuLanding">
+                <a href="../index.html" class="nav-link hidden--landing">Home</a>
                 <a href="immobili.html" class="nav-link active hidden--landing">I miei immobili</a>
                 <a href="consulenza.html" class="nav-link hidden--landing">Consulenza</a>
                 <a href="vendi-casa.html" class="nav-link hidden--landing">Vendi casa</a>
+                <a href="compra-casa.html" class="nav-link hidden--landing">Compra casa</a>
                 <a href="blog.html" class="nav-link hidden--landing">Blog</a>
-                <a href="tel:+393793691313" class="btn--landing btn btn-primary chiama--landing hidden-mobile--landing">Chiama ora</a>
             </div>
         </div>
     </nav>
@@ -158,32 +172,10 @@
                             <div>🛁 2 bagni</div>
                             <div>🚗 Garage</div>
                         </div>
+                        <a href="../CASE/la-casa-con-gli-oblò-in-vendita-a-senigallia.html" class="link link--right" aria-label="Vai alla pagina con tutti i dettagli de La Casa con gli Oblò">Vedi tutti i dettagli</a>
                         <a href="tel:+393793691313" class="btn--landing btn-primary--landing btn-full--landing">Contattami per info</a>
                     </div>
                 </div>
-
-                <!-- Casa bifamiliare con giardino -->
-                <div class="property-card--landing">
-                    <div class="property-image--landing">
-                        <div class="property-type">Casa bifamilare</div>
-                        <img class="property-image--landing" src="../IMG/LM286/mappa-posizione-via-venezia-senigallia-casa-bifamiliare-in-vendita.webp" alt="Casa bifamiliare in vendita a Senigallia in Via Venezia.">
-                    </div>
-                    <div class="property-content">
-                        <div class="property-header">
-                            <h2 class="property-title--landing">Casa bifamiliare con giardino</h2>
-                            <span class="property-price">Trattativa riservata</span>
-                        </div>
-                        <div class="property-location--landing">📍 Via Venezia, Senigallia</div>
-                        <p class="property-description--landing">A Senigallia, splendida casa bifamiliare di tre piani, con giardino e garage.</p>
-                        <div class="property-features--landing">
-                            <div>🏠 255m²</div>
-                            <div>🛏 2+ camere</div>
-                            <div>🛁 2+ bagni</div>
-                            <div>🚗 Garage</div>
-                        </div>
-                        <a href="tel:+393793691313" class="btn--landing btn-primary--landing btn-full--landing">Contattami per info</a>
-                    </div>
-                </div> 
 
                 <!-- L'oasi di Scapezzano LM283 -->
                 <div class="property-card--landing">
@@ -204,6 +196,7 @@
                             <div>🛁 3 bagni</div>
                             <div>🚗 Garage</div>
                         </div>
+                        <a href="../CASE/villa-con-dependance-giardino-in-vendita-a-scapezzano-senigallia.html" class="link link--right" aria-label="Vai alla pagina con tutti i dettagli de L'Oasi di Scapezzano">Vedi tutti i dettagli</a>
                         <a href="tel:+393793691313" class="btn--landing btn-primary--landing btn-full--landing">Contattami per info</a>
                     </div>
                 </div>
@@ -229,6 +222,7 @@
                             <div>🛁 5 bagni</div>
                             <div>🚗 Garage</div>
                         </div>
+                        <a href="../CASE/lussuosa-villa-in-vendita-alle-saline-senigallia.html" class="link link--right" aria-label="Vai alla pagina con tutti i dettagli della Villa di lusso">Vedi tutti i dettagli</a>
                         <a href="tel:+393793691313" class="btn--landing btn-primary--landing btn-full--landing">Contattami per info</a>
                     </div>
                 </div>
@@ -252,6 +246,7 @@
                             <div>🛁 2 bagni</div>
                             <div>🚗 Garage</div>
                         </div>
+                        <a href="../CASE/villetta-a-schiera-panoramica-in-vendita-a-senigallia.html" class="link link--right" aria-label="Vai alla pagina con tutti i dettagli della Villetta a schiera">Vedi tutti i dettagli</a>
                         <a href="tel:+393793691313" class="btn--landing btn-primary--landing btn-full--landing">Contattami per info</a>
                     </div>
                 </div>
@@ -275,6 +270,7 @@
                             <div>🛁 2 bagni</div>
                             <div>🌳 6.000m²</div>
                         </div>
+                        <a href="../CASE/casa-colonica-ristrutturata-barbara-senigallia.html" class="link link--right" aria-label="Vai alla pagina con tutti i dettagli della Casa colonica ristrutturata">Vedi tutti i dettagli</a>
                         <a href="tel:+393793691313" class="btn--landing btn-primary--landing btn-full--landing">Contattami per info</a>
                     </div>
                 </div>
@@ -298,6 +294,7 @@
                             <div>🛁 1 bagno</div>
                             <div>🚗 Garage</div>
                         </div>
+                        <a href="../CASE/appartamento-moderno-in-vendita-senigallia-villa-torlonia.html" class="link link--right" aria-label="Vai alla pagina con tutti i dettagli dell'Appartamento Villa Torlonia">Vedi tutti i dettagli</a>
                         <a href="tel:+393793691313" class="btn--landing btn-primary--landing btn-full--landing">Contattami per info</a>
                     </div>
                 </div>
@@ -321,6 +318,7 @@
                             <div>🛁 2 bagni</div>
                             <div>🚗 Garage</div>
                         </div>
+                        <a href="../CASE/villetta-indipendente-ciarnin-in-vendita-a-senigallia.html" class="link link--right" aria-label="Vai alla pagina con tutti i dettagli della Villetta indipendente Ciarnin">Vedi tutti i dettagli</a>
                         <a href="tel:+393793691313" class="btn--landing btn-primary--landing btn-full--landing">Contattami per info</a>
                     </div>
                 </div>
@@ -344,33 +342,106 @@
                             <div>🛁 2 bagni</div>
                             <div>🚗 Garage</div>
                         </div>
+                        <a href="../CASE/appartamento-con-giardino-ciarnin-in-vendita-a-senigallia.html" class="link link--right" aria-label="Vai alla pagina con tutti i dettagli dell'Appartamento con giardino Ciarnin">Vedi tutti i dettagli</a>
                         <a href="tel:+393793691313" class="btn--landing btn-primary--landing btn-full--landing">Contattami per info</a>
                     </div>
                 </div>
 
-                <!-- Casa indipendente con giardino Montagnola LM292 -->
+                <!-- Casa indipendente con giardino Parco della Pace LM292 -->
                 <div class="property-card--landing">
                     <div class="property-image--landing">
                         <div class="property-type">Casa</div>
-                        <img class="property-image--landing" src="../IMG/LM292/rendering-facciata-casa-indipendente-giardino-montagnola-senigallia.webp" alt="Casa indipendente con giardino da ristrutturare in vendita a Senigallia, zona Montagnola">
+                        <img class="property-image--landing" src="../IMG/LM292/rendering-facciata-casa-indipendente-giardino-montagnola-senigallia.webp" alt="Casa indipendente con giardino da ristrutturare in vendita a Senigallia, zona Parco della Pace">
                     </div>
                     <div class="property-content">
                         <div class="property-header">
                             <h2 class="property-title--landing">Casa indipendente con giardino</h2>
                             <span class="property-price">€500.000</span>
                         </div>
-                        <div class="property-location--landing">📍 Montagnola, Senigallia</div>
-                        <p class="property-description--landing">Casa indipendente da ristrutturare, 256m² con due appartamenti da 128m² ciascuno, garage 50m², cantina e spazi esterni di 500m². Grande occasione di investimento in zona Montagnola.</p>
+                        <div class="property-location--landing">📍 Parco della Pace, Senigallia</div>
+                        <p class="property-description--landing">Casa indipendente da ristrutturare, 256m² con due appartamenti da 128m² ciascuno, garage 50m², cantina e spazi esterni di 500m². Grande occasione di investimento in zona Parco della Pace.</p>
                         <div class="property-features--landing">
                             <div>🏠 256m²</div>
                             <div>🛏 13 locali</div>
                             <div>🌳 Giardino</div>
                             <div>🚗 Garage</div>
                         </div>
+                        <a href="../CASE/casa-indipendente-con-giardino-in-vendita-a-senigallia-montagnola.html" class="link link--right" aria-label="Vai alla pagina con tutti i dettagli della Casa indipendente con giardino Parco della Pace">Vedi tutti i dettagli</a>
                         <a href="tel:+393793691313" class="btn--landing btn-primary--landing btn-full--landing">Contattami per info</a>
                     </div>
                 </div>
 
+                <!-- Grande appartamento Via Venezia LM297 -->
+                <div class="property-card--landing">
+                    <div class="property-image--landing">
+                        <div class="property-type">Appartamento</div>
+                        <img class="property-image--landing" src="../IMG/LM297/rendering-facciata-palazzina-appartamento-via-venezia-senigallia.webp" alt="Grande appartamento ristrutturato in vendita a Senigallia, Via Venezia">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h2 class="property-title--landing">Grande appartamento Via Venezia</h2>
+                            <span class="property-price">€490.000</span>
+                        </div>
+                        <div class="property-location--landing">📍 Via Venezia, Senigallia</div>
+                        <p class="property-description--landing">Grande appartamento di 180m² recentemente ristrutturato all'interno di una bifamiliare, con due terrazzi, giardinetto e garage, in una delle zone più centrali di Senigallia.</p>
+                        <div class="property-features--landing">
+                            <div>🏠 210m²</div>
+                            <div>🛏 6 locali</div>
+                            <div>🌳 Giardino</div>
+                            <div>🚗 Garage</div>
+                        </div>
+                        <a href="../CASE/grande-appartamento-in-vendita-a-senigallia-via-venezia.html" class="link link--right" aria-label="Vai alla pagina con tutti i dettagli del Grande appartamento Via Venezia">Vedi tutti i dettagli</a>
+                        <a href="tel:+393793691313" class="btn--landing btn-primary--landing btn-full--landing">Contattami per info</a>
+                    </div>
+                </div>
+
+                <!-- Appartamento Montemarciano LM295 -->
+                <div class="property-card--landing">
+                    <div class="property-image--landing">
+                        <div class="property-type">Appartamento</div>
+                        <img class="property-image--landing" src="../IMG/LM295/soggiorno-sala-pranzo-appartamento-montemarciano.webp" alt="Appartamento luminoso in vendita a Montemarciano, Via Marconi">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h2 class="property-title--landing">Appartamento Montemarciano</h2>
+                            <span class="property-price">€170.000</span>
+                        </div>
+                        <div class="property-location--landing">📍 Via Marconi, Montemarciano</div>
+                        <p class="property-description--landing">Appartamento luminoso di 110m² netti, due camere con balcone, garage di generose dimensioni e giardino di 60m². Pronto da abitare.</p>
+                        <div class="property-features--landing">
+                            <div>🏠 110m²</div>
+                            <div>🛏 2 camere</div>
+                            <div>🛁 1 bagno</div>
+                            <div>🚗 Garage</div>
+                        </div>
+                        <a href="../CASE/appartamento-in-vendita-a-montemarciano-via-marconi.html" class="link link--right" aria-label="Vai alla pagina con tutti i dettagli dell'Appartamento Montemarciano">Vedi tutti i dettagli</a>
+                        <a href="tel:+393793691313" class="btn--landing btn-primary--landing btn-full--landing">Contattami per info</a>
+                    </div>
+                </div>
+
+                <!-- Appartamento nuovo con giardino Ponte Rosso LM296 -->
+                <div class="property-card--landing">
+                    <div class="property-image--landing">
+                        <div class="property-type">Appartamento</div>
+                        <img class="property-image--landing" src="../IMG/LM296/rendering-facciata-appartamento-giardino-ponte-rosso-senigallia.webp" alt="Appartamento nuovo con giardino privato in vendita a Senigallia, zona Ponte Rosso">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h2 class="property-title--landing">Appartamento nuovo con giardino</h2>
+                            <span class="property-price">€600.000</span>
+                        </div>
+                        <div class="property-location--landing">📍 Ponte Rosso, Via Podesti, Senigallia</div>
+                        <p class="property-description--landing">Appartamento di nuova costruzione di 164m² netti, 3 camere, 3 bagni, giardino privato di 325m², doppio garage e cantina, in una delle zone più centrali e prestigiose di Senigallia.</p>
+                        <div class="property-features--landing">
+                            <div>🏠 164m²</div>
+                            <div>🛏 3 camere</div>
+                            <div>🛁 3 bagni</div>
+                            <div>🚗 Garage</div>
+                        </div>
+                        <a href="../CASE/appartamento-nuovo-con-giardino-in-vendita-a-senigallia-ponte-rosso.html" class="link link--right" aria-label="Vai alla pagina con tutti i dettagli dell'Appartamento nuovo con giardino Ponte Rosso">Vedi tutti i dettagli</a>
+                        <a href="tel:+393793691313" class="btn--landing btn-primary--landing btn-full--landing">Contattami per info</a>
+                    </div>
+                </div>
 
                 <!-- Appartamento semi-nuovo -->
                 <!-- <div class="property-card--landing">
@@ -440,5 +511,7 @@
         </div>
     </section>
     </main>
+
+    <script src="../scripts/nav-landing.js" defer></script>
 </body>
 </html>

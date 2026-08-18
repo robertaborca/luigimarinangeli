@@ -138,66 +138,23 @@
             { "@type": "City", "name": "Ancona" },
             { "@type": "AdministrativeArea", "name": "Marche" }
           ],
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "8",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "review": [
+          "makesOffer": [
             {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Andrea Arcangeli" },
-              "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-              "reviewBody": "Se non era per Luigi pensavo che la mia casa non avesse problemi per la vendita invece con il suo aiuto abbiamo sistemato tutta la documentazione necessaria per poter vendere in piena perfezione e tranquillità. Grazie Luigi per la tua precisione e soprattutto per la notevole disponibilità."
+              "@type": "Offer",
+              "url": "https://www.lecasediluigi.com/SRC/vendi-casa.html",
+              "itemOffered": { "@type": "Service", "name": "Servizi per chi vende casa" }
             },
             {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Andrea Manizza" },
-              "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-              "reviewBody": "Un anno fa ho venduto casa grazie a Luigi, una grande persona e un grande professionista. Mi sono trovato molto bene perché sono stato seguito passo passo in tutti i vari passaggi. Consiglio vivamente questa agenzia ma consiglio soprattutto Luigi."
-            },
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Alma Senigallia" },
-              "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-              "reviewBody": "Anche noi abbiamo comprato la casa dei miei sogni dall'agenzia del grande Luigi, siamo stati accompagnati in questo percorso dalla sua professionalità e dalla cura nei confronti del cliente."
-            },
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Lorella Cordella" },
-              "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-              "reviewBody": "Un autentico professionista: competente, affidabile e di lunga esperienza!"
-            },
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Ivana Torraco" },
-              "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-              "reviewBody": "Luigi Marinangeli un professionista serio e competente."
-            },
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Andrea Palazzi" },
-              "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-              "reviewBody": "Luigi è un professionista, serio e affidabile. Si percepisce la cura con cui affronta ogni situazione e la sua attenzione alle persone."
-            },
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Sara Bucefalo" },
-              "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-              "reviewBody": "Luigi è una persona molto disponibile e sincera. Sarà venuto con me a vedere almeno 5 case facendomi vedere cose che da sola non avrei notato, stimando eventuali lavori ecc. ormai mi sono affezionata!"
-            },
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Danilo Brunetti" },
-              "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-              "reviewBody": "Luigi, un professionista a tutto tondo che ti segue e consiglia dalla a alla z. Sempre cordiale."
+              "@type": "Offer",
+              "url": "https://www.lecasediluigi.com/SRC/compra-casa.html",
+              "itemOffered": { "@type": "Service", "name": "Servizi per chi compra casa" }
             }
           ],
+          "hasMap": "https://share.google/FvC7OVg8rgAu7QM3Y",
           "sameAs": [
             "https://www.facebook.com/share/yfGNqDAxoRqWp9po/",
-            "https://www.instagram.com/lecasediluigi/"
+            "https://www.instagram.com/lecasediluigi/",
+            "https://share.google/FvC7OVg8rgAu7QM3Y"
           ]
         }
         </script>
@@ -238,6 +195,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "L'agenzia immobiliare di Luigi Marinangeli a Senigallia propone appartamenti, ville, case con giardino, case bifamiliari e immobili commerciali. Tutti gli immobili in vendita a Senigallia e provincia di Ancona sono selezionati personalmente da Luigi Marinangeli con oltre 45 anni di esperienza."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Luigi Marinangeli opera solo a Senigallia o anche in provincia di Ancona e nelle Marche?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Luigi Marinangeli opera come agente e consulente immobiliare di parte in tutta la provincia di Ancona e nella regione Marche, non solo a Senigallia. Tra gli immobili seguiti di recente figurano proprietà a Senigallia, Montemarciano e nei comuni limitrofi. Per una consulenza o una valutazione in provincia di Ancona è possibile contattarlo al +39 379.3691313 o a info@lecasediluigi.com."
               }
             }
           ]
@@ -285,6 +250,18 @@
                   </li>
 
                     <li class="navbar__menu-item">
+                      <a href="SRC/vendi-casa.html" class="navbar__menu-item--link no-display--3" tabindex="0" aria-label="Vai alla pagina dei servizi per chi vende casa">
+                          Vendi casa
+                      </a>
+                  </li>
+
+                    <li class="navbar__menu-item">
+                      <a href="SRC/compra-casa.html" class="navbar__menu-item--link no-display--3" tabindex="0" aria-label="Vai alla pagina dei servizi per chi compra casa">
+                          Compra casa
+                      </a>
+                  </li>
+
+                    <li class="navbar__menu-item">
                       <a href="#blog" id="link-4" class="navbar__menu-item--link no-display--3" tabindex="0" aria-label="Link alla sezione 'Blog' di questa pagina">
                           Blog
                       </a>
@@ -313,7 +290,7 @@
 
             <!--HERO-->
             <article class="hero" aria-label="banner">
-                    <h2 class="hero__h2"><span>I</span>l mio lavoro, la mia passione.</h2>
+                    <p class="hero__h2"><span>I</span>l mio lavoro, la mia passione.</p>
                     <h1 class="hero__title">Sono Luigi, il tuo consulente immobiliare di parte a Senigallia.</h1>
                     <div class="btn-container">
                     <!-- HERO BTN -->
@@ -441,6 +418,9 @@
                         </div>
                       </li>
                   </ul>
+                  <div class="article__blog--more">
+                      <a href="SRC/vendi-casa.html" class="link link--right" aria-label="Vai alla pagina con tutti i servizi per chi vende casa">Scopri tutti i servizi per chi vende</a>
+                  </div>
             </article>
 
             <article class="article article__servizi" aria-roledescription="Sezione 'I miei servizi per chi compra'">
@@ -501,6 +481,9 @@
                         </div>
                       </li>
                   </ul>
+                  <div class="article__blog--more">
+                      <a href="SRC/compra-casa.html" class="link link--right" aria-label="Vai alla pagina con tutti i servizi per chi compra casa">Scopri tutti i servizi per chi compra</a>
+                  </div>
             </article>
 
             <!-- CONSULENZE STARTS -->
@@ -569,84 +552,9 @@
                     <div class="property-carousel__list" id="propertyCarouselList">
 
                       <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
-                        <div class="image-content">
-                          <div class="card-image">
-                       <img src="IMG/LM284/villa-singola-con-giardino-privato-in-vendita-a-senigallia-borgo-bicchia.webp" loading="lazy" alt="Villa singola con giardino privato in vendita a Senigallia – agente immobiliare Luigi Marinangeli" class="card-img" height="330px" width="330px">
-                    </div>
-                </div>
-  
-                <div class="card-content">
-                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
-                  <h4>La casa con gli oblò</h4>
-                  <p title="Prezzo dell'immobile" class="price">€ 225.000</p>
-  
-                  <div class="house-services">
-                    <ul class="services">
-                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 90m²</li>
-                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>3</li>
-                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>2</li>
-                      <li> <i title="Presenza di Garage"class="fa-solid fa-car-side"></i>
-                    </ul>
-                  </div>
-                  <a href="./CASE/la-casa-con-gli-oblò-in-vendita-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
-                </div>
-              </div>
-
-              <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
-              <div class="image-content">
-
-                  <div class="card-image">
-                     <img src="IMG/LM272/villa-lussuosa-immersa-nel-verde-in-vendita-a-senigallia-le-saline.webp" loading="lazy" alt="Villa lussuosa immersa nel verde in vendita alle Saline Senigallia" class="card-img" height="330px" width="330px">
-                  </div>
-              </div>
-
-              <div class="card-content">
-                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
-                  <h4>Villa di lusso</h4>
-                  <p title="Prezzo dell'immobile" class="price">€ 1.350.000</p>
-
-                  <div class="house-services">
-                    <ul class="services">
-                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 360m²</li>
-                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>8</li>
-                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>5</li>
-                      <li> <i title="Presenza di Garage"class="fa-solid fa-car-side"></i>
-                    </ul>
-                  </div>
-                  <a href="./CASE/lussuosa-villa-in-vendita-alle-saline-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
-              </div>
-              </div>
-
-              
-              <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
-                <div class="image-content">
-  
-                    <div class="card-image">
-                       <img src="IMG/LM280/villetta-a-schiera-in-vendita-a-senigallia.webp" loading="lazy" alt="Villetta a schiera panoramica e recentemente ristrutturata in vendita a Senigallia" class="card-img" height="330px" width="330px">
-                    </div>
-                </div>
-  
-                <div class="card-content">
-                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
-                  <h4>Villetta a schiera</h4>
-                  <p title="Prezzo dell'immobile" class="price">€ 420.000</p>
-  
-                  <div class="house-services">
-                    <ul class="services">
-                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 173m²</li>
-                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>3</li>
-                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>2</li>
-                      <li> <i title="Presenza di Garage"class="fa-solid fa-car-side"></i>
-                    </ul>
-                  </div>
-                  <a href="./CASE/villetta-a-schiera-panoramica-in-vendita-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
-                </div>
-              </div>
-
-              <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
                 <div class="image-content">
                     <div class="card-image">
-                       <img src="IMG/LM290/esterno-casa-colonica-ristrutturata-barbara-senigallia.webp" loading="lazy" alt="Casa colonica ristrutturata in vendita a Barbara, Senigallia – Luigi Marinangeli" class="card-img" height="330px" width="330px">
+                       <img src="IMG/LM290/esterno-casa-colonica-ristrutturata-barbara-senigallia.webp" loading="lazy" alt="Casa colonica ristrutturata in vendita a Barbara, Senigallia – Luigi Marinangeli" class="card-img" height="330" width="330">
                     </div>
                 </div>
                 <div class="card-content">
@@ -668,7 +576,7 @@
               <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
                 <div class="image-content">
                     <div class="card-image">
-                       <img src="IMG/LM291/esterno-palazzina-appartamento-villa-torlonia-senigallia.webp" loading="lazy" alt="Appartamento arredato con garage in vendita a Senigallia zona Villa Torlonia – Luigi Marinangeli" class="card-img" height="330px" width="330px">
+                       <img src="IMG/LM291/esterno-palazzina-appartamento-villa-torlonia-senigallia.webp" loading="lazy" alt="Appartamento arredato con garage in vendita a Senigallia zona Villa Torlonia – Luigi Marinangeli" class="card-img" height="330" width="330">
                     </div>
                 </div>
                 <div class="card-content">
@@ -690,7 +598,7 @@
               <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
                 <div class="image-content">
                     <div class="card-image">
-                       <img src="IMG/LM293/esterno-portico-giardino-villetta-ciarnin-senigallia.webp" loading="lazy" alt="Villetta indipendente ristrutturata in vendita a Senigallia zona Ciarnin – Luigi Marinangeli" class="card-img" height="330px" width="330px">
+                       <img src="IMG/LM293/esterno-portico-giardino-villetta-ciarnin-senigallia.webp" loading="lazy" alt="Villetta indipendente ristrutturata in vendita a Senigallia zona Ciarnin – Luigi Marinangeli" class="card-img" height="330" width="330">
                     </div>
                 </div>
                 <div class="card-content">
@@ -712,7 +620,7 @@
               <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
                 <div class="image-content">
                     <div class="card-image">
-                       <img src="IMG/LM294/vialetto-melo-giardino-appartamento-ciarnin-senigallia.webp" loading="lazy" alt="Appartamento con giardino in vendita a Senigallia zona Ciarnin – Luigi Marinangeli" class="card-img" height="330px" width="330px">
+                       <img src="IMG/LM294/vialetto-melo-giardino-appartamento-ciarnin-senigallia.webp" loading="lazy" alt="Appartamento con giardino in vendita a Senigallia zona Ciarnin – Luigi Marinangeli" class="card-img" height="330" width="330">
                     </div>
                 </div>
                 <div class="card-content">
@@ -734,11 +642,11 @@
               <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
                 <div class="image-content">
                     <div class="card-image">
-                       <img src="IMG/LM292/rendering-facciata-casa-indipendente-giardino-montagnola-senigallia.webp" loading="lazy" alt="Casa indipendente con giardino da ristrutturare in vendita a Senigallia zona Montagnola – Luigi Marinangeli" class="card-img" height="330px" width="330px">
+                       <img src="IMG/LM292/rendering-facciata-casa-indipendente-giardino-montagnola-senigallia.webp" loading="lazy" alt="Casa indipendente con giardino da ristrutturare in vendita a Senigallia zona Parco della Pace – Luigi Marinangeli" class="card-img" height="330" width="330">
                     </div>
                 </div>
                 <div class="card-content">
-                  <h3 title="Località dell'immobile" class="name">Montagnola, Senigallia</h3>
+                  <h3 title="Località dell'immobile" class="name">Parco della Pace, Senigallia</h3>
                   <h4 class="tooLong">Casa indipendente con giardino</h4>
                   <p title="Prezzo dell'immobile" class="price">€ 500.000</p>
                   <div class="house-services">
@@ -756,7 +664,7 @@
               <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
                 <div class="image-content">
                     <div class="card-image">
-                       <img src="IMG/LM283/vista-aerea-facciata-oasi-scapezzano-senigallia.webp" loading="lazy" alt="Villa con dependance e giardino in vendita a Scapezzano, Senigallia – Luigi Marinangeli" class="card-img" height="330px" width="330px">
+                       <img src="IMG/LM283/vista-aerea-facciata-oasi-scapezzano-senigallia.webp" loading="lazy" alt="Villa con dependance e giardino in vendita a Scapezzano, Senigallia – Luigi Marinangeli" class="card-img" height="330" width="330">
                     </div>
                 </div>
                 <div class="card-content">
@@ -777,26 +685,142 @@
 
               <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
                 <div class="image-content">
-
                     <div class="card-image">
-                       <img src="IMG/LM286/casa-bifamiliare-con-giardino-in-vendita-a-senigallia-via-venezia.webp" loading="lazy" alt="Casa bifamiliare con giardino in vendita a Senigallia – agente immobiliare Luigi Marinangeli" class="card-img" height="330px" width="330px">
+                       <img src="IMG/LM297/rendering-facciata-palazzina-appartamento-via-venezia-senigallia.webp" loading="lazy" alt="Grande appartamento ristrutturato in vendita a Senigallia zona Via Venezia – Luigi Marinangeli" class="card-img" height="330" width="330">
+                    </div>
+                </div>
+                <div class="card-content">
+                  <h3 title="Località dell'immobile" class="name">Via Venezia, Senigallia</h3>
+                  <h4 class="tooLong">Grande appartamento Via Venezia</h4>
+                  <p title="Prezzo dell'immobile" class="price">€ 490.000</p>
+                  <div class="house-services">
+                    <ul class="services">
+                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 210m²</li>
+                      <li><i title="Numero di locali" class="fa-solid fa-bed"></i>6</li>
+                      <li><i title="Giardino" class="fa-solid fa-tree"></i></li>
+                      <li><i title="Presenza di Garage" class="fa-solid fa-car-side"></i></li>
+                    </ul>
+                  </div>
+                  <a href="./CASE/grande-appartamento-in-vendita-a-senigallia-via-venezia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
+                </div>
+              </div>
+
+              <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
+                <div class="image-content">
+                    <div class="card-image">
+                       <img src="IMG/LM295/soggiorno-sala-pranzo-appartamento-montemarciano.webp" loading="lazy" alt="Appartamento luminoso in vendita a Montemarciano zona Via Marconi – Luigi Marinangeli" class="card-img" height="330" width="330">
+                    </div>
+                </div>
+                <div class="card-content">
+                  <h3 title="Località dell'immobile" class="name">Via Marconi, Montemarciano</h3>
+                  <h4 class="tooLong">Appartamento Montemarciano</h4>
+                  <p title="Prezzo dell'immobile" class="price">€ 170.000</p>
+                  <div class="house-services">
+                    <ul class="services">
+                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 110m²</li>
+                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>2</li>
+                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>1</li>
+                      <li><i title="Presenza di Garage" class="fa-solid fa-car-side"></i></li>
+                    </ul>
+                  </div>
+                  <a href="./CASE/appartamento-in-vendita-a-montemarciano-via-marconi.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
+                </div>
+              </div>
+
+              <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
+                <div class="image-content">
+                    <div class="card-image">
+                       <img src="IMG/LM296/rendering-facciata-appartamento-giardino-ponte-rosso-senigallia.webp" loading="lazy" alt="Appartamento nuovo con giardino privato in vendita a Senigallia zona Ponte Rosso – Luigi Marinangeli" class="card-img" height="330" width="330">
+                    </div>
+                </div>
+                <div class="card-content">
+                  <h3 title="Località dell'immobile" class="name">Ponte Rosso, Senigallia</h3>
+                  <h4 class="tooLong">Appartamento nuovo con giardino</h4>
+                  <p title="Prezzo dell'immobile" class="price">€ 600.000</p>
+                  <div class="house-services">
+                    <ul class="services">
+                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 164m²</li>
+                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>3</li>
+                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>3</li>
+                      <li><i title="Presenza di Garage" class="fa-solid fa-car-side"></i></li>
+                    </ul>
+                  </div>
+                  <a href="./CASE/appartamento-nuovo-con-giardino-in-vendita-a-senigallia-ponte-rosso.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
+                </div>
+              </div>
+
+                      <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
+                        <div class="image-content">
+                          <div class="card-image">
+                       <img src="IMG/LM284/villa-singola-con-giardino-privato-in-vendita-a-senigallia-borgo-bicchia.webp" loading="lazy" alt="Villa singola con giardino privato in vendita a Senigallia – agente immobiliare Luigi Marinangeli" class="card-img" height="330" width="330">
                     </div>
                 </div>
 
                 <div class="card-content">
                   <h3 title="Località dell'immobile" class="name">Senigallia</h3>
-                  <h4 class="tooLong">Casa bifamiliare con giardino</h4>
-                  <p title="Prezzo dell'immobile" class="price">Trattativa riservata</p>
+                  <h4>La casa con gli oblò</h4>
+                  <p title="Prezzo dell'immobile" class="price">€ 225.000</p>
 
                   <div class="house-services">
                     <ul class="services">
-                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 255m²</li>
-                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>2+</li>
-                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>2+</li>
+                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 90m²</li>
+                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>3</li>
+                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>2</li>
                       <li> <i title="Presenza di Garage"class="fa-solid fa-car-side"></i>
                     </ul>
                   </div>
-                  <a href="./CASE/casa-bifamiliare-con-giardino-in-vendita-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
+                  <a href="./CASE/la-casa-con-gli-oblò-in-vendita-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
+                </div>
+              </div>
+
+              <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
+              <div class="image-content">
+
+                  <div class="card-image">
+                     <img src="IMG/LM272/villa-lussuosa-immersa-nel-verde-in-vendita-a-senigallia-le-saline.webp" loading="lazy" alt="Villa lussuosa immersa nel verde in vendita alle Saline Senigallia" class="card-img" height="330" width="330">
+                  </div>
+              </div>
+
+              <div class="card-content">
+                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
+                  <h4>Villa di lusso</h4>
+                  <p title="Prezzo dell'immobile" class="price">€ 1.350.000</p>
+
+                  <div class="house-services">
+                    <ul class="services">
+                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 360m²</li>
+                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>8</li>
+                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>5</li>
+                      <li> <i title="Presenza di Garage"class="fa-solid fa-car-side"></i>
+                    </ul>
+                  </div>
+                  <a href="./CASE/lussuosa-villa-in-vendita-alle-saline-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
+              </div>
+              </div>
+
+
+              <div class="card" aria-roledescription="Carta con una breve descrizione dell'immobile">
+                <div class="image-content">
+
+                    <div class="card-image">
+                       <img src="IMG/LM280/villetta-a-schiera-in-vendita-a-senigallia.webp" loading="lazy" alt="Villetta a schiera panoramica e recentemente ristrutturata in vendita a Senigallia" class="card-img" height="330" width="330">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                  <h3 title="Località dell'immobile" class="name">Senigallia</h3>
+                  <h4>Villetta a schiera</h4>
+                  <p title="Prezzo dell'immobile" class="price">€ 420.000</p>
+
+                  <div class="house-services">
+                    <ul class="services">
+                      <li><i title="Superficie" class="fa-solid fa-ruler-combined"></i> 173m²</li>
+                      <li><i title="Numero di camere" class="fa-solid fa-bed"></i>3</li>
+                      <li><i title="Numero di bagni" class="fa-solid fa-bath"></i>2</li>
+                      <li> <i title="Presenza di Garage"class="fa-solid fa-car-side"></i>
+                    </ul>
+                  </div>
+                  <a href="./CASE/villetta-a-schiera-panoramica-in-vendita-a-senigallia.html" class="button" aria-label="Link alla pagina con tutti i dettagli dell'immobile">Vedi di più +</a>
                 </div>
               </div>
 
@@ -858,6 +882,38 @@
                         <span class="blog-card__link link link--right">Leggi l'articolo</span>
                     </a>
 
+                    <a class="blog-card" href="BLOG/comprare-casa-da-ristrutturare-vantaggi-e-rischi.html" aria-label="Leggi l'articolo: Comprare casa da ristrutturare, vantaggi e rischi">
+                        <i class="blog-card__icon fa-solid fa-trowel" aria-hidden="true"></i>
+                        <span class="blog-card__category">Guida all'acquisto</span>
+                        <h3 class="blog-card__title">Comprare casa da ristrutturare: vantaggi e rischi</h3>
+                        <p class="blog-card__excerpt">Prezzo più basso, ma quali rischi? Cosa verificare prima di offrire e come stimare davvero i costi dei lavori.</p>
+                        <span class="blog-card__link link link--right">Leggi l'articolo</span>
+                    </a>
+
+                    <a class="blog-card" href="BLOG/guida-ai-quartieri-di-senigallia-dove-comprare-casa.html" aria-label="Leggi l'articolo: Le zone di Senigallia, guida ai quartieri per chi vuole comprare casa">
+                        <i class="blog-card__icon fa-solid fa-map-location-dot" aria-hidden="true"></i>
+                        <span class="blog-card__category">Zone e quartieri</span>
+                        <h3 class="blog-card__title">Le zone di Senigallia: guida ai quartieri</h3>
+                        <p class="blog-card__excerpt">Centro, Ponte Rosso, Ciarnin, Saline, frazioni collinari: come orientarsi tra le zone della città.</p>
+                        <span class="blog-card__link link link--right">Leggi l'articolo</span>
+                    </a>
+
+                    <a class="blog-card" href="BLOG/mutuo-casa-come-funziona-cosa-serve.html" aria-label="Leggi l'articolo: Mutuo casa, come funziona e cosa serve per ottenerlo">
+                        <i class="blog-card__icon fa-solid fa-handshake" aria-hidden="true"></i>
+                        <span class="blog-card__category">Consulenza mutui</span>
+                        <h3 class="blog-card__title">Mutuo casa: come funziona e cosa serve</h3>
+                        <p class="blog-card__excerpt">Documenti, pre-delibera e tempi: cosa verificare prima di offrire su un immobile se serve un mutuo.</p>
+                        <span class="blog-card__link link link--right">Leggi l'articolo</span>
+                    </a>
+
+                    <a class="blog-card" href="BLOG/attestato-prestazione-energetica-ape-cosa-serve.html" aria-label="Leggi l'articolo: APE, cos'è l'attestato di prestazione energetica e perché serve">
+                        <i class="blog-card__icon fa-solid fa-bolt" aria-hidden="true"></i>
+                        <span class="blog-card__category">Documenti e certificazioni</span>
+                        <h3 class="blog-card__title">APE: cos'è e perché serve</h3>
+                        <p class="blog-card__excerpt">Classe energetica, obbligatorietà e cosa succede se manca al momento della vendita.</p>
+                        <span class="blog-card__link link link--right">Leggi l'articolo</span>
+                    </a>
+
                     <div class="article__blog--more">
                         <a href="SRC/blog.html" class="link link--right" aria-label="Vai alla pagina con tutti gli articoli del blog">Vedi tutti gli articoli</a>
                     </div>
@@ -867,6 +923,7 @@
         <section id="recensioni">
         <div class="container">
             <h2 class="section-title">Chi ha già comprato o venduto con me.</h2>
+            <a href="https://share.google/FvC7OVg8rgAu7QM3Y" target="_blank" rel="noopener noreferrer" class="link link--right" aria-label="Vedi tutte le recensioni sulla scheda Google di Luigi Marinangeli (si apre in una nuova scheda)">Vedi tutte le recensioni su Google</a>
             <div class="reviews-container">
                 <div class="reviews-grid" id="reviewsGrid">
                     
@@ -885,15 +942,15 @@
                             <span class="star">★</span>
                         </div>
                         <div class="review-text">Se non era per Luigi pensavo che la mia casa non avesse problemi per la vendita invece con il suo aiuto abbiamo sistemato tutta la documentazione necessaria per poter vendere in piena perfezione e tranquillità. Grazie Luigi per la tua precisione e soprattutto per la notevole disponibilità mostrata a me e alla mia famiglia nella vendita della nostra casa.</div>
-                        <div class="google-badge">
-                            <svg class="google-logo" viewBox="0 0 24 24">
+                        <a class="google-badge" href="https://share.google/FvC7OVg8rgAu7QM3Y" target="_blank" rel="noopener noreferrer" aria-label="Leggi questa e altre recensioni sulla scheda Google di Luigi Marinangeli (si apre in una nuova scheda)">
+                            <svg class="google-logo" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill="#4285f4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                                 <path fill="#34a853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                                 <path fill="#fbbc05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                                 <path fill="#ea4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                             </svg>
                             <span class="google-text">Google</span>
-                        </div>
+                        </a>
                     </article>
 
                     <article class="review-card">
@@ -911,15 +968,15 @@
                             <span class="star">★</span>
                         </div>
                         <div class="review-text">Un anno fa ho venduto casa grazie a Luigi, una grande persona e un grande professionista. Mi sono trovato molto bene perché sono stato seguito passo passo in tutti i vari passaggi. Consiglio vivamente questa agenzia ma consiglio soprattutto Luigi...</div>
-                        <div class="google-badge">
-                            <svg class="google-logo" viewBox="0 0 24 24">
+                        <a class="google-badge" href="https://share.google/FvC7OVg8rgAu7QM3Y" target="_blank" rel="noopener noreferrer" aria-label="Leggi questa e altre recensioni sulla scheda Google di Luigi Marinangeli (si apre in una nuova scheda)">
+                            <svg class="google-logo" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill="#4285f4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                                 <path fill="#34a853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                                 <path fill="#fbbc05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                                 <path fill="#ea4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                             </svg>
                             <span class="google-text">Google</span>
-                        </div>
+                        </a>
                     </article>
 
                     <article class="review-card">
@@ -937,15 +994,15 @@
                             <span class="star">★</span>
                         </div>
                         <div class="review-text">Anche noi abbiamo comprato la casa dei miei sogni dall'agenzia del grande Luigi, siamo stati accompagnati in questo percorso dalla sua professionalità e dalla cura nei confronti del cliente.</div>
-                        <div class="google-badge">
-                            <svg class="google-logo" viewBox="0 0 24 24">
+                        <a class="google-badge" href="https://share.google/FvC7OVg8rgAu7QM3Y" target="_blank" rel="noopener noreferrer" aria-label="Leggi questa e altre recensioni sulla scheda Google di Luigi Marinangeli (si apre in una nuova scheda)">
+                            <svg class="google-logo" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill="#4285f4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                                 <path fill="#34a853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                                 <path fill="#fbbc05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                                 <path fill="#ea4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                             </svg>
                             <span class="google-text">Google</span>
-                        </div>
+                        </a>
                     </article>
 
                     <article class="review-card">
@@ -963,15 +1020,15 @@
                             <span class="star">★</span>
                         </div>
                         <div class="review-text">Un autentico professionista: competente, affidabile e di lunga esperienza!</div>
-                        <div class="google-badge">
-                            <svg class="google-logo" viewBox="0 0 24 24">
+                        <a class="google-badge" href="https://share.google/FvC7OVg8rgAu7QM3Y" target="_blank" rel="noopener noreferrer" aria-label="Leggi questa e altre recensioni sulla scheda Google di Luigi Marinangeli (si apre in una nuova scheda)">
+                            <svg class="google-logo" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill="#4285f4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                                 <path fill="#34a853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                                 <path fill="#fbbc05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                                 <path fill="#ea4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                             </svg>
                             <span class="google-text">Google</span>
-                        </div>
+                        </a>
                     </article>
 
                     <article class="review-card">
@@ -989,15 +1046,15 @@
                             <span class="star">★</span>
                         </div>
                         <div class="review-text">Luigi Marinangeli un professionista serio e competente</div>
-                        <div class="google-badge">
-                            <svg class="google-logo" viewBox="0 0 24 24">
+                        <a class="google-badge" href="https://share.google/FvC7OVg8rgAu7QM3Y" target="_blank" rel="noopener noreferrer" aria-label="Leggi questa e altre recensioni sulla scheda Google di Luigi Marinangeli (si apre in una nuova scheda)">
+                            <svg class="google-logo" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill="#4285f4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                                 <path fill="#34a853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                                 <path fill="#fbbc05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                                 <path fill="#ea4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                             </svg>
                             <span class="google-text">Google</span>
-                        </div>
+                        </a>
                     </article>
 
                     <article class="review-card">
@@ -1015,15 +1072,15 @@
                             <span class="star">★</span>
                         </div>
                         <div class="review-text">Luigi è un professionista, serio e affidabile. Si percepisce la cura con cui affronta ogni situazione e la sua attenzione alle persone.</div>
-                        <div class="google-badge">
-                            <svg class="google-logo" viewBox="0 0 24 24">
+                        <a class="google-badge" href="https://share.google/FvC7OVg8rgAu7QM3Y" target="_blank" rel="noopener noreferrer" aria-label="Leggi questa e altre recensioni sulla scheda Google di Luigi Marinangeli (si apre in una nuova scheda)">
+                            <svg class="google-logo" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill="#4285f4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                                 <path fill="#34a853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                                 <path fill="#fbbc05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                                 <path fill="#ea4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                             </svg>
                             <span class="google-text">Google</span>
-                        </div>
+                        </a>
                     </article>
 
                     <article class="review-card">
@@ -1041,15 +1098,15 @@
                             <span class="star">★</span>
                         </div>
                         <div class="review-text">Luigi è una persona molto disponibile e sincera. Sarà venuto con me a vedere almeno 5 case facendomi vedere cose che da sola non avrei notato, stimando eventuali lavori ecc. ormai mi sono affezionata!</div>
-                        <div class="google-badge">
-                            <svg class="google-logo" viewBox="0 0 24 24">
+                        <a class="google-badge" href="https://share.google/FvC7OVg8rgAu7QM3Y" target="_blank" rel="noopener noreferrer" aria-label="Leggi questa e altre recensioni sulla scheda Google di Luigi Marinangeli (si apre in una nuova scheda)">
+                            <svg class="google-logo" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill="#4285f4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                                 <path fill="#34a853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                                 <path fill="#fbbc05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                                 <path fill="#ea4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                             </svg>
                             <span class="google-text">Google</span>
-                        </div>
+                        </a>
                     </article>
 
                     <article class="review-card">
@@ -1067,15 +1124,15 @@
                             <span class="star">★</span>
                         </div>
                         <div class="review-text">Luigi, un professionista a tutto tondo che ti segue e consiglia dalla a alla z. Sempre cordiale.</div>
-                        <div class="google-badge">
-                            <svg class="google-logo" viewBox="0 0 24 24">
+                        <a class="google-badge" href="https://share.google/FvC7OVg8rgAu7QM3Y" target="_blank" rel="noopener noreferrer" aria-label="Leggi questa e altre recensioni sulla scheda Google di Luigi Marinangeli (si apre in una nuova scheda)">
+                            <svg class="google-logo" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill="#4285f4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                                 <path fill="#34a853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                                 <path fill="#fbbc05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                                 <path fill="#ea4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                             </svg>
                             <span class="google-text">Google</span>
-                        </div>
+                        </a>
                     </article>
 
 
