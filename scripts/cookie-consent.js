@@ -68,7 +68,7 @@
         var text = document.createElement("p");
         text.className = "cookie-consent-banner__text";
         text.innerHTML =
-            "Questo sito utilizza servizi esterni sempre attivi (Google Fonts, Font Awesome) che possono trattare il tuo indirizzo IP, e Google Analytics per statistiche di utilizzo, attivato solo se acconsenti. " +
+            "Questo sito utilizza Google Analytics per statistiche di utilizzo, attivato solo se acconsenti. " +
             '<a href="/privacy-cookie-policy.html">Maggiori informazioni</a>';
 
         var actions = document.createElement("div");
