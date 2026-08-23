@@ -168,5 +168,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/CASE/stabilimento-balneare-rotonda-di-senigallia.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
 
 </urlset>
