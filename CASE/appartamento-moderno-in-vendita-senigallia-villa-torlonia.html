@@ -85,17 +85,68 @@
     <body>
     <!--HEADER-->
     <header>
-        <nav class="navbar" id="navBar">
+        <nav class="navbar" id="navBar" aria-label="Contenitore del menù di navigazione">
+            <!--MENU-->
             <ul class="navbar__menu" id="menu" aria-label="menù di navigazione">
+
                 <li class="navbar__menu-item navbar__logo">
+                    <!--LOGO-->
                     <a href="../index.html" aria-label="Link alla home page">
-                        <img src="../IMG/luigi-marinangeli-consulente-immobiliare-logo-piccolo.svg" alt="Logo Luigi Marinangeli agente immobiliare Senigallia" class="navbar__img" width="60" height="60">
+                    <img src="../IMG/luigi-marinangeli-consulente-immobiliare-logo-piccolo.svg" alt="Logo Luigi Marinangeli agente immobiliare Senigallia" class="navbar__img" width="60" height="60">
                     </a>
-                    <a href="../index.html" aria-label="Link alla home page">
-                        <img src="../IMG/luigi-marinangeli-consulente-immobiliare-ancona-firma.svg" alt="Firma di Luigi Marinangeli" class="navbar__signature" width="180" height="60">
+                    <img id="logo-1" src="../IMG/luigi-marinangeli-consulente-immobiliare-ancona-firma.svg" alt="" aria-hidden="true" class="navbar__signature"  width="180" height="60">
+                </li>
+                <li class="navbar__menu-item">
+                    <a href="../index.html#chi-sono" class="navbar__menu-item--link no-display--1" aria-label="Link alla sezione 'Chi sono' della home page" tabindex="0">
+                        Chi sono
+                    </a>
+                </li>
+
+                <li class="navbar__menu-item">
+                    <a href="../SRC/consulenza.html" id="link-1" class="navbar__menu-item--link no-display--2" aria-label="Vai alla pagina Consulenze" tabindex="0">
+                        Consulenze
+                    </a>
+                </li>
+
+                <li class="navbar__menu-item">
+                  <a href="../SRC/immobili.html" id="link-2" class="navbar__menu-item--link no-display--3" tabindex="0" aria-label="Vai alla pagina I miei immobili">
+                      I miei immobili
+                  </a>
+              </li>
+
+                <li class="navbar__menu-item">
+                  <a href="../SRC/vendi-casa.html" class="navbar__menu-item--link no-display--3" tabindex="0" aria-label="Vai alla pagina dei servizi per chi vende casa">
+                      Vendi casa
+                  </a>
+              </li>
+
+                <li class="navbar__menu-item">
+                  <a href="../SRC/compra-casa.html" class="navbar__menu-item--link no-display--3" tabindex="0" aria-label="Vai alla pagina dei servizi per chi compra casa">
+                      Compra casa
+                  </a>
+              </li>
+
+                <li class="navbar__menu-item">
+                  <a href="../SRC/blog.html" id="link-4" class="navbar__menu-item--link no-display--3" tabindex="0" aria-label="Vai alla pagina Blog">
+                      Blog
+                  </a>
+              </li>
+
+                <li class="navbar__menu-item">
+                    <a href="../index.html#contatti" id="link-3" class="navbar__menu-item--link no-display--3" aria-label="Link alla sezione 'Contatti' della home page" tabindex="0">
+                        Contatti
                     </a>
                 </li>
             </ul>
+            <a href="#" class="nav-icon" id="hamburger"
+            data-toggle="collapse"
+            data-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Chiudi o apri il menù di navigazione"
+            tabindex="0">
+              <i aria-hidden="true" class="fa fa-bars"></i>
+            </a>
         </nav>
     </header>
 
@@ -245,6 +296,7 @@
         </main>
 
         <script src="../scripts/property-gallery.min.js" defer></script>
+        <script src="../scripts/nav.min.js" defer></script>
 
         <footer class="footer">
             <div class="footer__content">
