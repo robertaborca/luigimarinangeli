@@ -8,7 +8,6 @@ const link4= document.getElementById("link-4");
 
 
 function navBar() {
-    void(0);
       navigationBar.classList.toggle("responsive");
       hamburger.setAttribute("aria-expanded", navigationBar.classList.contains("responsive"));
 }
