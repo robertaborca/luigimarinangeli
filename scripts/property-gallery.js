@@ -54,8 +54,10 @@
     }, { passive: true });
 
     if (slides.length > 1) {
-        renderDots();
+        // Read layout (offsetLeft of every slide) before renderDots() writes
+        // innerHTML, to avoid forcing a synchronous reflow.
         updateActiveState();
+        renderDots();
 
         // Layout can still shift after this point (images finishing load,
         // fonts swapping in, etc.), which changes viewport.scrollWidth and

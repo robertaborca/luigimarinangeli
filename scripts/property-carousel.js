@@ -72,13 +72,13 @@
         window.addEventListener("resize", () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
-                renderDots();
                 updateActiveState();
+                renderDots();
             }, 150);
         });
 
-        renderDots();
         updateActiveState();
+        renderDots();
 
         // Guard against layout shifting after this point (images finishing
         // load, fonts swapping in, etc.), which would otherwise leave the
