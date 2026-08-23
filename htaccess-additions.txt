@@ -38,9 +38,11 @@ Redirect 301 /consulenza-personalizzata.html /SRC/consulenza.html
 Redirect 301 /analisi-documentale.html /SRC/consulenza.html
 
 # NOTA: /CASE/stabilimento-balneare-rotonda-di-senigallia.html
-# NON va reindirizzato. Va ricreato come pagina "immobile non più
-# disponibile" con link agli immobili attuali (135 clic, 674 impr.,
-# nessun immobile comparabile su cui reindirizzare). Vedi task separato
-# piu' sotto: il file non è recuperabile da questo repository, serve
-# il contenuto originale (testo/foto) per ricostruirlo, altrimenti lo
-# scrivo da zero sulla base della sola URL.
+# NON va reindirizzato. E' stata ricreata come pagina "immobile non
+# più disponibile" con link agli immobili attuali. Nessuna azione
+# richiesta qui: la pagina esiste già a quell'URL.
+
+# URL rinominato (rimosso il carattere accentato "ò", che causava
+# problemi di indicizzazione/accesso su alcuni tool SEO). L'URL
+# vecchio aveva 86+68 clic da ricerca: reindirizzarlo è importante.
+Redirect 301 /CASE/la-casa-con-gli-oblò-in-vendita-a-senigallia.html /CASE/la-casa-con-gli-oblo-in-vendita-a-senigallia.html
