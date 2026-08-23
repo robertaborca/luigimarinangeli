@@ -44,5 +44,10 @@ Redirect 301 /analisi-documentale.html /SRC/consulenza.html
 
 # URL rinominato (rimosso il carattere accentato "ò", che causava
 # problemi di indicizzazione/accesso su alcuni tool SEO). L'URL
-# vecchio aveva 86+68 clic da ricerca: reindirizzarlo è importante.
-Redirect 301 /CASE/la-casa-con-gli-oblò-in-vendita-a-senigallia.html /CASE/la-casa-con-gli-oblo-in-vendita-a-senigallia.html
+# vecchio ha avuto 61 clic e 567 impressioni negli ultimi 3 mesi
+# (3° pagina del sito per traffico): reindirizzarlo è importante.
+# RedirectMatch (non Redirect) + pattern sui byte percent-encoded:
+# più affidabile di un Redirect semplice con carattere UTF-8 letterale,
+# perché il browser può inviare la richiesta già percent-encoded e
+# alcuni setup Apache/LiteSpeed la confrontano prima della decodifica.
+RedirectMatch 301 "^/CASE/la-casa-con-gli-obl(%C3%B2|ò)-in-vendita-a-senigallia\.html$" /CASE/la-casa-con-gli-oblo-in-vendita-a-senigallia.html
