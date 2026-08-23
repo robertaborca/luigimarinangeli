@@ -88,6 +88,7 @@
             setConsent(value);
             if (value === "accepted") loadGoogleAnalytics();
             banner.remove();
+            document.body.classList.remove("cookie-banner-visible");
         }
 
         rejectBtn.addEventListener("click", function () {
@@ -117,5 +118,6 @@
 
         injectStyle();
         document.body.appendChild(buildBanner());
+        document.body.classList.add("cookie-banner-visible");
     });
 })();
