@@ -4,7 +4,7 @@ const sharp = require('sharp');
 
 const ROOT = path.resolve(__dirname, '..');
 const GRID_SIZES = '(max-width: 768px) 92vw, (max-width: 1200px) 45vw, 373px';
-const GALLERY_SIZES = '(max-width: 768px) 94vw, 650px';
+const GALLERY_SIZES = '(max-width: 768px) 80vw, 600px';
 
 function isInsideComment(html, index) {
   const lastOpen = html.lastIndexOf('<!--', index);

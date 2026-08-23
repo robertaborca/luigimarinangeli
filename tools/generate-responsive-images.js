@@ -3,7 +3,7 @@ const path = require('path');
 const sharp = require('sharp');
 
 const ROOT = path.resolve(__dirname, '..');
-const WIDTHS = [400, 800, 1200];
+const WIDTHS = [400, 600, 800, 1200];
 const QUALITY = 74;
 
 function collectImagePaths() {
