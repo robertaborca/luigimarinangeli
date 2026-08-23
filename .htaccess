@@ -15,3 +15,30 @@ Redirect 301 /consulenza-personalizzata.html /SRC/consulenza.html
 Redirect 301 /consulenza-fast.html /SRC/consulenza.html
 Redirect 301 /SRC/consulenza-personalizzata.html /SRC/consulenza.html
 Redirect 301 /SRC/consulenza-fast.html /SRC/consulenza.html
+Redirect 301 /analisi-documentale.html /SRC/consulenza.html
+
+# Immobili venduti o ritirati
+Redirect 301 /CASE/mini-appartamento-in-vendita-a-senigallia.html /CASE/appartamento-moderno-in-vendita-senigallia-villa-torlonia.html
+Redirect 301 /CASE/villino-in-vendita-a-scapezzano-senigallia.html /CASE/villa-con-dependance-giardino-in-vendita-a-scapezzano-senigallia.html
+Redirect 301 /CASE/appartamento-vista-mare-ammobiliato-in-vendita-a-senigallia.html /CASE/appartamento-moderno-in-vendita-senigallia-villa-torlonia.html
+Redirect 301 /CASE/luminoso-trilocale-in-vendita-a-senigallia-le-saline.html /SRC/immobili.html
+Redirect 301 /CASE/casa-bifamiliare-con-giardino-in-vendita-a-senigallia.html /CASE/grande-appartamento-in-vendita-a-senigallia-via-venezia.html
+Redirect 301 /CASE/villa-a-schiera-in-vendita-a-casine-di-ostra.html /CASE/villetta-a-schiera-panoramica-in-vendita-a-senigallia.html
+Redirect 301 /CASE/appartamento-sul-mare-in-vendita-a-marzocca.html /CASE/appartamento-in-vendita-a-montemarciano-via-marconi.html
+Redirect 301 /CASE/appartamento-semi-nuovo-in-vendita-a-barbara.html /CASE/casa-colonica-ristrutturata-barbara-senigallia.html
+Redirect 301 /CASE/appartamento-indipendente-in-vendita-a-marina-di-montemarciano.html /CASE/appartamento-in-vendita-a-montemarciano-via-marconi.html
+Redirect 301 /CASE/appartamento-centro-storico-senigallia.html /CASE/grande-appartamento-in-vendita-a-senigallia-via-venezia.html
+Redirect 301 /CASE/favoloso-appartamento-al-ciarnin.html /CASE/appartamento-con-giardino-ciarnin-in-vendita-a-senigallia.html
+Redirect 301 /CASE/appartamento-sul-mare-senigallia.html /SRC/immobili.html
+Redirect 301 /CASE/grande-appartamento-a-senigallia.html /CASE/grande-appartamento-in-vendita-a-senigallia-via-venezia.html
+Redirect 301 /CASE/villino-indipendente-senigallia.html /CASE/villetta-indipendente-ciarnin-in-vendita-a-senigallia.html
+Redirect 301 /CASE/villa-in-vendita-in-Via-Capanna-Senigallia.html /SRC/immobili.html
+
+# NOTA: /CASE/stabilimento-balneare-rotonda-di-senigallia.html NON va
+# reindirizzato. E' stata ricreata come pagina "immobile non più
+# disponibile" con link agli immobili attuali: esiste già a quell'URL.
+
+# URL rinominato (rimossa la ò accentata, problematica per alcuni
+# tool SEO/indicizzazione). RedirectMatch sui byte percent-encoded:
+# più affidabile di un Redirect con carattere UTF-8 letterale.
+RedirectMatch 301 "^/CASE/la-casa-con-gli-obl(%C3%B2|ò)-in-vendita-a-senigallia\.html$" /CASE/la-casa-con-gli-oblo-in-vendita-a-senigallia.html
