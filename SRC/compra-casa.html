@@ -224,8 +224,34 @@
                     ✉️ info@lecasediluigi.com
                 </a>
             </div>
+
+            <div class="contact-form-wrapper">
+                <p class="contact-form-divider">oppure scrivimi</p>
+                <p class="contact-form__status contact-form__status--error" id="formError" hidden>Non sono riuscito a inviare il messaggio. Riprova, oppure chiamami o scrivimi direttamente.</p>
+                <form class="contact-form" action="/contact-form.php" method="POST">
+                    <input type="text" name="website" class="contact-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <input type="hidden" name="origine" value="Compra Casa">
+                    <div class="contact-form__row">
+                        <label for="compra-nome" class="sr-only">Nome e cognome</label>
+                        <input type="text" id="compra-nome" name="nome" placeholder="Nome e cognome" autocomplete="name" required>
+                        <label for="compra-telefono" class="sr-only">Telefono</label>
+                        <input type="tel" id="compra-telefono" name="telefono" placeholder="Telefono (facoltativo)" autocomplete="tel">
+                    </div>
+                    <label for="compra-email" class="sr-only">Email</label>
+                    <input type="email" id="compra-email" name="email" placeholder="La tua email" autocomplete="email" required>
+                    <label for="compra-messaggio" class="sr-only">Messaggio</label>
+                    <textarea id="compra-messaggio" name="messaggio" placeholder="Scrivimi il tuo messaggio..." rows="4" required></textarea>
+                    <button type="submit" class="btn btn-primary btn-large btn-consulenza-chiama btn--vendi">Invia messaggio</button>
+                </form>
+            </div>
         </div>
     </section>
+    <script>
+        if (location.search.includes("form=error")) {
+            document.getElementById("formError").hidden = false;
+            history.replaceState(null, "", location.pathname);
+        }
+    </script>
     </main>
 
     <footer class="footer">

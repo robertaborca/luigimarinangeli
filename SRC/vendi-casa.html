@@ -247,8 +247,34 @@
                     ✉️ info@lecasediluigi.com
                 </a>
             </div>
+
+            <div class="contact-form-wrapper">
+                <p class="contact-form-divider">oppure scrivimi</p>
+                <p class="contact-form__status contact-form__status--error" id="formError" hidden>Non sono riuscito a inviare il messaggio. Riprova, oppure chiamami o scrivimi direttamente.</p>
+                <form class="contact-form" action="/contact-form.php" method="POST">
+                    <input type="text" name="website" class="contact-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <input type="hidden" name="origine" value="Vendi Casa">
+                    <div class="contact-form__row">
+                        <label for="vendi-nome" class="sr-only">Nome e cognome</label>
+                        <input type="text" id="vendi-nome" name="nome" placeholder="Nome e cognome" autocomplete="name" required>
+                        <label for="vendi-telefono" class="sr-only">Telefono</label>
+                        <input type="tel" id="vendi-telefono" name="telefono" placeholder="Telefono (facoltativo)" autocomplete="tel">
+                    </div>
+                    <label for="vendi-email" class="sr-only">Email</label>
+                    <input type="email" id="vendi-email" name="email" placeholder="La tua email" autocomplete="email" required>
+                    <label for="vendi-messaggio" class="sr-only">Messaggio</label>
+                    <textarea id="vendi-messaggio" name="messaggio" placeholder="Scrivimi il tuo messaggio..." rows="4" required></textarea>
+                    <button type="submit" class="btn btn-primary btn-large btn-consulenza-chiama btn--vendi">Invia messaggio</button>
+                </form>
+            </div>
         </div>
     </section>
+    <script>
+        if (location.search.includes("form=error")) {
+            document.getElementById("formError").hidden = false;
+            history.replaceState(null, "", location.pathname);
+        }
+    </script>
     </main>
 
     <footer class="footer">
