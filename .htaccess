@@ -11,6 +11,10 @@ Options -Indexes
   ExpiresByType application/javascript "access plus 1 day"
   ExpiresByType text/javascript "access plus 1 day"
   ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
 </IfModule>
 
 <IfModule mod_headers.c>
@@ -19,15 +23,15 @@ Options -Indexes
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
   Header always set Strict-Transport-Security "max-age=300"
+  # TEMPORANEO: la CSP sopra e' in Report-Only, quindi frame-ancestors non e'
+  # ancora applicato. Da rimuovere quando la CSP passa ad attiva.
+  Header always set X-Frame-Options "SAMEORIGIN"
 </IfModule>
 
 RewriteEngine On
 
-# Redirect HTTP → HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
-
-# Redirect non-www → www
+# Redirect HTTP → HTTPS e non-www → www (un solo hop)
+RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^lecasediluigi\.com$ [NC]
 RewriteRule ^(.*)$ https://www.lecasediluigi.com/$1 [L,R=301]
 
