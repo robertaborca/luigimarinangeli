@@ -42,21 +42,23 @@ Redirect 301 /SRC/consulenza-personalizzata.html /SRC/consulenza.html
 Redirect 301 /SRC/consulenza-fast.html /SRC/consulenza.html
 Redirect 301 /analisi-documentale.html /SRC/consulenza.html
 
-# Immobili venduti o ritirati
-Redirect 301 /CASE/mini-appartamento-in-vendita-a-senigallia.html /CASE/appartamento-moderno-in-vendita-senigallia-villa-torlonia.html
-Redirect 301 /CASE/villino-in-vendita-a-scapezzano-senigallia.html /CASE/villa-con-dependance-giardino-in-vendita-a-scapezzano-senigallia.html
-Redirect 301 /CASE/appartamento-vista-mare-ammobiliato-in-vendita-a-senigallia.html /CASE/appartamento-moderno-in-vendita-senigallia-villa-torlonia.html
+# Immobili venduti o ritirati -> pagina elenco immobili.
+# Target unico e volutamente generico: le schede singole si vendono a loro
+# volta e diventerebbero anelli di catene di redirect da manutenere.
+Redirect 301 /CASE/mini-appartamento-in-vendita-a-senigallia.html /SRC/immobili.html
+Redirect 301 /CASE/villino-in-vendita-a-scapezzano-senigallia.html /SRC/immobili.html
+Redirect 301 /CASE/appartamento-vista-mare-ammobiliato-in-vendita-a-senigallia.html /SRC/immobili.html
 Redirect 301 /CASE/luminoso-trilocale-in-vendita-a-senigallia-le-saline.html /SRC/immobili.html
-Redirect 301 /CASE/casa-bifamiliare-con-giardino-in-vendita-a-senigallia.html /CASE/grande-appartamento-in-vendita-a-senigallia-via-venezia.html
-Redirect 301 /CASE/villa-a-schiera-in-vendita-a-casine-di-ostra.html /CASE/villetta-a-schiera-panoramica-in-vendita-a-senigallia.html
-Redirect 301 /CASE/appartamento-sul-mare-in-vendita-a-marzocca.html /CASE/appartamento-in-vendita-a-montemarciano-via-marconi.html
-Redirect 301 /CASE/appartamento-semi-nuovo-in-vendita-a-barbara.html /CASE/casa-colonica-ristrutturata-barbara-senigallia.html
-Redirect 301 /CASE/appartamento-indipendente-in-vendita-a-marina-di-montemarciano.html /CASE/appartamento-in-vendita-a-montemarciano-via-marconi.html
-Redirect 301 /CASE/appartamento-centro-storico-senigallia.html /CASE/grande-appartamento-in-vendita-a-senigallia-via-venezia.html
-Redirect 301 /CASE/favoloso-appartamento-al-ciarnin.html /CASE/appartamento-con-giardino-ciarnin-in-vendita-a-senigallia.html
+Redirect 301 /CASE/casa-bifamiliare-con-giardino-in-vendita-a-senigallia.html /SRC/immobili.html
+Redirect 301 /CASE/villa-a-schiera-in-vendita-a-casine-di-ostra.html /SRC/immobili.html
+Redirect 301 /CASE/appartamento-sul-mare-in-vendita-a-marzocca.html /SRC/immobili.html
+Redirect 301 /CASE/appartamento-semi-nuovo-in-vendita-a-barbara.html /SRC/immobili.html
+Redirect 301 /CASE/appartamento-indipendente-in-vendita-a-marina-di-montemarciano.html /SRC/immobili.html
+Redirect 301 /CASE/appartamento-centro-storico-senigallia.html /SRC/immobili.html
+Redirect 301 /CASE/favoloso-appartamento-al-ciarnin.html /SRC/immobili.html
 Redirect 301 /CASE/appartamento-sul-mare-senigallia.html /SRC/immobili.html
-Redirect 301 /CASE/grande-appartamento-a-senigallia.html /CASE/grande-appartamento-in-vendita-a-senigallia-via-venezia.html
-Redirect 301 /CASE/villino-indipendente-senigallia.html /CASE/villetta-indipendente-ciarnin-in-vendita-a-senigallia.html
+Redirect 301 /CASE/grande-appartamento-a-senigallia.html /SRC/immobili.html
+Redirect 301 /CASE/villino-indipendente-senigallia.html /SRC/immobili.html
 Redirect 301 /CASE/villa-in-vendita-in-Via-Capanna-Senigallia.html /SRC/immobili.html
 
 # NOTA: /CASE/stabilimento-balneare-rotonda-di-senigallia.html NON va
