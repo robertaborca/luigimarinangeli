@@ -14,7 +14,11 @@ $REDIRECT_OK = '/grazie.html';
 
 function redirect_back(string $status): void
 {
-    $referer = $_SERVER['HTTP_REFERER'] ?? '/';
+    $referer = $_SERVER['HTTP_REFERER'] ?? '';
+    $refererHost = parse_url($referer, PHP_URL_HOST);
+    if ($refererHost === null || !preg_match('/(^|\.)lecasediluigi\.com$/i', $refererHost)) {
+        $referer = '/';
+    }
     $separator = strpos($referer, '?') !== false ? '&' : '?';
     header('Location: ' . $referer . $separator . 'form=' . $status);
     exit;
@@ -52,8 +56,9 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 $emailClean = clean_header_value($email);
 $nomeClean = clean_header_value($nome);
+$origineClean = clean_header_value($origine);
 
-$subject = 'Nuovo contatto dal sito - ' . $origine;
+$subject = 'Nuovo contatto dal sito - ' . $origineClean;
 
 $body = "Nuova richiesta dal form di contatto del sito.\n\n";
 $body .= "Nome: {$nome}\n";
