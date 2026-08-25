@@ -104,6 +104,7 @@ try {
     $mail->Password = $smtp['password'];
     $mail->CharSet = 'UTF-8';
     $mail->Timeout = 10;
+    $mail->XMailer = ' ';
 
     $mail->setFrom($FROM_EMAIL, 'Sito lecasediluigi.com');
     $mail->addAddress($TO_EMAIL);
