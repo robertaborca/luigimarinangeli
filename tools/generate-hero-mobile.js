@@ -23,7 +23,7 @@ const CROP_HEIGHT = 1202;
   }
   await sharp(SOURCE)
     .extract({ left: meta.width - CROP_WIDTH, top: 0, width: CROP_WIDTH, height: CROP_HEIGHT })
-    .webp({ quality: 80 })
+    .webp({ quality: 70 })
     .toFile(OUT);
 
   const out = await sharp(OUT).metadata();
