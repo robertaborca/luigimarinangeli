@@ -82,9 +82,11 @@ $headers = [];
 $headers[] = 'From: Sito lecasediluigi.com <' . $FROM_EMAIL . '>';
 $headers[] = 'Reply-To: ' . $nomeClean . ' <' . $emailClean . '>';
 $headers[] = 'Content-Type: text/plain; charset=UTF-8';
+$headers[] = 'MIME-Version: 1.0';
+$headers[] = 'Content-Transfer-Encoding: 8bit';
 $headers[] = 'X-Mailer: PHP/' . phpversion();
 
-$sent = mail($TO_EMAIL, $subject, $body, implode("\r\n", $headers));
+$sent = mail($TO_EMAIL, $subject, $body, implode("\r\n", $headers), '-f' . $FROM_EMAIL);
 
 if ($sent) {
     header('Location: ' . $REDIRECT_OK);
