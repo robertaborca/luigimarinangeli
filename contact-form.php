@@ -19,8 +19,18 @@ function redirect_back(string $status): void
     if ($refererHost === null || !preg_match('/(^|\.)lecasediluigi\.com$/i', $refererHost)) {
         $referer = '/';
     }
+
+    // Spezza il fragment (es. #contatti) prima di appendere la query,
+    // altrimenti finisce dentro al fragment e nessuno lo legge piu'.
+    $fragment = '';
+    $hashPos = strpos($referer, '#');
+    if ($hashPos !== false) {
+        $fragment = substr($referer, $hashPos);
+        $referer = substr($referer, 0, $hashPos);
+    }
+
     $separator = strpos($referer, '?') !== false ? '&' : '?';
-    header('Location: ' . $referer . $separator . 'form=' . $status);
+    header('Location: ' . $referer . $separator . 'form=' . $status . $fragment);
     exit;
 }
 
