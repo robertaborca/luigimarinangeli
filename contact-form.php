@@ -92,6 +92,17 @@ if (!is_readable($configPath)) {
 }
 $smtp = require $configPath;
 
+if (
+    !is_array($smtp)
+    || empty($smtp['host'])
+    || empty($smtp['port'])
+    || empty($smtp['username'])
+    || empty($smtp['password'])
+) {
+    error_log('contact-form: smtp-config.php non contiene tutte le chiavi richieste (host, port, username, password)');
+    redirect_back('error');
+}
+
 $mail = new PHPMailer(true);
 
 try {

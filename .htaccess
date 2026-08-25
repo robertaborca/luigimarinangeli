@@ -1,5 +1,13 @@
 Options -Indexes
 
+<FilesMatch "^(error_log|.*\.log)$">
+  Require all denied
+</FilesMatch>
+
+<FilesMatch "^(PHPMailer|SMTP|Exception)\.php$">
+  Require all denied
+</FilesMatch>
+
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript image/svg+xml
 </IfModule>
@@ -23,8 +31,8 @@ Options -Indexes
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
   Header always set Strict-Transport-Security "max-age=31536000"
-  # TEMPORANEO: la CSP sopra e' in Report-Only, quindi frame-ancestors non e'
-  # ancora applicato. Da rimuovere quando la CSP passa ad attiva.
+  # Ridondante con frame-ancestors della CSP, mantenuto per i browser
+  # che non supportano la direttiva.
   Header always set X-Frame-Options "SAMEORIGIN"
 </IfModule>
 
