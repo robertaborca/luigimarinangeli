@@ -46,8 +46,9 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Honeypot: campo nascosto che un utente reale non compila mai.
-if (!empty($_POST['website'])) {
-    exit; // silenzioso, non da' indizi ai bot
+if (!empty($_POST['hp_riferimento'])) {
+    header('Location: ' . $REDIRECT_OK);
+    exit;
 }
 
 $nome = trim((string) ($_POST['nome'] ?? ''));
