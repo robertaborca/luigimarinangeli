@@ -8,6 +8,13 @@ declare(strict_types=1);
  * come su una mail normale.
  */
 
+require_once __DIR__ . '/lib/PHPMailer/Exception.php';
+require_once __DIR__ . '/lib/PHPMailer/PHPMailer.php';
+require_once __DIR__ . '/lib/PHPMailer/SMTP.php';
+
+use PHPMailer\PHPMailer\Exception as PHPMailerException;
+use PHPMailer\PHPMailer\PHPMailer;
+
 $TO_EMAIL = 'info@lecasediluigi.com';
 $FROM_EMAIL = 'noreply@lecasediluigi.com';
 $REDIRECT_OK = '/grazie.html';
@@ -78,19 +85,39 @@ $body .= "Email: {$email}\n";
 $body .= "Pagina: {$origine}\n\n";
 $body .= "Messaggio:\n{$messaggio}\n";
 
-$headers = [];
-$headers[] = 'From: Sito lecasediluigi.com <' . $FROM_EMAIL . '>';
-$headers[] = 'Reply-To: ' . $nomeClean . ' <' . $emailClean . '>';
-$headers[] = 'Content-Type: text/plain; charset=UTF-8';
-$headers[] = 'MIME-Version: 1.0';
-$headers[] = 'Content-Transfer-Encoding: 8bit';
-$headers[] = 'X-Mailer: PHP/' . phpversion();
+$configPath = dirname(__DIR__) . '/smtp-config.php';
+if (!is_readable($configPath)) {
+    error_log('contact-form: smtp-config.php mancante o non leggibile');
+    redirect_back('error');
+}
+$smtp = require $configPath;
 
-$sent = mail($TO_EMAIL, $subject, $body, implode("\r\n", $headers), '-f' . $FROM_EMAIL);
+$mail = new PHPMailer(true);
 
-if ($sent) {
+try {
+    $mail->isSMTP();
+    $mail->Host = $smtp['host'];
+    $mail->Port = $smtp['port'];
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->SMTPAuth = true;
+    $mail->Username = $smtp['username'];
+    $mail->Password = $smtp['password'];
+    $mail->CharSet = 'UTF-8';
+    $mail->Timeout = 10;
+
+    $mail->setFrom($FROM_EMAIL, 'Sito lecasediluigi.com');
+    $mail->addAddress($TO_EMAIL);
+    $mail->addReplyTo($emailClean, $nomeClean);
+
+    $mail->isHTML(false);
+    $mail->Subject = $subject;
+    $mail->Body = $body;
+
+    $mail->send();
+
     header('Location: ' . $REDIRECT_OK);
     exit;
+} catch (PHPMailerException $e) {
+    error_log('contact-form: invio fallito - ' . $mail->ErrorInfo);
+    redirect_back('error');
 }
-
-redirect_back('error');
