@@ -68,6 +68,7 @@ Redirect 301 /CASE/appartamento-sul-mare-senigallia.html /SRC/immobili.html
 Redirect 301 /CASE/grande-appartamento-a-senigallia.html /SRC/immobili.html
 Redirect 301 /CASE/villino-indipendente-senigallia.html /SRC/immobili.html
 Redirect 301 /CASE/villa-in-vendita-in-Via-Capanna-Senigallia.html /SRC/immobili.html
+Redirect 301 /CASE/appartamento-nuovo-con-giardino-in-vendita-a-senigallia-ponte-rosso.html /SRC/immobili.html
 
 # NOTA: /CASE/stabilimento-balneare-rotonda-di-senigallia.html NON va
 # reindirizzato. E' stata ricreata come pagina "immobile non più

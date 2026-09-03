@@ -4,7 +4,8 @@
     var section = document.querySelector("[data-share-article]");
     if (!section) return;
 
-    var title = document.title;
+    var og = document.querySelector('meta[property="og:title"]');
+    var title = (og && og.content) || document.title;
     var url = window.location.href;
     var encodedTitle = encodeURIComponent(title);
     var encodedUrl = encodeURIComponent(url);
