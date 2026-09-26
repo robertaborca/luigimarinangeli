@@ -36,6 +36,15 @@
         };
         window.gtag("js", new Date());
         window.gtag("config", GA_MEASUREMENT_ID);
+
+        // Segnala ad analytics-events.js che gtag e' disponibile: serve a chi
+        // accetta i cookie sulla pagina di conferma, dove l'evento
+        // generate_lead sarebbe altrimenti gia' passato.
+        try {
+            document.dispatchEvent(new CustomEvent("lecasediluigi:analytics-ready"));
+        } catch (e) {
+            /* CustomEvent non supportato: nessun evento differito, non è bloccante */
+        }
     }
 
     function buildBanner() {
