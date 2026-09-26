@@ -31,6 +31,10 @@
         <link rel="alternate" hreflang="it" href="https://www.lecasediluigi.com/CASE/villetta-indipendente-ciarnin-in-vendita-a-senigallia.html"/>
 
         <!-- STRUCTURED DATA -->
+        <!-- DA CHIEDERE A LUIGI: la scheda dati interna riporta 490.000 euro con
+             la dicitura "Trattativa riservata". Il prezzo non viene pubblicato e
+             l'Offer del JSON-LD resta quindi senza price/priceCurrency:
+             confermare se va pubblicato oppure se resta riservato. -->
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -51,6 +55,7 @@
           },
           "offers": {
             "@type": "Offer",
+            "availability": "https://schema.org/InStock",
             "seller": {
               "@type": "RealEstateAgent",
               "name": "Luigi Marinangeli",
