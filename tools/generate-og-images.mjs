@@ -305,6 +305,36 @@ const ARTICLES = [
     category: 'Documenti e certificazioni',
     title: 'APE: cos’è e perché serve',
   },
+  {
+    slug: 'seconda-casa-al-mare-senigallia-costi-e-tasse',
+    category: 'Costi e tasse',
+    title: 'Seconda casa al mare: costi e tasse',
+  },
+  {
+    slug: 'affittare-seconda-casa-senigallia-affitti-brevi',
+    category: 'Affitti e rendita',
+    title: 'Affittare la seconda casa a Senigallia',
+  },
+  {
+    slug: 'trasferirsi-a-senigallia-guida',
+    category: 'Vivere a Senigallia',
+    title: 'Trasferirsi a Senigallia: la guida',
+  },
+  {
+    slug: 'colline-o-mare-scapezzano-ciarnin-saline-senigallia',
+    category: 'Zone e quartieri',
+    title: 'Colline o mare: le zone a confronto',
+  },
+  {
+    slug: 'comprare-casa-a-distanza-senigallia',
+    category: 'Guida all’acquisto',
+    title: 'Comprare casa a Senigallia da lontano',
+  },
+  {
+    slug: 'superbonus-classe-energetica-cosa-resta-a-chi-compra',
+    category: 'Documenti e certificazioni',
+    title: 'Superbonus e classe energetica',
+  },
 ];
 
 async function main() {
