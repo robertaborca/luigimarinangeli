@@ -19,6 +19,12 @@ $TO_EMAIL = 'info@lecasediluigi.com';
 $FROM_EMAIL = 'noreply@lecasediluigi.com';
 $REDIRECT_OK = '/grazie.html';
 
+// Finestra di validita' del token temporale emesso da form-token.php.
+// Sotto i 3 secondi non e' un essere umano che compila; oltre le 2 ore la
+// pagina e' rimasta aperta troppo a lungo e si chiede di ricaricare.
+$TOKEN_MIN_SECONDI = 3;
+$TOKEN_MAX_SECONDI = 7200;
+
 function redirect_back(string $status): void
 {
     $referer = $_SERVER['HTTP_REFERER'] ?? '';
@@ -53,9 +59,44 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Honeypot: campo nascosto che un utente reale non compila mai.
+// Risposta neutra senza redirect: mandarlo su /grazie.html farebbe scattare
+// l'evento generate_lead di GA4 e gonfierebbe i lead con i bot.
 if (!empty($_POST['hp_riferimento'])) {
-    header('Location: ' . $REDIRECT_OK);
+    http_response_code(204);
     exit;
+}
+
+// Token temporale firmato da form-token.php: blocca i bot che postano
+// direttamente su questo endpoint senza aver mai aperto una pagina del sito.
+// La chiave sta in smtp-config.php, fuori dalla web root.
+$configPath = dirname(__DIR__) . '/smtp-config.php';
+if (!is_readable($configPath)) {
+    error_log('contact-form: smtp-config.php mancante o non leggibile');
+    redirect_back('error');
+}
+$smtp = require $configPath;
+
+if (!is_array($smtp) || empty($smtp['form_token_key'])) {
+    error_log('contact-form: smtp-config.php non contiene form_token_key');
+    redirect_back('error');
+}
+
+$tokenTs = (string) ($_POST['form_ts'] ?? '');
+$tokenSig = (string) ($_POST['form_sig'] ?? '');
+
+if ($tokenTs === '' || $tokenSig === '' || !ctype_digit($tokenTs)) {
+    redirect_back('scaduto');
+}
+
+$attesa = hash_hmac('sha256', $tokenTs, (string) $smtp['form_token_key']);
+if (!hash_equals($attesa, $tokenSig)) {
+    error_log('contact-form: firma del token non valida');
+    redirect_back('scaduto');
+}
+
+$eta = time() - (int) $tokenTs;
+if ($eta < $TOKEN_MIN_SECONDI || $eta > $TOKEN_MAX_SECONDI) {
+    redirect_back('scaduto');
 }
 
 $nome = trim((string) ($_POST['nome'] ?? ''));
@@ -85,13 +126,7 @@ $body .= "Email: {$email}\n";
 $body .= "Pagina: {$origine}\n\n";
 $body .= "Messaggio:\n{$messaggio}\n";
 
-$configPath = dirname(__DIR__) . '/smtp-config.php';
-if (!is_readable($configPath)) {
-    error_log('contact-form: smtp-config.php mancante o non leggibile');
-    redirect_back('error');
-}
-$smtp = require $configPath;
-
+// $smtp è già stato caricato sopra per verificare il token.
 if (
     !is_array($smtp)
     || empty($smtp['host'])
