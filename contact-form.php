@@ -104,6 +104,19 @@ $telefono = trim((string) ($_POST['telefono'] ?? ''));
 $email = trim((string) ($_POST['email'] ?? ''));
 $messaggio = trim((string) ($_POST['messaggio'] ?? ''));
 $origine = trim((string) ($_POST['origine'] ?? 'Sito web'));
+$riferimento = trim((string) ($_POST['riferimento'] ?? ''));
+
+// Il form del dossier dichiara il consenso privacy: se il campo c'e' nel POST
+// ma non e' spuntato, la richiesta non va accettata.
+if (isset($_POST['privacy']) && $_POST['privacy'] !== '1') {
+    redirect_back('error');
+}
+
+// Riferimento immobile: formato fisso, cosi' non finisce nulla di arbitrario
+// nell'oggetto della mail.
+if ($riferimento !== '' && !preg_match('/^LM\d{1,6}$/', $riferimento)) {
+    $riferimento = '';
+}
 
 if ($nome === '' || $email === '' || $messaggio === '') {
     redirect_back('error');
@@ -123,7 +136,11 @@ $body = "Nuova richiesta dal form di contatto del sito.\n\n";
 $body .= "Nome: {$nome}\n";
 $body .= "Telefono: " . ($telefono !== '' ? $telefono : '(non fornito)') . "\n";
 $body .= "Email: {$email}\n";
-$body .= "Pagina: {$origine}\n\n";
+$body .= "Pagina: {$origine}\n";
+if ($riferimento !== '') {
+    $body .= "Immobile: {$riferimento}\n";
+}
+$body .= "\n";
 $body .= "Messaggio:\n{$messaggio}\n";
 
 // $smtp è già stato caricato sopra per verificare il token.

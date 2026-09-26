@@ -98,6 +98,48 @@
     }, true);
 
     /**
+     * Il form del dossier sta sulla scheda immobile, ma la conferma arriva su
+     * /grazie.html, dove il nome dell'immobile non c'e' piu'. Il contesto
+     * viaggia in sessionStorage invece che in querystring: resta nella stessa
+     * scheda del browser, non passa dal server e non aggiunge parametri
+     * manipolabili al redirect.
+     */
+    var CHIAVE_LEAD = "lecasediluigi_lead";
+
+    document.addEventListener("submit", function (evento) {
+        var form = evento.target;
+        if (!form || !form.classList || !form.classList.contains("dossier-form")) return;
+        try {
+            sessionStorage.setItem(CHIAVE_LEAD, JSON.stringify({
+                origine: "dossier",
+                rif: form.getAttribute("data-dossier-rif") || "",
+                nome: nomeImmobile() || ""
+            }));
+        } catch (e) {
+            /* sessionStorage non disponibile: il lead parte senza dettaglio */
+        }
+    }, true);
+
+    // Letto senza consumare: se il consenso non c'e' ancora, l'evento riparte
+    // al segnale di analytics-ready e il contesto deve essere ancora qui.
+    function contestoLead() {
+        try {
+            var grezzo = sessionStorage.getItem(CHIAVE_LEAD);
+            return grezzo ? JSON.parse(grezzo) : null;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function consumaContestoLead() {
+        try {
+            sessionStorage.removeItem(CHIAVE_LEAD);
+        } catch (e) {
+            /* niente da ripulire */
+        }
+    }
+
+    /**
      * generate_lead: solo sulla conferma di invio riuscito, non al click su
      * "invia". contact-form.php redirige su /grazie.html soltanto dopo che
      * PHPMailer ha accettato il messaggio; in caso di errore torna alla
@@ -106,6 +148,16 @@
      */
     function inviaGenerateLead() {
         var parametri = parametriBase();
+
+        var contesto = contestoLead();
+        if (contesto && contesto.origine) {
+            parametri.form_origine = contesto.origine;
+            if (contesto.nome) parametri.nome_immobile = contesto.nome;
+            if (contesto.rif) parametri.rif_immobile = contesto.rif;
+            var inviato = track("generate_lead", parametri);
+            if (inviato) consumaContestoLead();
+            return inviato;
+        }
 
         // Da quale pagina e' partito il form: utile per capire se converte
         // piu' vendi-casa o compra-casa. Solo se il referrer e' interno.

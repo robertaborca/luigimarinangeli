@@ -70,7 +70,13 @@
                 </div>
             </div>
 
-            <div class="blog-content">
+            <div class="blog-content grazie-dossier" id="grazieDossier" hidden>
+                <p><strong>Ti invierò il dossier entro 24 ore.</strong> Lo preparo io a mano:
+                   contiene planimetrie e documentazione con dati personali, quindi non è
+                   scaricabile in automatico.</p>
+                <a href="tel:+393793691313" class="cta link link--right">Hai fretta? Chiamami: +39 379.3691313</a>
+            </div>
+            <div class="blog-content" id="grazieGenerico">
                 <p>Ho ricevuto il tuo messaggio e ti risponderò il prima possibile, di solito entro un giorno lavorativo. Se preferisci una risposta più rapida, puoi anche chiamarmi o scrivermi direttamente.</p>
                 <a href="tel:+393793691313" class="cta link link--right">Preferisci chiamare? +39 379.3691313</a>
             </div>
@@ -89,6 +95,19 @@
                     <a href="mailto:info@lecasediluigi.com" aria-label="manda una email a Luigi Marinangeli" class="article__contatti--link link link--right">Email</a>
                 </li>
             </ul>
+                    <script>
+                (function () {
+                    try {
+                        var c = JSON.parse(sessionStorage.getItem("lecasediluigi_lead") || "null");
+                        if (c && c.origine === "dossier") {
+                            document.getElementById("grazieDossier").hidden = false;
+                            document.getElementById("grazieGenerico").hidden = true;
+                        }
+                    } catch (e) {
+                        /* nessun contesto: resta il messaggio generico */
+                    }
+                })();
+            </script>
         </main>
 
         <footer class="footer">

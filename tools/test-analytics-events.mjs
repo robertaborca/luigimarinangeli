@@ -48,10 +48,16 @@ function creaAmbiente({ pathname, h1, ogTitle, referrer, gtagPresente = true }) 
     location: { pathname, search: '', host: 'www.lecasediluigi.com' },
     document,
   };
+  const store = globalThis.__store || (globalThis.__store = {});
+  const sessionStorage = {
+    getItem: (k) => (k in store ? store[k] : null),
+    setItem: (k, v) => { store[k] = String(v); },
+    removeItem: (k) => { delete store[k]; },
+  };
   if (gtagPresente) window.gtag = (tipo, nome, params) => { if (tipo === 'event') inviati.push({ nome, params }); };
 
   const ctx = {
-    window, document, URL,
+    window, document, URL, sessionStorage,
     CustomEvent: class { constructor(t) { this.type = t; } },
   };
   ctx.globalThis = ctx;
@@ -165,6 +171,44 @@ function verifica(desc, atteso, effettivo) {
   const env = creaAmbiente({ pathname: '/grazie.html', referrer: 'https://www.google.com/' });
   verifica('referrer esterno -> generate_lead senza form_origine',
     [{ nome: 'generate_lead', params: { page_path: '/grazie.html' } }], env.inviati);
+}
+
+// --- 11. dossier: il contesto passa dalla scheda a grazie.html
+{
+  globalThis.__store = {};
+  const scheda = creaAmbiente({ pathname: '/CASE/la-casa-con-gli-oblo-in-vendita-a-senigallia.html', h1: 'La casa con gli oblò' });
+  const form = scheda.makeEl('form', { 'data-dossier-rif': 'LM284' });
+  form.classList = { contains: (c) => c === 'dossier-form' };
+  (scheda.listeners.submit || []).forEach((fn) => fn({ target: form }));
+  verifica('submit del form dossier -> contesto salvato', true, 'lecasediluigi_lead' in globalThis.__store);
+
+  const grazie = creaAmbiente({ pathname: '/grazie.html', referrer: 'https://www.lecasediluigi.com/CASE/la-casa-con-gli-oblo-in-vendita-a-senigallia.html' });
+  verifica('grazie.html dopo il dossier -> generate_lead con form_origine dossier',
+    [{ nome: 'generate_lead', params: { page_path: '/grazie.html', form_origine: 'dossier', nome_immobile: 'La casa con gli oblò', rif_immobile: 'LM284' } }],
+    grazie.inviati);
+  verifica('contesto consumato dopo l invio', false, 'lecasediluigi_lead' in globalThis.__store);
+}
+
+// --- 12. senza consenso il contesto del dossier non va perso
+{
+  globalThis.__store = { lecasediluigi_lead: JSON.stringify({ origine: 'dossier', rif: 'LM280', nome: 'Villetta a schiera' }) };
+  const env = creaAmbiente({ pathname: '/grazie.html', gtagPresente: false });
+  verifica('senza consenso -> nessun evento e contesto conservato', true, 'lecasediluigi_lead' in globalThis.__store);
+  env.window.gtag = (tipo, nome, params) => { if (tipo === 'event') env.inviati.push({ nome, params }); };
+  env.document.dispatchEvent(new env.ctx.CustomEvent('lecasediluigi:analytics-ready'));
+  verifica('dopo il consenso -> lead dossier completo',
+    [{ nome: 'generate_lead', params: { page_path: '/grazie.html', form_origine: 'dossier', nome_immobile: 'Villetta a schiera', rif_immobile: 'LM280' } }],
+    env.inviati);
+}
+
+// un form normale non deve essere scambiato per una richiesta di dossier
+{
+  globalThis.__store = {};
+  const env = creaAmbiente({ pathname: '/SRC/vendi-casa.html' });
+  const form = env.makeEl('form', {});
+  form.classList = { contains: () => false };
+  (env.listeners.submit || []).forEach((fn) => fn({ target: form }));
+  verifica('submit del form contatti -> nessun contesto dossier', false, 'lecasediluigi_lead' in globalThis.__store);
 }
 
 console.log('\n' + (falliti ? falliti + ' test falliti' : 'Tutti i test passati'));
