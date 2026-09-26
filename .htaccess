@@ -38,43 +38,69 @@ Options -Indexes
 
 RewriteEngine On
 
-# Redirect HTTP → HTTPS e non-www → www (un solo hop)
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} ^lecasediluigi\.com$ [NC]
-RewriteRule ^(.*)$ https://www.lecasediluigi.com/$1 [L,R=301]
+# ---------------------------------------------------------------------------
+# ORDINE DELLE REGOLE: prima i redirect di contenuto, poi la
+# canonicalizzazione host/protocollo.
+#
+# I redirect di contenuto puntano all'URL assoluto canonico
+# (https://www.lecasediluigi.com/...). Così una richiesta che arriva su
+# http:// o senza www a un URL legacy viene servita con UN SOLO 301,
+# invece di rimbalzare prima sulla regola di canonicalizzazione e poi sul
+# redirect di contenuto.
+#
+# Sono RewriteRule e non Redirect/RedirectMatch di mod_alias: dentro un
+# unico modulo l'ordine di valutazione è quello di scrittura, mentre
+# mescolare mod_alias e mod_rewrite lascia l'ordine dei due moduli
+# implicito e reintroduce le catene.
+#
+# Nota: le pattern vedono il path già decodificato e senza lo slash
+# iniziale (.htaccess nella document root).
+# ---------------------------------------------------------------------------
 
-# Legacy pages merged into SRC/consulenza.html
-Redirect 301 /consulenza-personalizzata.html /SRC/consulenza.html
-Redirect 301 /consulenza-fast.html /SRC/consulenza.html
-Redirect 301 /SRC/consulenza-personalizzata.html /SRC/consulenza.html
-Redirect 301 /SRC/consulenza-fast.html /SRC/consulenza.html
-Redirect 301 /analisi-documentale.html /SRC/consulenza.html
+# Pagine consulenza accorpate in SRC/consulenza.html
+RewriteRule ^(?:SRC/)?consulenza-personalizzata\.html$ https://www.lecasediluigi.com/SRC/consulenza.html [L,R=301]
+RewriteRule ^(?:SRC/)?consulenza-fast\.html$ https://www.lecasediluigi.com/SRC/consulenza.html [L,R=301]
+RewriteRule ^analisi-documentale\.html$ https://www.lecasediluigi.com/SRC/consulenza.html [L,R=301]
+
+# URL rinominato: rimossa la ò accentata, problematica per alcuni tool
+# SEO e per i report di Search Console (che la mostra anche come %C3%B2).
+# Apache decodifica il path prima di mod_rewrite, quindi il carattere
+# letterale copre entrambe le forme; l'alternativa percent-encoded resta
+# per i casi di doppia codifica (%25C3%25B2 -> %C3%B2).
+RewriteRule ^CASE/la-casa-con-gli-obl(?:ò|%C3%B2)-in-vendita-a-senigallia\.html$ https://www.lecasediluigi.com/CASE/la-casa-con-gli-oblo-in-vendita-a-senigallia.html [L,R=301]
+
+# Articolo linkato con lo slug sbagliato da fonti esterne (404 in Search
+# Console): manca "quartieri-di" e manca l'estensione.
+RewriteRule ^BLOG/guida-ai-senigallia-dove-comprare-casa(?:\.html)?$ https://www.lecasediluigi.com/BLOG/guida-ai-quartieri-di-senigallia-dove-comprare-casa.html [L,R=301]
 
 # Immobili venduti o ritirati -> pagina elenco immobili.
 # Target unico e volutamente generico: le schede singole si vendono a loro
 # volta e diventerebbero anelli di catene di redirect da manutenere.
-Redirect 301 /CASE/mini-appartamento-in-vendita-a-senigallia.html /SRC/immobili.html
-Redirect 301 /CASE/villino-in-vendita-a-scapezzano-senigallia.html /SRC/immobili.html
-Redirect 301 /CASE/appartamento-vista-mare-ammobiliato-in-vendita-a-senigallia.html /SRC/immobili.html
-Redirect 301 /CASE/luminoso-trilocale-in-vendita-a-senigallia-le-saline.html /SRC/immobili.html
-Redirect 301 /CASE/casa-bifamiliare-con-giardino-in-vendita-a-senigallia.html /SRC/immobili.html
-Redirect 301 /CASE/villa-a-schiera-in-vendita-a-casine-di-ostra.html /SRC/immobili.html
-Redirect 301 /CASE/appartamento-sul-mare-in-vendita-a-marzocca.html /SRC/immobili.html
-Redirect 301 /CASE/appartamento-semi-nuovo-in-vendita-a-barbara.html /SRC/immobili.html
-Redirect 301 /CASE/appartamento-indipendente-in-vendita-a-marina-di-montemarciano.html /SRC/immobili.html
-Redirect 301 /CASE/appartamento-centro-storico-senigallia.html /SRC/immobili.html
-Redirect 301 /CASE/favoloso-appartamento-al-ciarnin.html /SRC/immobili.html
-Redirect 301 /CASE/appartamento-sul-mare-senigallia.html /SRC/immobili.html
-Redirect 301 /CASE/grande-appartamento-a-senigallia.html /SRC/immobili.html
-Redirect 301 /CASE/villino-indipendente-senigallia.html /SRC/immobili.html
-Redirect 301 /CASE/villa-in-vendita-in-Via-Capanna-Senigallia.html /SRC/immobili.html
-Redirect 301 /CASE/appartamento-nuovo-con-giardino-in-vendita-a-senigallia-ponte-rosso.html /SRC/immobili.html
+RewriteRule ^CASE/mini-appartamento-in-vendita-a-senigallia\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/villino-in-vendita-a-scapezzano-senigallia\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/appartamento-vista-mare-ammobiliato-in-vendita-a-senigallia\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/luminoso-trilocale-in-vendita-a-senigallia-le-saline\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/casa-bifamiliare-con-giardino-in-vendita-a-senigallia\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/villa-a-schiera-in-vendita-a-casine-di-ostra\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/appartamento-sul-mare-in-vendita-a-marzocca\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/appartamento-semi-nuovo-in-vendita-a-barbara\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/appartamento-indipendente-in-vendita-a-marina-di-montemarciano\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/appartamento-centro-storico-senigallia\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/favoloso-appartamento-al-ciarnin\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/appartamento-sul-mare-senigallia\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/grande-appartamento-a-senigallia\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/villino-indipendente-senigallia\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/villa-in-vendita-in-Via-Capanna-Senigallia\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/appartamento-nuovo-con-giardino-in-vendita-a-senigallia-ponte-rosso\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
 
 # NOTA: /CASE/stabilimento-balneare-rotonda-di-senigallia.html NON va
 # reindirizzato. E' stata ricreata come pagina "immobile non più
 # disponibile" con link agli immobili attuali: esiste già a quell'URL.
 
-# URL rinominato (rimossa la ò accentata, problematica per alcuni
-# tool SEO/indicizzazione). RedirectMatch sui byte percent-encoded:
-# più affidabile di un Redirect con carattere UTF-8 letterale.
-RedirectMatch 301 "^/CASE/la-casa-con-gli-obl(%C3%B2|ò)-in-vendita-a-senigallia\.html$" /CASE/la-casa-con-gli-oblo-in-vendita-a-senigallia.html
+# Canonicalizzazione: http -> https e non-www -> www, un solo 301, path
+# conservato. Match positivo sul dominio nudo invece di una negazione su
+# www: così un eventuale dominio di preview Hostinger continua a
+# rispondere in proprio invece di essere spinto in produzione.
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^lecasediluigi\.com$ [NC]
+RewriteRule ^(.*)$ https://www.lecasediluigi.com/$1 [L,R=301]
