@@ -107,6 +107,15 @@ function verifica(desc, atteso, effettivo) {
     [{ nome: 'click_calendly', params: { page_path: '/SRC/consulenza.html' } }], env.inviati);
 }
 
+// --- 4b. Calendly con parametri UTM e risposta precompilata (CTA scheda)
+{
+  const env = creaAmbiente({ pathname: "/CASE/villetta-indipendente-ciarnin-in-vendita-a-senigallia.html", h1: "Villetta indipendente" });
+  click(env, env.makeEl("a", { href: "https://calendly.com/lecasediluigi/consulenza-fast?utm_source=scheda-immobile&utm_content=LM293&a1=Immobile%20Rif.%20LM293" }));
+  verifica("calendly con parametri -> click_calendly con nome_immobile",
+    [{ nome: "click_calendly", params: { page_path: "/CASE/villetta-indipendente-ciarnin-in-vendita-a-senigallia.html", nome_immobile: "Villetta indipendente" } }],
+    env.inviati);
+}
+
 // --- 5. PayPal (link e bottone con data-analytics-event)
 {
   const env = creaAmbiente({ pathname: '/SRC/consulenza.html' });
