@@ -5,7 +5,11 @@ const ROOT = path.resolve(__dirname, '..');
 const CORE_CSS = fs.readFileSync(path.join(__dirname, 'critical-core.css'), 'utf8');
 const LANDING_NAV_CSS = fs.readFileSync(path.join(__dirname, 'critical-landing-nav.css'), 'utf8');
 
-const groupC = new Set(['SRC/vendi-casa.html', 'SRC/compra-casa.html', 'SRC/immobili.html', 'SRC/blog.html', 'SRC/consulenza.html']);
+// Le pagine di zona usano la navigazione delle landing, quindi stanno nel
+// gruppo C insieme alle pagine di SRC.
+const zonePages = fs.readdirSync(path.join(ROOT, 'ZONE')).filter(f => f.endsWith('.html')).map(f => `ZONE/${f}`);
+
+const groupC = new Set(['SRC/vendi-casa.html', 'SRC/compra-casa.html', 'SRC/immobili.html', 'SRC/blog.html', 'SRC/consulenza.html', ...zonePages]);
 
 const files = [
   'index.html', 'grazie.html', 'privacy-cookie-policy.html',
