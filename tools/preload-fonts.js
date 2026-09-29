@@ -27,7 +27,7 @@ for (const { file, prefix, hero } of files) {
     `<link rel="preload" href="${fontsBase}montserrat.woff2" as="font" type="font/woff2" crossorigin>\n` +
     `        <link rel="preload" href="${fontsBase}suse.woff2" as="font" type="font/woff2" crossorigin>\n`;
   if (hero) {
-    preloads += `        <link rel="preload" href="${fontsBase}great-vibes.woff2" as="font" type="font/woff2" crossorigin>\n`;
+    preloads += `        <link rel="preload" href="${fontsBase}italianno.woff2" as="font" type="font/woff2" crossorigin>\n`;
   }
   preloads += '        ';
 

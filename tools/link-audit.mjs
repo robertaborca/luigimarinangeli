@@ -20,8 +20,9 @@ for (const f of files) {
   let m;
   while ((m = re.exec(html))) {
     const attr = m[1].toLowerCase();
-    // srcset contiene piu' candidati "url 400w": va scomposto
-    const urls = attr === 'srcset'
+    // srcset contiene piu' candidati "url 400w": va scomposto. Un data: URI
+    // contiene una virgola sua, quindi non va spezzato (e non va controllato).
+    const urls = /^\s*data:/i.test(m[2]) ? [] : attr === 'srcset'
       ? m[2].split(',').map((c) => c.trim().split(/\s+/)[0]).filter(Boolean)
       : [m[2].trim()];
     for (const u of urls) {

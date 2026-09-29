@@ -178,7 +178,7 @@ function verifica(desc, atteso, effettivo) {
   globalThis.__store = {};
   const scheda = creaAmbiente({ pathname: '/CASE/la-casa-con-gli-oblo-in-vendita-a-senigallia.html', h1: 'La casa con gli oblò' });
   const form = scheda.makeEl('form', { 'data-dossier-rif': 'LM284' });
-  form.classList = { contains: (c) => c === 'dossier-form' };
+  form.classList = { contains: (c) => c === 'contact-form' || c === 'dossier-form' };
   (scheda.listeners.submit || []).forEach((fn) => fn({ target: form }));
   verifica('submit del form dossier -> contesto salvato', true, 'lecasediluigi_lead' in globalThis.__store);
 
@@ -206,9 +206,30 @@ function verifica(desc, atteso, effettivo) {
   globalThis.__store = {};
   const env = creaAmbiente({ pathname: '/SRC/vendi-casa.html' });
   const form = env.makeEl('form', {});
-  form.classList = { contains: () => false };
+  form.classList = { contains: (c) => c === 'contact-form' };
   (env.listeners.submit || []).forEach((fn) => fn({ target: form }));
   verifica('submit del form contatti -> nessun contesto dossier', false, 'lecasediluigi_lead' in globalThis.__store);
+}
+
+// un dossier rimasto in sospeso (niente consenso) non deve finire sul form
+// normale inviato dopo nella stessa scheda
+{
+  globalThis.__store = { lecasediluigi_lead: JSON.stringify({ origine: 'dossier', rif: 'LM284', nome: 'La casa con gli oblò' }) };
+  const env = creaAmbiente({ pathname: '/SRC/compra-casa.html' });
+  const form = env.makeEl('form', {});
+  form.classList = { contains: (c) => c === 'contact-form' };
+  (env.listeners.submit || []).forEach((fn) => fn({ target: form }));
+  verifica('form contatti dopo un dossier -> contesto dossier rimosso', false, 'lecasediluigi_lead' in globalThis.__store);
+}
+
+// un form che non e' di contatto non tocca il contesto
+{
+  globalThis.__store = { lecasediluigi_lead: JSON.stringify({ origine: 'dossier', rif: 'LM284', nome: '' }) };
+  const env = creaAmbiente({ pathname: '/CASE/la-casa-con-gli-oblo-in-vendita-a-senigallia.html' });
+  const form = env.makeEl('form', {});
+  form.classList = { contains: () => false };
+  (env.listeners.submit || []).forEach((fn) => fn({ target: form }));
+  verifica('altro form -> contesto invariato', true, 'lecasediluigi_lead' in globalThis.__store);
 }
 
 console.log('\n' + (falliti ? falliti + ' test falliti' : 'Tutti i test passati'));

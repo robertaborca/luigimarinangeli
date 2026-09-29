@@ -108,8 +108,15 @@
 
     document.addEventListener("submit", function (evento) {
         var form = evento.target;
-        if (!form || !form.classList || !form.classList.contains("dossier-form")) return;
+        if (!form || !form.classList || !form.classList.contains("contact-form")) return;
         try {
+            // Senza consenso analytics il contesto di un dossier precedente
+            // non viene consumato: un form normale inviato dopo nella stessa
+            // scheda mostrerebbe su grazie.html il messaggio del dossier.
+            if (!form.classList.contains("dossier-form")) {
+                sessionStorage.removeItem(CHIAVE_LEAD);
+                return;
+            }
             sessionStorage.setItem(CHIAVE_LEAD, JSON.stringify({
                 origine: "dossier",
                 rif: form.getAttribute("data-dossier-rif") || "",
