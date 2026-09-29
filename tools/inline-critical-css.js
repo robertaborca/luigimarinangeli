@@ -19,7 +19,7 @@ const files = [
 // depth: root-level pages (group A) need "CSS/fonts/", one-level-deep pages
 // (groups B and C) need "../CSS/fonts/".
 function fontFaceBlock(fontsPrefix) {
-  return `@font-face{font-family:Montserrat;font-style:normal;font-weight:100 900;font-display:swap;src:url(${fontsPrefix}montserrat.woff2) format('woff2')}@font-face{font-family:Montserrat;font-style:italic;font-weight:100 900;font-display:swap;src:url(${fontsPrefix}montserrat-italic.woff2) format('woff2')}@font-face{font-family:SUSE;font-style:normal;font-weight:100 800;font-display:swap;src:url(${fontsPrefix}suse.woff2) format('woff2')}@font-face{font-family:'Great Vibes';font-style:normal;font-weight:400;font-display:swap;src:url(${fontsPrefix}great-vibes.woff2) format('woff2')}`;
+  return `@font-face{font-family:Montserrat;font-style:normal;font-weight:100 900;font-display:swap;src:url(${fontsPrefix}montserrat.woff2) format('woff2')}@font-face{font-family:Montserrat;font-style:italic;font-weight:100 900;font-display:swap;src:url(${fontsPrefix}montserrat-italic.woff2) format('woff2')}@font-face{font-family:SUSE;font-style:normal;font-weight:100 800;font-display:swap;src:url(${fontsPrefix}suse.woff2) format('woff2')}@font-face{font-family:Italianno;font-style:normal;font-weight:400;font-display:swap;src:url(${fontsPrefix}italianno.woff2) format('woff2')}`;
 }
 
 function criticalCssFor(group) {

@@ -12,8 +12,6 @@ const LATIN_TEXT =
   '°²·ÀÈàèéìòù' +
   '–—‘’…›€';
 
-const HERO_TEXT = 'Il mio lavoro, la mia passione.';
-
 async function subsetOne(relPath, text, label, variationAxes) {
   const srcPath = path.join(FONTS_DIR, relPath);
   const before = fs.statSync(srcPath).size;
@@ -32,7 +30,9 @@ async function run() {
   await subsetOne('montserrat.woff2', LATIN_TEXT, 'montserrat.woff2', wghtRange);
   await subsetOne('montserrat-italic.woff2', LATIN_TEXT, 'montserrat-italic.woff2', wghtRange);
   await subsetOne('suse.woff2', LATIN_TEXT, 'suse.woff2', wghtRange);
-  await subsetOne('great-vibes.woff2', HERO_TEXT, 'great-vibes.woff2');
+  // italianno.woff2 e cormorant-garamond-500*.woff2 non si riducono: sono già
+  // il set latino di Google Fonts, e ridurli al solo testo dell'hero fa cadere
+  // le lettere nel font di riserva appena il testo cambia.
 }
 
 run();
