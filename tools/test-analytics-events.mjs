@@ -105,6 +105,26 @@ function verifica(desc, atteso, effettivo) {
   verifica('whatsapp.com/legal -> nessun evento', [], env.inviati);
 }
 
+// --- 3b. pulsante di condivisione: share_whatsapp, mai click_whatsapp
+{
+  const env = creaAmbiente({ pathname: '/BLOG/compromesso-e-rogito-differenze.html' });
+  const a = env.makeEl('a', { href: 'https://wa.me/?text=Compromesso%20e%20rogito', 'data-share': 'whatsapp' });
+  click(env, env.makeEl('svg', {}, a));
+  verifica('pulsante condividi WhatsApp -> share_whatsapp',
+    [{ nome: 'share_whatsapp', params: { page_path: '/BLOG/compromesso-e-rogito-differenze.html' } }], env.inviati);
+}
+
+// --- 3c. WhatsApp senza numero non e' un contatto; con phone= si'
+{
+  const env = creaAmbiente({ pathname: '/' });
+  click(env, env.makeEl('a', { href: 'https://wa.me/?text=Ciao' }));
+  click(env, env.makeEl('a', { href: 'https://api.whatsapp.com/send?text=Ciao' }));
+  verifica('wa.me e api.whatsapp.com senza numero -> nessun evento', [], env.inviati);
+  click(env, env.makeEl('a', { href: 'https://api.whatsapp.com/send?text=Ciao&phone=393793691313' }));
+  verifica('api.whatsapp.com/send con phone= -> click_whatsapp',
+    [{ nome: 'click_whatsapp', params: { page_path: '/' } }], env.inviati);
+}
+
 // --- 4. Calendly
 {
   const env = creaAmbiente({ pathname: '/SRC/consulenza.html' });

@@ -2,7 +2,7 @@ class ReviewsCarousel {
     constructor() {
         this.currentIndex = 0;
         this.reviewsPerView = this.calculateReviewsPerView();
-        this.totalReviews = 8; // Number of review cards
+        this.totalReviews = document.querySelectorAll('#reviewsGrid .review-card').length;
         this.maxIndex = Math.max(0, this.totalReviews - this.reviewsPerView);
         this.autoplayInterval = null;
 
@@ -136,11 +136,38 @@ class ReviewsCarousel {
     }
 }
 
+// Reviews longer than this are cut to a few lines with a "mostra di più"
+// toggle. Without JS the full text stays visible.
+const REVIEW_MAX_CHARS = 450;
+
+function setupReviewToggles(grid) {
+    grid.querySelectorAll('.review-text').forEach((text, i) => {
+        if (text.textContent.trim().length <= REVIEW_MAX_CHARS) return;
+
+        text.id = text.id || `review-text-${i}`;
+        text.classList.add('review-text--chiusa');
+
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'review-toggle';
+        button.setAttribute('aria-controls', text.id);
+        button.setAttribute('aria-expanded', 'false');
+        button.textContent = 'mostra di più';
+        button.addEventListener('click', () => {
+            const aperta = text.classList.toggle('review-text--chiusa') === false;
+            button.setAttribute('aria-expanded', String(aperta));
+            button.textContent = aperta ? 'mostra meno' : 'mostra di più';
+        });
+        text.after(button);
+    });
+}
+
 // Defer construction until the carousel is about to enter the viewport, so
 // its setup cost doesn't count against the initial render above the fold.
 (function () {
     const grid = document.getElementById('reviewsGrid');
     if (!grid) return;
+    setupReviewToggles(grid);
     function start() {
         new ReviewsCarousel();
     }
