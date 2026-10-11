@@ -61,13 +61,15 @@
     /**
      * Mappa href -> nome evento. Nessun match = nessun evento.
      *
-     * Su WhatsApp si filtra per wa.me e api.whatsapp.com/send: il link
-     * whatsapp.com/legal/privacy-policy nel footer della privacy policy non
-     * e' un contatto e non deve contare come tale.
+     * Su WhatsApp conta come contatto solo un link con il numero (wa.me/39...
+     * o api.whatsapp.com/send?phone=...): il pulsante di condivisione degli
+     * articoli usa wa.me/?text= senza numero, e il link
+     * whatsapp.com/legal/privacy-policy della privacy policy non e' un
+     * contatto.
      */
     function eventoPerHref(href) {
         if (/^tel:/i.test(href)) return "click_telefono";
-        if (/^https?:\/\/(wa\.me|api\.whatsapp\.com\/send)/i.test(href)) return "click_whatsapp";
+        if (/^https?:\/\/(wa\.me\/\d|api\.whatsapp\.com\/send\/?\?([^#]*&)?phone=\d)/i.test(href)) return "click_whatsapp";
         if (/^https?:\/\/([a-z0-9-]+\.)*calendly\.com(\/|$)/i.test(href)) return "click_calendly";
         if (/^https?:\/\/([a-z0-9-]+\.)*paypal\.(com|me)(\/|$)/i.test(href)) return "click_paypal";
         return null;
@@ -92,6 +94,13 @@
 
         var link = nodo.closest("a[href]");
         if (!link) return;
+
+        // Condivisione dell'articolo (share-article.js): non e' un contatto,
+        // ha un evento suo che in GA4 non va segnato come evento chiave.
+        if (link.getAttribute("data-share") === "whatsapp") {
+            track("share_whatsapp", parametriBase());
+            return;
+        }
 
         var evt = eventoPerHref(link.getAttribute("href") || "");
         if (evt) track(evt, parametriBase());
