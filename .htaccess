@@ -67,7 +67,9 @@ RewriteRule ^analisi-documentale\.html$ https://www.lecasediluigi.com/SRC/consul
 # Apache decodifica il path prima di mod_rewrite, quindi il carattere
 # letterale copre entrambe le forme; l'alternativa percent-encoded resta
 # per i casi di doppia codifica (%25C3%25B2 -> %C3%B2).
-RewriteRule ^CASE/la-casa-con-gli-obl(?:ò|%C3%B2)-in-vendita-a-senigallia\.html$ https://www.lecasediluigi.com/CASE/la-casa-con-gli-oblo-in-vendita-a-senigallia.html [L,R=301]
+# "o + U+0300" è la ò in forma decomposta (o + accento combinante, NFD),
+# quella che inviano macOS/iOS: senza questa alternativa dava 404.
+RewriteRule ^CASE/la-casa-con-gli-obl(?:ò|ò|%C3%B2|o%CC%80)-in-vendita-a-senigallia\.html$ https://www.lecasediluigi.com/CASE/la-casa-con-gli-oblo-in-vendita-a-senigallia.html [L,R=301]
 
 # Articolo linkato con lo slug sbagliato da fonti esterne (404 in Search
 # Console): manca "quartieri-di" e manca l'estensione.
@@ -92,9 +94,9 @@ RewriteRule ^CASE/grande-appartamento-a-senigallia\.html$ https://www.lecasedilu
 RewriteRule ^CASE/villino-indipendente-senigallia\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
 RewriteRule ^CASE/villa-in-vendita-in-Via-Capanna-Senigallia\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
 RewriteRule ^CASE/appartamento-nuovo-con-giardino-in-vendita-a-senigallia-ponte-rosso\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/casa-indipendente-con-giardino-in-vendita-a-senigallia-montagnola\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
 
 # NOTA: /CASE/stabilimento-balneare-rotonda-di-senigallia.html NON va
-RewriteRule ^CASE/casa-indipendente-con-giardino-in-vendita-a-senigallia-montagnola\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
 # reindirizzato. E' stata ricreata come pagina "immobile non più
 # disponibile" con link agli immobili attuali: esiste già a quell'URL.
 
