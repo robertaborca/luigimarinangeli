@@ -96,7 +96,7 @@ RewriteRule ^CASE/villa-in-vendita-in-Via-Capanna-Senigallia\.html$ https://www.
 RewriteRule ^CASE/appartamento-nuovo-con-giardino-in-vendita-a-senigallia-ponte-rosso\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
 RewriteRule ^CASE/casa-indipendente-con-giardino-in-vendita-a-senigallia-montagnola\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
 
-# Villa venduta ancora segnalata come 404 in Search Console: va sulla
+# Villa venduta che rispondeva 404 (trovata nella storia del repo): va sulla
 # categoria ville invece che sull'elenco generico, perché è la pagina più
 # vicina a ciò che cercava chi arriva da quel link. La categoria non si
 # vende, quindi non diventa anello di una catena. NC perché le fonti
