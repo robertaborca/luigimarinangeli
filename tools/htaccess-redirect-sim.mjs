@@ -92,6 +92,8 @@ const paths = [
   '/CASE/la-casa-con-gli-oblo%25CC%2580-in-vendita-a-senigallia.html',
   '/CASE/la-casa-con-gli-obl%25C3%25B2-in-vendita-a-senigallia.html',
   '/CASE/casa-indipendente-con-giardino-in-vendita-a-senigallia-montagnola.html',
+  '/CASE/villa-in-vendita-a-Borgo-Molino-Senigallia.html',
+  '/CASE/villa-in-vendita-a-borgo-molino-senigallia.html',
   '/BLOG/guida-ai-senigallia-dove-comprare-casa',
   '/BLOG/guida-ai-senigallia-dove-comprare-casa.html',
   '/consulenza-fast.html',

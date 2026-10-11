@@ -96,6 +96,13 @@ RewriteRule ^CASE/villa-in-vendita-in-Via-Capanna-Senigallia\.html$ https://www.
 RewriteRule ^CASE/appartamento-nuovo-con-giardino-in-vendita-a-senigallia-ponte-rosso\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
 RewriteRule ^CASE/casa-indipendente-con-giardino-in-vendita-a-senigallia-montagnola\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
 
+# Villa venduta ancora segnalata come 404 in Search Console: va sulla
+# categoria ville invece che sull'elenco generico, perché è la pagina più
+# vicina a ciò che cercava chi arriva da quel link. La categoria non si
+# vende, quindi non diventa anello di una catena. NC perché le fonti
+# esterne riportano lo slug con maiuscole diverse.
+RewriteRule ^CASE/villa-in-vendita-a-Borgo-Molino-Senigallia\.html$ https://www.lecasediluigi.com/ZONE/ville-in-vendita-senigallia.html [NC,L,R=301]
+
 # NOTA: /CASE/stabilimento-balneare-rotonda-di-senigallia.html NON va
 # reindirizzato. E' stata ricreata come pagina "immobile non più
 # disponibile" con link agli immobili attuali: esiste già a quell'URL.
