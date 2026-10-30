@@ -103,6 +103,25 @@ RewriteRule ^CASE/casa-indipendente-con-giardino-in-vendita-a-senigallia-montagn
 # esterne riportano lo slug con maiuscole diverse.
 RewriteRule ^CASE/villa-in-vendita-a-Borgo-Molino-Senigallia\.html$ https://www.lecasediluigi.com/ZONE/ville-in-vendita-senigallia.html [NC,L,R=301]
 
+# URL della vecchia struttura (radice, senza estensione), prima gestiti da
+# 7 redirect in hPanel Hostinger. Qui sostituiscono quelli di hPanel, che
+# vanno eliminati: tenerli in entrambi i posti rimetterebbe in gioco
+# l'ordine di moduli diversi e riporterebbe le catene.
+# Destinazioni allineate alle regole delle versioni .html in CASE/ sopra.
+RewriteRule ^consulenza-fast$ https://www.lecasediluigi.com/SRC/consulenza.html [L,R=301]
+RewriteRule ^grande-appartamento-a-senigallia$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^appartamento-indipendente-in-vendita-a-marina-di-montemarciano$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^appartamento-sul-mare-senigallia$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^villa-in-vendita-a-Borgo-Molino-Senigallia$ https://www.lecasediluigi.com/ZONE/ville-in-vendita-senigallia.html [NC,L,R=301]
+# Immobile ancora in vendita: la scheda si e' spostata dalla radice a CASE/.
+RewriteRule ^lussuosa-villa-in-vendita-alle-saline-senigallia$ https://www.lecasediluigi.com/CASE/lussuosa-villa-in-vendita-alle-saline-senigallia.html [L,R=301]
+
+# /index.html -> home. La condizione su THE_REQUEST guarda la richiesta
+# originale del client: la riscrittura interna che il DirectoryIndex fa da
+# "/" a index.html non la soddisfa, quindi niente loop.
+RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+RewriteRule ^index\.html$ https://www.lecasediluigi.com/ [R=301,L]
+
 # NOTA: /CASE/stabilimento-balneare-rotonda-di-senigallia.html NON va
 # reindirizzato. E' stata ricreata come pagina "immobile non più
 # disponibile" con link agli immobili attuali: esiste già a quell'URL.

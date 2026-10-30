@@ -27,7 +27,8 @@ function condsPass(conds, ctx) {
   const results = conds.map((c) => {
     const subject = c.test
       .replace('%{HTTPS}', ctx.https ? 'on' : 'off')
-      .replace('%{HTTP_HOST}', ctx.host);
+      .replace('%{HTTP_HOST}', ctx.host)
+      .replace('%{THE_REQUEST}', ctx.theRequest);
     let pat = c.pattern;
     let negate = false;
     if (pat.startsWith('!')) { negate = true; pat = pat.slice(1); }
@@ -50,7 +51,8 @@ function condsPass(conds, ctx) {
 // Un giro = una risposta del server. Ritorna {status, location} oppure {status:200}
 function serve(url) {
   const u = new URL(url);
-  const ctx = { https: u.protocol === 'https:', host: u.host };
+  // THE_REQUEST e' la riga di richiesta originale del client, come arriva a Apache.
+  const ctx = { https: u.protocol === 'https:', host: u.host, theRequest: 'GET ' + u.pathname + u.search + ' HTTP/1.1' };
   // mod_rewrite in .htaccess alla document root: il path perde lo slash iniziale
   const relPath = decodeURIComponent(u.pathname).replace(/^\//, '');
   for (const r of rules) {
@@ -102,6 +104,16 @@ const paths = [
   '/CASE/villino-indipendente-senigallia.html',
   '/CASE/appartamento-nuovo-con-giardino-in-vendita-a-senigallia-ponte-rosso.html',
   '/CASE/stabilimento-balneare-rotonda-di-senigallia.html',
+  // URL della vecchia struttura (radice, senza estensione)
+  '/consulenza-fast',
+  '/grande-appartamento-a-senigallia',
+  '/appartamento-indipendente-in-vendita-a-marina-di-montemarciano',
+  '/appartamento-sul-mare-senigallia',
+  '/villa-in-vendita-a-Borgo-Molino-Senigallia',
+  '/villa-in-vendita-a-borgo-molino-senigallia',
+  '/lussuosa-villa-in-vendita-alle-saline-senigallia',
+  '/index.html',
+  '/index.html?utm_source=test',
 ];
 const origins = [
   'http://lecasediluigi.com',
@@ -123,6 +135,14 @@ for (const p of paths) {
     console.log(`  [${tag}] ${o.padEnd(30)} => ${final}`);
   }
 }
+// Nessuna pagina in sitemap deve essere intercettata da una regola.
+const sitemap = fs.readFileSync('sitemapMAR.xml', 'utf8');
+const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+const intercettate = locs.filter((l) => serve(l).status !== 200);
+console.log('\nURL in sitemap: ' + locs.length + ', intercettati da un redirect: ' + intercettate.length);
+intercettate.forEach((l) => console.log('  INTERCETTATO: ' + l + ' -> ' + serve(l).location));
+if (intercettate.length) loops += intercettate.length;
+
 console.log('\n===========================================');
 console.log('hop massimi: ' + worst);
 console.log('loop rilevati: ' + loops);
