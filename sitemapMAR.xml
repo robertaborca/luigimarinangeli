@@ -166,12 +166,6 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.lecasediluigi.com/CASE/villetta-a-schiera-panoramica-in-vendita-a-senigallia.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://www.lecasediluigi.com/CASE/casa-colonica-ristrutturata-barbara-senigallia.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -180,6 +174,12 @@
   <url>
     <loc>https://www.lecasediluigi.com/CASE/appartamento-moderno-in-vendita-senigallia-villa-torlonia.html</loc>
     <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/CASE/appartamento-recente-costruzione-con-soppalco-in-vendita-a-montemarciano.html</loc>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
