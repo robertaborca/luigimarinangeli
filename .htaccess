@@ -95,6 +95,7 @@ RewriteRule ^CASE/villino-indipendente-senigallia\.html$ https://www.lecasedilui
 RewriteRule ^CASE/villa-in-vendita-in-Via-Capanna-Senigallia\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
 RewriteRule ^CASE/appartamento-nuovo-con-giardino-in-vendita-a-senigallia-ponte-rosso\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
 RewriteRule ^CASE/casa-indipendente-con-giardino-in-vendita-a-senigallia-montagnola\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
+RewriteRule ^CASE/villetta-a-schiera-panoramica-in-vendita-a-senigallia\.html$ https://www.lecasediluigi.com/SRC/immobili.html [L,R=301]
 
 # Villa venduta che rispondeva 404 (trovata nella storia del repo): va sulla
 # categoria ville invece che sull'elenco generico, perché è la pagina più

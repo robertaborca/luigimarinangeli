@@ -211,13 +211,13 @@ function verifica(desc, atteso, effettivo) {
 
 // --- 12. senza consenso il contesto del dossier non va perso
 {
-  globalThis.__store = { lecasediluigi_lead: JSON.stringify({ origine: 'dossier', rif: 'LM280', nome: 'Villetta a schiera' }) };
+  globalThis.__store = { lecasediluigi_lead: JSON.stringify({ origine: 'dossier', rif: 'LM284', nome: 'La casa con gli oblò' }) };
   const env = creaAmbiente({ pathname: '/grazie.html', gtagPresente: false });
   verifica('senza consenso -> nessun evento e contesto conservato', true, 'lecasediluigi_lead' in globalThis.__store);
   env.window.gtag = (tipo, nome, params) => { if (tipo === 'event') env.inviati.push({ nome, params }); };
   env.document.dispatchEvent(new env.ctx.CustomEvent('lecasediluigi:analytics-ready'));
   verifica('dopo il consenso -> lead dossier completo',
-    [{ nome: 'generate_lead', params: { page_path: '/grazie.html', form_origine: 'dossier', nome_immobile: 'Villetta a schiera', rif_immobile: 'LM280' } }],
+    [{ nome: 'generate_lead', params: { page_path: '/grazie.html', form_origine: 'dossier', nome_immobile: 'La casa con gli oblò', rif_immobile: 'LM284' } }],
     env.inviati);
 }
 
