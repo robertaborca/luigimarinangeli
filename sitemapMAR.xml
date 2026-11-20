@@ -8,7 +8,7 @@
   <!-- HOME -->
   <url>
     <loc>https://www.lecasediluigi.com/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
@@ -16,7 +16,7 @@
   <!-- LANDING PAGES SRC -->
   <url>
     <loc>https://www.lecasediluigi.com/SRC/immobili.html</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -178,6 +178,18 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://www.lecasediluigi.com/CASE/appartamento-arredato-con-garage-in-vendita-a-senigallia-ponte-rosso.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lecasediluigi.com/CASE/mini-appartamento-con-corte-in-vendita-a-marina-di-montemarciano.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://www.lecasediluigi.com/CASE/appartamento-recente-costruzione-con-soppalco-in-vendita-a-montemarciano.html</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -203,7 +215,7 @@
   </url>
   <url>
     <loc>https://www.lecasediluigi.com/CASE/grande-appartamento-in-vendita-a-senigallia-via-venezia.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
